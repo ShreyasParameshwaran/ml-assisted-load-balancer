@@ -1,0 +1,22 @@
+{
+  "name": "ml-assisted-load-balancer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyasParameshwaran/ml-assisted-load-balancer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShreyasParameshwaran/ml-assisted-load-balancer/issues"
+  },
+  "homepage": "https://github.com/ShreyasParameshwaran/ml-assisted-load-balancer#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
