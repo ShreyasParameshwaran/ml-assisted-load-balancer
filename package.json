@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ShreyasParameshwaran/ml-assisted-load-balancer#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "prom-client": "^15.1.3"
   }
 }

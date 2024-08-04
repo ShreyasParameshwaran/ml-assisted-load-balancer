@@ -1,13 +1,14 @@
 version: '3'
 services:
+  node-app:
+    image: my-node-app
+    network_mode: "host"  # Use the host's network stack
+    ports:
+      - "4000:4000"  # Not needed if using host networking, but included for clarity
   prometheus:
     image: prom/prometheus
     volumes:
       - "./prometheus.yml:/etc/prometheus/prometheus.yml"
-    networks:
-      - localprom
+    network_mode: "host"  # Use the host's network stack
     ports:
-      - 9090:9090
-networks:
-  localprom:
-    driver: bridge
+      - "9090:9090"  # Not needed if using host networking, but included for clarity
