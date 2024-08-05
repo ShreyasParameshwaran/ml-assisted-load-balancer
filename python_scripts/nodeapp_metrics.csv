@@ -1,0 +1,3 @@
+timestamp,pod,cpu_usage,memory_usage,network_receive,network_transmit,network_receive_errors,network_transmit_errors,replicas
+1722880470.603,nodeapp-deployment-6cc654cb66-4ftbf,0.002601504117661072,,,,,,1
+1722880470.605,nodeapp-deployment-6cc654cb66-4ftbf,,57495552,,,,,1
