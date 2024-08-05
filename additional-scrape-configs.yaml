@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: additional-scrape-configs
+  namespace: default
+data:
+  additional-scrape-configs.yaml: |
+    - job_name: 'nodejs-app'
+      static_configs:
+        - targets: ['http://192.168.49.2:32000/']
