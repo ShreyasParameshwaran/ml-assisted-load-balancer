@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: additional-scrape-configs
-  namespace: default
+  namespace: monitoring
 data:
   additional-scrape-configs.yaml: |
     - job_name: 'nodejs-app'
