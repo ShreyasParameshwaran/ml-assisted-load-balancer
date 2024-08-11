@@ -5,11 +5,13 @@ metadata:
   namespace: default
 spec:
   scaleTargetRef:
-    name: 
+    name: nodeapp-deployment
   minReplicaCount: 1
   maxReplicaCount: 10
   triggers:
-  - type: cpu
+  - type: metrics-api
     metadata:
-      type: AverageValue
-      value: "50"
+      targetValue: 1
+      url: "http://ml-api-service/predict"
+      valueLocation: 'predicted_replicas'
+  
