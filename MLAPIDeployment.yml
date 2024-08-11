@@ -22,3 +22,18 @@ spec:
           env:
             - name: FLASK_ENV
               value: production
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-api-service
+spec:
+  selector:
+    app: ml-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
