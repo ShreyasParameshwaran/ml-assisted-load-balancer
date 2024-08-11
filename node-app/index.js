@@ -21,8 +21,9 @@ app.get('/metrics', async (req, res) => {
 
 app.get('/', (req, res) => {
   counter.inc({ method: req.method });
-  res.send('Hello, World!');
+  res.sendFile('index.html',{ root: __dirname })
 });
+
 
 app.listen(4000, () => {
   console.log('Server is running on port 4000');

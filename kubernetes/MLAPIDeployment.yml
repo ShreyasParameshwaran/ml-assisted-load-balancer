@@ -15,13 +15,13 @@ spec:
         app: ml-api
     spec:
       containers:
-        - name: ml-api
-          image: shreyas2204/ml-api:latest
-          ports:
-            - containerPort: 5000
-          env:
-            - name: FLASK_ENV
-              value: production
+      - name: ml-api
+        image: shreyas2204/ml-api:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: FLASK_ENV
+          value: production
 
 
 ---
@@ -34,6 +34,5 @@ spec:
   selector:
     app: ml-api
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 5000
+  - protocol: TCP
+    port: 5000

@@ -1,7 +1,7 @@
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
-  name: nodeapp-deployment
+  name: nodeapp-deployment-scaler
   namespace: default
 spec:
   scaleTargetRef:
@@ -11,7 +11,19 @@ spec:
   triggers:
   - type: metrics-api
     metadata:
-      targetValue: 1
-      url: "http://ml-api-service/predict"
+      targetValue: '1'
+      url: "http://10.101.53.44:5000/predict"
+      format: "json"
       valueLocation: 'predicted_replicas'
-  
+      pollingInterval: '10'
+      cooldownPeriod: '3600'
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus-kube-prometheus-prometheus:9090
+      metricName: nginx_ingress_controller_requests
+      threshold: '500'
+      pollingInterval: '5'
+      cooldownPeriod: '60'
+      query: |
+        sum(rate(nginx_ingress_controller_requests[1m])) by (deployment)
+

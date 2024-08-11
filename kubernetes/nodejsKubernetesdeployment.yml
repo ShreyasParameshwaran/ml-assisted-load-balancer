@@ -12,10 +12,11 @@ spec:
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: nodeapp
     spec:
       containers:
       - name: nodeserver
         image: shreyas2204/my-node-app
+        imagePullPolicy: Always
         ports:
         - containerPort: 4000
