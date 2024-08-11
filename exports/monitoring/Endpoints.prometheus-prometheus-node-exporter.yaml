@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-10T11:31:39Z"
+  labels:
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: prometheus-node-exporter
+    app.kubernetes.io/part-of: prometheus-node-exporter
+    app.kubernetes.io/version: 1.8.2
+    helm.sh/chart: prometheus-node-exporter-4.37.3
+    jobLabel: node-exporter
+    release: prometheus
+  name: prometheus-prometheus-node-exporter
+  namespace: monitoring
+subsets:
+- addresses:
+  - ip: 192.168.49.2
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-prometheus-node-exporter-hxxn8
+      namespace: monitoring
+      uid: 64d3aa0c-9644-4342-bd6a-8971bd63d425
+  ports:
+  - name: http-metrics
+    port: 9100
+    protocol: TCP

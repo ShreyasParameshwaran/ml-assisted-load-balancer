@@ -1,0 +1,36 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.158
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: nodeapp-deployment-6cc654cb66-twvxn
+    namespace: default
+    uid: f177a407-3201-446b-9477-1634554b6d3c
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-11T16:08:20Z"
+  generateName: nodeapp-service-
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: nodeapp-service
+  name: nodeapp-service-8789g
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: nodeapp-service
+    uid: e8efba18-c4f1-4b3d-ba65-0b2b6d4921b0
+ports:
+- name: ""
+  port: 4000
+  protocol: TCP

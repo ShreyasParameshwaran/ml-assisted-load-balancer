@@ -1,0 +1,39 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.49.2
+  conditions:
+    ready: true
+  targetRef:
+    kind: Node
+    name: minikube
+    uid: f9fe5e0a-ec7a-4ec2-90f9-a25cc3fdc836
+kind: EndpointSlice
+metadata:
+  generateName: prometheus-kube-prometheus-kubelet-
+  labels:
+    app.kubernetes.io/managed-by: prometheus-operator
+    app.kubernetes.io/name: kubelet
+    endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+    k8s-app: kubelet
+    kubernetes.io/service-name: prometheus-kube-prometheus-kubelet
+  name: prometheus-kube-prometheus-kubelet-ch2ct
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Endpoints
+    name: prometheus-kube-prometheus-kubelet
+    uid: ae671ac5-bd90-4df5-bae5-54e10ff864f8
+ports:
+- name: http-metrics
+  port: 10255
+  protocol: TCP
+- name: https-metrics
+  port: 10250
+  protocol: TCP
+- name: cadvisor
+  port: 4194
+  protocol: TCP

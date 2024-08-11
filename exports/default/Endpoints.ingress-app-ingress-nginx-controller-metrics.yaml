@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-08T17:30:13Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: ingress-app
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/version: 1.11.1
+    helm.sh/chart: ingress-nginx-4.11.1
+  name: ingress-app-ingress-nginx-controller-metrics
+  namespace: default
+subsets:
+- addresses:
+  - ip: 10.244.0.154
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: ingress-app-ingress-nginx-controller-544f5dfc8f-5mkc8
+      namespace: default
+      uid: 7c40e53c-3d60-45e9-b293-02edefe3f3d3
+  ports:
+  - name: metrics
+    port: 10254
+    protocol: TCP

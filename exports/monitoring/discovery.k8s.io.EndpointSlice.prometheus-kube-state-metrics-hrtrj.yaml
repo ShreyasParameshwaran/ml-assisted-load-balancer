@@ -1,0 +1,44 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.150
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-f2bsm
+    namespace: monitoring
+    uid: 6d11f15d-abd0-4e6e-93a0-93c997bb9930
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-11T16:05:54Z"
+  generateName: prometheus-kube-state-metrics-
+  labels:
+    app.kubernetes.io/component: metrics
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kube-state-metrics
+    app.kubernetes.io/part-of: kube-state-metrics
+    app.kubernetes.io/version: 2.13.0
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    helm.sh/chart: kube-state-metrics-5.25.1
+    kubernetes.io/service-name: prometheus-kube-state-metrics
+    release: prometheus
+  name: prometheus-kube-state-metrics-hrtrj
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-kube-state-metrics
+    uid: 6621f912-cde8-4161-aae4-f6680ffdbd8f
+ports:
+- name: http
+  port: 8080
+  protocol: TCP

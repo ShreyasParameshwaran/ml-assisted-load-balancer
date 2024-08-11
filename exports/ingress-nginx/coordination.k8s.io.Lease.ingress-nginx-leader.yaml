@@ -1,0 +1,11 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  name: ingress-nginx-leader
+  namespace: ingress-nginx
+spec:
+  acquireTime: "2024-08-11T02:17:10.753190Z"
+  holderIdentity: ingress-nginx-controller-768f948f8f-fkfw5
+  leaseDurationSeconds: 30
+  leaseTransitions: 1
+  renewTime: "2024-08-11T17:14:15.744326Z"

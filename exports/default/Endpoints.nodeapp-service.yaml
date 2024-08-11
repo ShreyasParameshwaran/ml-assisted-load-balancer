@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: nodeapp-service
+  namespace: default
+subsets:
+- addresses:
+  - ip: 10.244.0.158
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: nodeapp-deployment-6cc654cb66-twvxn
+      namespace: default
+      uid: f177a407-3201-446b-9477-1634554b6d3c
+  ports:
+  - port: 4000
+    protocol: TCP

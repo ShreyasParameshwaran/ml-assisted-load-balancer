@@ -1,0 +1,46 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.148
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: coredns-7db6d8ff4d-tjqfq
+    namespace: kube-system
+    uid: cd306b39-aa42-4d33-a349-4d314cbf549c
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-11T16:06:15Z"
+  generateName: prometheus-kube-prometheus-coredns-
+  labels:
+    app: kube-prometheus-stack-coredns
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 61.7.2
+    chart: kube-prometheus-stack-61.7.2
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    heritage: Helm
+    jobLabel: coredns
+    kubernetes.io/service-name: prometheus-kube-prometheus-coredns
+    release: prometheus
+    service.kubernetes.io/headless: ""
+  name: prometheus-kube-prometheus-coredns-tf254
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-kube-prometheus-coredns
+    uid: ffaf821a-d166-4d84-96f2-47490ece1914
+ports:
+- name: http-metrics
+  port: 9153
+  protocol: TCP
