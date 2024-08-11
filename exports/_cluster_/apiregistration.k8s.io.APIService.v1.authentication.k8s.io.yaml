@@ -1,0 +1,11 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: onstart
+  name: v1.authentication.k8s.io
+spec:
+  group: authentication.k8s.io
+  groupPriorityMinimum: 17700
+  version: v1
+  versionPriority: 15

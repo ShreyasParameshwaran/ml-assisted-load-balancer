@@ -1,0 +1,46 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.49.2
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: kube-proxy-xfhsx
+    namespace: kube-system
+    uid: f9f5e8e8-cc2f-496d-9288-6c11d9aac4c2
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-10T11:31:32Z"
+  generateName: prometheus-kube-prometheus-kube-proxy-
+  labels:
+    app: kube-prometheus-stack-kube-proxy
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 61.7.2
+    chart: kube-prometheus-stack-61.7.2
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    heritage: Helm
+    jobLabel: kube-proxy
+    kubernetes.io/service-name: prometheus-kube-prometheus-kube-proxy
+    release: prometheus
+    service.kubernetes.io/headless: ""
+  name: prometheus-kube-prometheus-kube-proxy-k628v
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-kube-prometheus-kube-proxy
+    uid: b3938c0e-be6c-4817-a9b4-d98b2014ea87
+ports:
+- name: http-metrics
+  port: 10249
+  protocol: TCP

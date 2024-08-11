@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_30655f61-9bd3-4ebb-ac36-a54c6745308e","leaseDurationSeconds":15,"acquireTime":"2024-08-11T16:06:38Z","renewTime":"2024-08-11T17:14:15Z","leaderTransitions":3}'
+  labels:
+    addonmanager.kubernetes.io/mode: Reconcile
+  name: k8s.io-minikube-hostpath
+  namespace: kube-system

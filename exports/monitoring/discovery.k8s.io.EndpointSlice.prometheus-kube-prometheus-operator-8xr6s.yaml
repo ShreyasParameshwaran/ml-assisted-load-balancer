@@ -1,0 +1,46 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.151
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-zlscx
+    namespace: monitoring
+    uid: f1c9d3b3-e999-4480-a0e3-a0f47e2a41ef
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-08T17:00:00Z"
+  generateName: prometheus-kube-prometheus-operator-
+  labels:
+    app: kube-prometheus-stack-operator
+    app.kubernetes.io/component: prometheus-operator
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 61.7.2
+    chart: kube-prometheus-stack-61.7.2
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    heritage: Helm
+    kubernetes.io/service-name: prometheus-kube-prometheus-operator
+    release: prometheus
+  name: prometheus-kube-prometheus-operator-8xr6s
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-kube-prometheus-operator
+    uid: fe72b191-4f29-49cc-aaca-9a12a3ea777c
+ports:
+- name: https
+  port: 10250
+  protocol: TCP

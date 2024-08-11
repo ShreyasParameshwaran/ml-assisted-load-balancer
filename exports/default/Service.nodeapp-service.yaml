@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  name: nodeapp-service
+  namespace: default
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.135.236
+  clusterIPs:
+  - 10.100.135.236
+  externalIPs:
+  - 10.0.0.100
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32000
+    port: 5000
+    protocol: TCP
+    targetPort: 4000
+  selector:
+    app: nodeapp
+  sessionAffinity: None
+  type: LoadBalancer

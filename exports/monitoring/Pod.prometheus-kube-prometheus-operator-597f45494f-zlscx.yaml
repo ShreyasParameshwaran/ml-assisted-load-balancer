@@ -1,0 +1,136 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: prometheus-kube-prometheus-operator-597f45494f-
+  labels:
+    app: kube-prometheus-stack-operator
+    app.kubernetes.io/component: prometheus-operator
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 61.7.2
+    chart: kube-prometheus-stack-61.7.2
+    heritage: Helm
+    pod-template-hash: 597f45494f
+    release: prometheus
+  name: prometheus-kube-prometheus-operator-597f45494f-zlscx
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: prometheus-kube-prometheus-operator-597f45494f
+    uid: 1e4ec55a-0028-47f5-9ace-1c6cf887ece5
+spec:
+  automountServiceAccountToken: true
+  containers:
+  - args:
+    - --kubelet-service=kube-system/prometheus-kube-prometheus-kubelet
+    - --localhost=127.0.0.1
+    - --prometheus-config-reloader=quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2
+    - --config-reloader-cpu-request=0
+    - --config-reloader-cpu-limit=0
+    - --config-reloader-memory-request=0
+    - --config-reloader-memory-limit=0
+    - --thanos-default-base-image=quay.io/thanos/thanos:v0.36.0
+    - --secret-field-selector=type!=kubernetes.io/dockercfg,type!=kubernetes.io/service-account-token,type!=helm.sh/release.v1
+    - --web.enable-tls=true
+    - --web.cert-file=/cert/cert
+    - --web.key-file=/cert/key
+    - --web.listen-address=:10250
+    - --web.tls-min-version=VersionTLS13
+    env:
+    - name: GOGC
+      value: "30"
+    image: quay.io/prometheus-operator/prometheus-operator:v0.75.2
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: https
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: kube-prometheus-stack
+    ports:
+    - containerPort: 10250
+      name: https
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: https
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /cert
+      name: tls-secret
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8fpch
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: minikube
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 65534
+    runAsGroup: 65534
+    runAsNonRoot: true
+    runAsUser: 65534
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: prometheus-kube-prometheus-operator
+  serviceAccountName: prometheus-kube-prometheus-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: tls-secret
+    secret:
+      defaultMode: 420
+      secretName: prometheus-kube-prometheus-admission
+  - name: kube-api-access-8fpch
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace

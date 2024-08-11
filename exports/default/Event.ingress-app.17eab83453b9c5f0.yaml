@@ -1,0 +1,23 @@
+apiVersion: v1
+count: 131
+eventTime: null
+firstTimestamp: "2024-08-11T16:05:42Z"
+involvedObject:
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  name: ingress-app
+  namespace: default
+  resourceVersion: "35629"
+  uid: b3bf48aa-901d-439c-9a8a-e719c8234138
+kind: Event
+lastTimestamp: "2024-08-11T17:10:42Z"
+message: Scheduled for sync
+metadata:
+  name: ingress-app.17eab83453b9c5f0
+  namespace: default
+reason: Sync
+reportingComponent: nginx-ingress-controller
+reportingInstance: ""
+source:
+  component: nginx-ingress-controller
+type: Normal

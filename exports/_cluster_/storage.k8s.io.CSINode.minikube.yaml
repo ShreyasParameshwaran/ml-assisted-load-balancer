@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/vsphere-volume
+  name: minikube
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: minikube
+    uid: f9fe5e0a-ec7a-4ec2-90f9-a25cc3fdc836
+spec:
+  drivers: null

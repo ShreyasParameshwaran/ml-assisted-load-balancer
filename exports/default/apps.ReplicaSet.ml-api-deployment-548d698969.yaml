@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  labels:
+    app: ml-api
+    pod-template-hash: 548d698969
+  name: ml-api-deployment-548d698969
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: ml-api-deployment
+    uid: 25d3f8e7-f525-402c-9242-61456c8b768a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ml-api
+      pod-template-hash: 548d698969
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ml-api
+        pod-template-hash: 548d698969
+    spec:
+      containers:
+      - env:
+        - name: FLASK_ENV
+          value: production
+        image: shreyas2204/ml-api:latest
+        imagePullPolicy: Always
+        name: ml-api
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

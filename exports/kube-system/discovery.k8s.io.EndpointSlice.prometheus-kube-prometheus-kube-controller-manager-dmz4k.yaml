@@ -1,0 +1,46 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 192.168.49.2
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: e1d8ce39-5385-4352-ac49-9daa94de571e
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-08-10T11:31:37Z"
+  generateName: prometheus-kube-prometheus-kube-controller-manager-
+  labels:
+    app: kube-prometheus-stack-kube-controller-manager
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: kube-prometheus-stack
+    app.kubernetes.io/version: 61.7.2
+    chart: kube-prometheus-stack-61.7.2
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    heritage: Helm
+    jobLabel: kube-controller-manager
+    kubernetes.io/service-name: prometheus-kube-prometheus-kube-controller-manager
+    release: prometheus
+    service.kubernetes.io/headless: ""
+  name: prometheus-kube-prometheus-kube-controller-manager-dmz4k
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: prometheus-kube-prometheus-kube-controller-manager
+    uid: eb6b42ef-aaef-47e5-addf-c8a761338d52
+ports:
+- name: http-metrics
+  port: 10257
+  protocol: TCP
