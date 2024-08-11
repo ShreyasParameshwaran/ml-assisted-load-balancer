@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Load Balancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'sans': ['"Plus Jakarta Sans"'],
+                    'mono': ['JetBrains Mon', 'monospace']
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="flex justify-center items-center flex-col gap-20 m-10">
+    <div>
+        <h1 class="font-bold text-7xl mt-10 text-[#1254FF]">ML Assisted Load Balancer</h1>
+    </div>
+    <div class="main-container flex justify-center items-center m-10 flex-col">
+        <div>
+            <h3 class="font-bold text-4xl text-[#565656]">Live count of replicas:</h3>
+        </div>
+        <div>
+            <div
+                class="border-2 border-[#D9D9D9] h-[150px] w-[150px] mt-10 rounded-2xl flex justify-center items-center">
+                <p class="text-8xl font-mono text-[#1254FF]" id="replica-count">10</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center gap-8">
+            <input type="number" id="number-input" aria-describedby="helper-text-explanation"
+                class="bg-[#D9D9D9] border-2 border-gray-100 text-gray-900 text-lg rounded-lg focus:ring-gray-100 focus:border-gray-100 block w-[200px] p-2.5 mt-10 h-[60px] font-mono"
+                placeholder="Enter number of Requests" required />
+            </input>
+            <div>
+                <button
+                    class="w-[300px] h-[60px] py-0 text-base font-medium text-center text-xl text-white bg-[#1254FF] rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-10"
+                    onclick="simulateRequests()">Simulate
+                    Request</button>
+            </div>
+        </div>
+        <div class="mt-20 flex justify-center items-center">
+            <div
+                class="flex items-center justify-center bg-[#E1E1E1] w-[1200px] h-[175px] rounded-2xl p-12 text-xl text-wrap">
+                <p>The <span class="text-[#1254FF]">ML-Assisted Load Balancer</span> improves traffic distribution in
+                    Kubernetes environments by combining
+                    machine learning with modern technologies. It predicts traffic patterns for optimized load
+                    balancing, uses Kubernetes for scalable container management, and relies on KEDA for real-time
+                    autoscaling based on metrics. Python handles machine learning logic, while Prometheus monitors
+                    performance. The project enhances load balancing efficiency and scalability in cloud environments.
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function fetchReplicaCount() {
+            metricsEndpoint = 'https://google.com'
+            apiEndpoint = "https://facebook.com"
+            try {
+                const response = await fetch(metricsEndpoint); // Replace with your API endpoint
+                const data = await response.json();
+
+                // Display the replica count or 0 if the count is not available
+                document.getElementById('replica-count').innerText = data.replica_count ?? 0;
+            } catch (error) {
+                console.error('Error fetching replica count:', error);
+                document.getElementById('replica-count').innerText = '0';
+            }
+        }
+
+        // Fetch the replica count when the page loads
+        window.onload = () => {
+            fetchReplicaCount(); // Initial fetch
+
+            // Set up an interval to fetch the replica count every 2 seconds
+            setInterval(fetchReplicaCount, 2000);
+        };
+
+        // Function to simulate API requests
+        async function simulateRequests() {
+            const requestCount = parseInt(document.getElementById('request-count').value, 10);
+
+            if (isNaN(requestCount) || requestCount <= 0) {
+                alert('Please enter a valid number greater than 0');
+                return;
+            }
+
+            for (let i = 0; i < requestCount; i++) {
+                try {
+                    const response = await fetch(apiEndpoint); // Replace with your API endpoint
+                    // Optionally, handle the response data here
+                    console.log(await response.txt()); // For debugging purposes
+                } catch (error) {
+                    console.error('Error fetching API data:', error);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
