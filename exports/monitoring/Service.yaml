@@ -1,0 +1,503 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations: {}
+    labels:
+      managed-by: prometheus-operator
+      operated-alertmanager: "true"
+    name: alertmanager-operated
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: monitoring.coreos.com/v1
+      kind: Alertmanager
+      name: prometheus-kube-prometheus-alertmanager
+      uid: 73e8987a-5d71-4ec1-995f-e6dc3bdaf7e1
+  spec:
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-web
+      port: 9093
+      protocol: TCP
+      targetPort: http-web
+    - name: tcp-mesh
+      port: 9094
+      protocol: TCP
+      targetPort: 9094
+    - name: udp-mesh
+      port: 9094
+      protocol: UDP
+      targetPort: 9094
+    selector:
+      app.kubernetes.io/name: alertmanager
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-monitor-nginx
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller
+    namespace: monitoring
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIPs:
+    - 10.104.1.82
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: http
+      name: http
+      nodePort: 32690
+      port: 80
+      protocol: TCP
+      targetPort: http
+    - appProtocol: https
+      name: https
+      nodePort: 31023
+      port: 443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: LoadBalancer
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-monitor-nginx
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller-admission
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.102.201.167
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: https
+      name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: webhook
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-monitor-nginx
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller-metrics
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.102.7.157
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 10254
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keda
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-admission-webhooks
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-admission-webhooks
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.99.233.159
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      app: keda-admission-webhooks
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keda
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-operator
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.108.13.255
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metricsservice
+      port: 9666
+      protocol: TCP
+      targetPort: 9666
+    selector:
+      app: keda-operator
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keda
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: keda-operator-metrics-apiserver
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator-metrics-apiserver
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-operator-metrics-apiserver
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.97.78.0
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    - name: metrics
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: keda-operator-metrics-apiserver
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: grafana
+      app.kubernetes.io/version: 11.1.0
+      helm.sh/chart: grafana-8.3.8
+    name: prometheus-grafana
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.102.204.57
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-web
+      port: 80
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/name: grafana
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: kube-prometheus-stack-alertmanager
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-alertmanager
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.105.101.116
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-web
+      port: 9093
+      protocol: TCP
+      targetPort: 9093
+    - appProtocol: http
+      name: reloader-web
+      port: 8080
+      protocol: TCP
+      targetPort: reloader-web
+    selector:
+      alertmanager: prometheus-kube-prometheus-alertmanager
+      app.kubernetes.io/name: alertmanager
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: kube-prometheus-stack-operator
+      app.kubernetes.io/component: prometheus-operator
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+    name: prometheus-kube-prometheus-operator
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.101.66.38
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app: kube-prometheus-stack-operator
+      release: prometheus
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: kube-prometheus-stack-prometheus
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-prometheus
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.109.45.90
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-web
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - appProtocol: http
+      name: reloader-web
+      port: 8080
+      protocol: TCP
+      targetPort: reloader-web
+    selector:
+      app.kubernetes.io/name: prometheus
+      operator.prometheus.io/name: prometheus-kube-prometheus-prometheus
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+      prometheus.io/scrape: "true"
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: kube-state-metrics
+      app.kubernetes.io/version: 2.13.0
+      helm.sh/chart: kube-state-metrics-5.25.1
+      release: prometheus
+    name: prometheus-kube-state-metrics
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.105.228.215
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/name: kube-state-metrics
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations: {}
+    labels:
+      managed-by: prometheus-operator
+      operated-prometheus: "true"
+    name: prometheus-operated
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: monitoring.coreos.com/v1
+      kind: Prometheus
+      name: prometheus-kube-prometheus-prometheus
+      uid: 3454c7cc-839a-4035-9575-11fb656bf1f0
+  spec:
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-web
+      port: 9090
+      protocol: TCP
+      targetPort: http-web
+    selector:
+      app.kubernetes.io/name: prometheus
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+      prometheus.io/scrape: "true"
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: prometheus-node-exporter
+      app.kubernetes.io/part-of: prometheus-node-exporter
+      app.kubernetes.io/version: 1.8.2
+      helm.sh/chart: prometheus-node-exporter-4.37.3
+      jobLabel: node-exporter
+      release: prometheus
+    name: prometheus-prometheus-node-exporter
+    namespace: monitoring
+  spec:
+    clusterIPs:
+    - 10.108.176.152
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9100
+      protocol: TCP
+      targetPort: 9100
+    selector:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/name: prometheus-node-exporter
+    sessionAffinity: None
+    type: ClusterIP
+kind: ServiceList

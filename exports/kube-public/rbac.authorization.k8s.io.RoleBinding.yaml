@@ -1,0 +1,34 @@
+apiVersion: rbac.authorization.k8s.io/v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations: {}
+    name: kubeadm:bootstrap-signer-clusterinfo
+    namespace: kube-public
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: kubeadm:bootstrap-signer-clusterinfo
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: system:anonymous
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      rbac.authorization.kubernetes.io/autoupdate: "true"
+    labels:
+      kubernetes.io/bootstrapping: rbac-defaults
+    name: system:controller:bootstrap-signer
+    namespace: kube-public
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: system:controller:bootstrap-signer
+  subjects:
+  - kind: ServiceAccount
+    name: bootstrap-signer
+    namespace: kube-system
+kind: RoleBindingList

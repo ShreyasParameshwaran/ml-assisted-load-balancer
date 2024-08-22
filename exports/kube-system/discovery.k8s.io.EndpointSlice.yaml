@@ -1,0 +1,314 @@
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: coredns-7db6d8ff4d-6l8t9
+      namespace: kube-system
+      uid: 5b7a5693-b79d-43fa-95bc-3f30a130bf3b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:17:05Z"
+    generateName: kube-dns-
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: kube-dns
+      kubernetes.io/cluster-service: "true"
+      kubernetes.io/name: CoreDNS
+      kubernetes.io/service-name: kube-dns
+    name: kube-dns-564l7
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: kube-dns
+      uid: 36c35636-a258-4449-b493-ba55acc1207b
+  ports:
+  - name: metrics
+    port: 9153
+    protocol: TCP
+  - name: dns
+    port: 53
+    protocol: UDP
+  - name: dns-tcp
+    port: 53
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: coredns-7db6d8ff4d-6l8t9
+      namespace: kube-system
+      uid: 5b7a5693-b79d-43fa-95bc-3f30a130bf3b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+    generateName: prometheus-kube-prometheus-coredns-
+    labels:
+      app: kube-prometheus-stack-coredns
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      jobLabel: coredns
+      kubernetes.io/service-name: prometheus-kube-prometheus-coredns
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-coredns-p9cpn
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-coredns
+      uid: 1a42a122-12bd-45b7-a055-7bef2ecc1450
+  ports:
+  - name: http-metrics
+    port: 9153
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: kube-controller-manager-minikube
+      namespace: kube-system
+      uid: 99f35d0e-c637-4e52-94db-719c29a056d6
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:27Z"
+    generateName: prometheus-kube-prometheus-kube-controller-manager-
+    labels:
+      app: kube-prometheus-stack-kube-controller-manager
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      jobLabel: kube-controller-manager
+      kubernetes.io/service-name: prometheus-kube-prometheus-kube-controller-manager
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-controller-manager-ztcgb
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-kube-controller-manager
+      uid: ce3fe7d7-de89-4aa3-821c-4ab2c6338568
+  ports:
+  - name: http-metrics
+    port: 10257
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: etcd-minikube
+      namespace: kube-system
+      uid: f613f2a6-ae8e-4cd3-a7f5-54b209a8a59e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:28Z"
+    generateName: prometheus-kube-prometheus-kube-etcd-
+    labels:
+      app: kube-prometheus-stack-kube-etcd
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      jobLabel: kube-etcd
+      kubernetes.io/service-name: prometheus-kube-prometheus-kube-etcd
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-etcd-p2cb2
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-kube-etcd
+      uid: f73fbd3d-9f85-4868-bde9-f6dd1e66d218
+  ports:
+  - name: http-metrics
+    port: 2381
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: kube-proxy-gqjqv
+      namespace: kube-system
+      uid: 3aa63f0d-24f5-4a0a-a6e2-110f19acdecf
+  kind: EndpointSlice
+  metadata:
+    generateName: prometheus-kube-prometheus-kube-proxy-
+    labels:
+      app: kube-prometheus-stack-kube-proxy
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      jobLabel: kube-proxy
+      kubernetes.io/service-name: prometheus-kube-prometheus-kube-proxy
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-proxy-vml2p
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-kube-proxy
+      uid: f1b2638e-5e3c-4112-bd82-18324e4832d8
+  ports:
+  - name: http-metrics
+    port: 10249
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: kube-scheduler-minikube
+      namespace: kube-system
+      uid: 2d53323d-5757-4db7-b331-a6dffeedce42
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+    generateName: prometheus-kube-prometheus-kube-scheduler-
+    labels:
+      app: kube-prometheus-stack-kube-scheduler
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      jobLabel: kube-scheduler
+      kubernetes.io/service-name: prometheus-kube-prometheus-kube-scheduler
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-scheduler-dcsq4
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-kube-scheduler
+      uid: 02fd9989-63e5-4958-a236-09c383ee58d9
+  ports:
+  - name: http-metrics
+    port: 10259
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+    targetRef:
+      kind: Node
+      name: minikube
+      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+  kind: EndpointSlice
+  metadata:
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+      k8s-app: kubelet
+      kubernetes.io/service-name: prometheus-kube-prometheus-kubelet
+    name: prometheus-kube-prometheus-kubelet-w29j4
+    namespace: kube-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Endpoints
+      name: prometheus-kube-prometheus-kubelet
+      uid: 68f4f587-334a-4a17-af63-09de9e9d8ce8
+  ports:
+  - name: http-metrics
+    port: 10255
+    protocol: TCP
+  - name: https-metrics
+    port: 10250
+    protocol: TCP
+  - name: cadvisor
+    port: 4194
+    protocol: TCP
+kind: EndpointSliceList

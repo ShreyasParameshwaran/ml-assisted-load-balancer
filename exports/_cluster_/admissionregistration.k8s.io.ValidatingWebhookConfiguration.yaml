@@ -1,0 +1,227 @@
+apiVersion: admissionregistration.k8s.io/v1
+items:
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-app
+      meta.helm.sh/release-namespace: default
+    labels:
+      app.kubernetes.io/component: admission-webhook
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-admission
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkakNDQVJ1Z0F3SUJBZ0lRVXBwSmRkYm5yWGJNc2hXbzFYaHp5ekFLQmdncWhrak9QUVFEQWpBUE1RMHcKQ3dZRFZRUUtFd1J1YVd3eE1DQVhEVEkwTURnd09ERTNNalV4TUZvWUR6SXhNalF3TnpFMU1UY3lOVEV3V2pBUApNUTB3Q3dZRFZRUUtFd1J1YVd3eE1Ga3dFd1lIS29aSXpqMENBUVlJS29aSXpqMERBUWNEUWdBRTBEdnhtY0FaCkRUSFBxVmtEeWtOMnROTmtkZGVYSUNuZGNzSkV6N2JxTnhVVjVXYUJzSFVheDNIYng1dmUvNjhyUzErYUJNVDQKZW5EYnNMMDZTSkdobjZOWE1GVXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1CTUdBMVVkSlFRTU1Bb0dDQ3NHQVFVRgpCd01CTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkxESUZYa0tFL3lqQXZVaTUvVDFiaFFKCmFwTVJNQW9HQ0NxR1NNNDlCQU1DQTBrQU1FWUNJUUQ0YlJHWUM5RFVaOEtxb1hmdWNxRm92WXZYUGUrMW1NS28KT3l0c1ZGMVgzd0loQUtZU25tZExjWE9ERTQ3RW1JdGhCU2E0K0hPU3psV2lmZ1lKTUJaQ2l3NDQKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+      service:
+        name: ingress-app-ingress-nginx-controller-admission
+        namespace: default
+        path: /networking/v1/ingresses
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: validate.nginx.ingress.kubernetes.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - networking.k8s.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - ingresses
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations: {}
+    labels:
+      app.kubernetes.io/component: admission-webhook
+      app.kubernetes.io/instance: ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
+    name: ingress-nginx-admission
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkVENDQVJ5Z0F3SUJBZ0lSQUo4blgxVVB4ZmVsWmEyR3FhWnFiaUF3Q2dZSUtvWkl6ajBFQXdJd0R6RU4KTUFzR0ExVUVDaE1FYm1sc01UQWdGdzB5TkRBNE1EZ3hOakU1TURsYUdBOHlNVEkwTURjeE5URTJNVGt3T1ZvdwpEekVOTUFzR0ExVUVDaE1FYm1sc01UQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJQTlJWNUV2Cm1udmpwS282T05lUFU3bWs3V2hFeTdrbkN2alhjWHBlVlZDSlhCN3pSbGpPOE5PMm9OWU9KYXpoMFh0SkxBdzIKV1hvZ05ya1NWNXRaVnUralZ6QlZNQTRHQTFVZER3RUIvd1FFQXdJQ0JEQVRCZ05WSFNVRUREQUtCZ2dyQmdFRgpCUWNEQVRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTaHYzVjFFTzRaNDBXYVVPeHFESTNUCmJmNlJ2ekFLQmdncWhrak9QUVFEQWdOSEFEQkVBaUFiYzJnRmxQYUIwd3B6bmVUYm4zM2gwL00yZ0VucjFsdVIKcTI3RysxN2YyZ0lnRWJaUEVLcUZHUFdQZ1BIRlVNekdKRTFKTU1iUHVvMVVhSWxiMFFtOS91MD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+      service:
+        name: ingress-nginx-controller-admission
+        namespace: ingress-nginx
+        path: /networking/v1/ingresses
+        port: 443
+    failurePolicy: Fail
+    matchPolicy: Equivalent
+    name: validate.nginx.ingress.kubernetes.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - networking.k8s.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - ingresses
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keda
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-admission-webhooks
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-admission
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFoTVJBd0RnWURWUVFLRXdkTFJVUkIKVDFKSE1RMHdDd1lEVlFRREV3UkxSVVJCTUI0WERUSTBNRGd5TWpFMU16RTBObG9YRFRNME1EZ3lNREUyTXpFMApObG93SVRFUU1BNEdBMVVFQ2hNSFMwVkVRVTlTUnpFTk1Bc0dBMVVFQXhNRVMwVkVRVENDQVNJd0RRWUpLb1pJCmh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBT05laXF2L3dhV05UaEQ3a2ZkSkpXWmo2d3pCeWZuOFdBSUkKSTVBb2I1QXNsUllJSi93VUJkazRNanlBRzlTUU1Cc0RLMk9WUlRCdlVzRnV5OHRtdmZXSEFnUWxoL1ZzUzB4YgpMWEZtRmJqK2hkUVNWK3BiK3dGRk9sQzlpWWhDZGxxMWkzVkxod282cGpSaWV2VkZNcEdHdGhxdzlXUFlIeEJzCnR2UzhKaVdSVVBPZTVsYkRRdHh0RndCdDdJbHQwaXUvL3U3bVZBejZPaXBFY2V0Nmd3MENpZDJ3dGxELzhJb2EKNnZLL04rY0pxZHoxajNwZWtlMWEwOEhXQjllalRpaFFrMzNiR216RkFwRnlTZWdqZkh0N2N2enJ4SGZxMlpiNQowbXEyMG9DeTdpTytqTWpkUldzT1Qrck5QWEJJVDdockVhWU5VMmVJSUF1RFQ0YTYrNXNDQXdFQUFhTlRNRkV3CkRnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkxqVWlwK0sKaE40VkhQRTVReE9DYk8rckJSaElNQThHQTFVZEVRUUlNQWFDQkV0RlJFRXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQU40d2xoa2lwemhvMzNHOEt2bDczaHhDRngxOXUxdTFPdnNzWUUzUEU0S0VYZCthMkNvMUtOdHRjTCtCCkVLb3NVb2VmZHVPRkhtd1hXVnZUSC9SQ0JsMUI0a3BqblFHZXFvZURhekNkbjZSYTh2S0tTazNOMEdvNUNXK3UKYjlRNU4yTEt3MW0vdU05clpQY2c5NjQrNDdRa3BMcDJCUGhBUThpTWVvYXl6NGg4ZWR0WjlaTWpncVNVcHUydQowRU1ka2JtVDBxVm1RVFA5Q2poN1k2WGZWY2EzdHFJUGtkUUl4MFZQS2s5endlNnZMekp3UVlHbUF4cFA3S3VxClJXaldQYll3ODR4RldVTzJBdTBndS9YWit2OENTcUJEMG9NNGt3TnA3aFRYb3dHL2cxTTc2cnBsVUVhSGdRK0IKakk4bjFCNmlLb2g4a2s3SmJ3VytyLy9lcWpnPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: keda-admission-webhooks
+        namespace: monitoring
+        path: /validate-keda-sh-v1alpha1-scaledobject
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: vscaledobject.kb.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - keda.sh
+      apiVersions:
+      - v1alpha1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - scaledobjects
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFoTVJBd0RnWURWUVFLRXdkTFJVUkIKVDFKSE1RMHdDd1lEVlFRREV3UkxSVVJCTUI0WERUSTBNRGd5TWpFMU16RTBObG9YRFRNME1EZ3lNREUyTXpFMApObG93SVRFUU1BNEdBMVVFQ2hNSFMwVkVRVTlTUnpFTk1Bc0dBMVVFQXhNRVMwVkVRVENDQVNJd0RRWUpLb1pJCmh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBT05laXF2L3dhV05UaEQ3a2ZkSkpXWmo2d3pCeWZuOFdBSUkKSTVBb2I1QXNsUllJSi93VUJkazRNanlBRzlTUU1Cc0RLMk9WUlRCdlVzRnV5OHRtdmZXSEFnUWxoL1ZzUzB4YgpMWEZtRmJqK2hkUVNWK3BiK3dGRk9sQzlpWWhDZGxxMWkzVkxod282cGpSaWV2VkZNcEdHdGhxdzlXUFlIeEJzCnR2UzhKaVdSVVBPZTVsYkRRdHh0RndCdDdJbHQwaXUvL3U3bVZBejZPaXBFY2V0Nmd3MENpZDJ3dGxELzhJb2EKNnZLL04rY0pxZHoxajNwZWtlMWEwOEhXQjllalRpaFFrMzNiR216RkFwRnlTZWdqZkh0N2N2enJ4SGZxMlpiNQowbXEyMG9DeTdpTytqTWpkUldzT1Qrck5QWEJJVDdockVhWU5VMmVJSUF1RFQ0YTYrNXNDQXdFQUFhTlRNRkV3CkRnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkxqVWlwK0sKaE40VkhQRTVReE9DYk8rckJSaElNQThHQTFVZEVRUUlNQWFDQkV0RlJFRXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQU40d2xoa2lwemhvMzNHOEt2bDczaHhDRngxOXUxdTFPdnNzWUUzUEU0S0VYZCthMkNvMUtOdHRjTCtCCkVLb3NVb2VmZHVPRkhtd1hXVnZUSC9SQ0JsMUI0a3BqblFHZXFvZURhekNkbjZSYTh2S0tTazNOMEdvNUNXK3UKYjlRNU4yTEt3MW0vdU05clpQY2c5NjQrNDdRa3BMcDJCUGhBUThpTWVvYXl6NGg4ZWR0WjlaTWpncVNVcHUydQowRU1ka2JtVDBxVm1RVFA5Q2poN1k2WGZWY2EzdHFJUGtkUUl4MFZQS2s5endlNnZMekp3UVlHbUF4cFA3S3VxClJXaldQYll3ODR4RldVTzJBdTBndS9YWit2OENTcUJEMG9NNGt3TnA3aFRYb3dHL2cxTTc2cnBsVUVhSGdRK0IKakk4bjFCNmlLb2g4a2s3SmJ3VytyLy9lcWpnPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: keda-admission-webhooks
+        namespace: monitoring
+        path: /validate-keda-sh-v1alpha1-triggerauthentication
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: vstriggerauthentication.kb.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - keda.sh
+      apiVersions:
+      - v1alpha1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - triggerauthentications
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+  - admissionReviewVersions:
+    - v1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFoTVJBd0RnWURWUVFLRXdkTFJVUkIKVDFKSE1RMHdDd1lEVlFRREV3UkxSVVJCTUI0WERUSTBNRGd5TWpFMU16RTBObG9YRFRNME1EZ3lNREUyTXpFMApObG93SVRFUU1BNEdBMVVFQ2hNSFMwVkVRVTlTUnpFTk1Bc0dBMVVFQXhNRVMwVkVRVENDQVNJd0RRWUpLb1pJCmh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBT05laXF2L3dhV05UaEQ3a2ZkSkpXWmo2d3pCeWZuOFdBSUkKSTVBb2I1QXNsUllJSi93VUJkazRNanlBRzlTUU1Cc0RLMk9WUlRCdlVzRnV5OHRtdmZXSEFnUWxoL1ZzUzB4YgpMWEZtRmJqK2hkUVNWK3BiK3dGRk9sQzlpWWhDZGxxMWkzVkxod282cGpSaWV2VkZNcEdHdGhxdzlXUFlIeEJzCnR2UzhKaVdSVVBPZTVsYkRRdHh0RndCdDdJbHQwaXUvL3U3bVZBejZPaXBFY2V0Nmd3MENpZDJ3dGxELzhJb2EKNnZLL04rY0pxZHoxajNwZWtlMWEwOEhXQjllalRpaFFrMzNiR216RkFwRnlTZWdqZkh0N2N2enJ4SGZxMlpiNQowbXEyMG9DeTdpTytqTWpkUldzT1Qrck5QWEJJVDdockVhWU5VMmVJSUF1RFQ0YTYrNXNDQXdFQUFhTlRNRkV3CkRnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkxqVWlwK0sKaE40VkhQRTVReE9DYk8rckJSaElNQThHQTFVZEVRUUlNQWFDQkV0RlJFRXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQU40d2xoa2lwemhvMzNHOEt2bDczaHhDRngxOXUxdTFPdnNzWUUzUEU0S0VYZCthMkNvMUtOdHRjTCtCCkVLb3NVb2VmZHVPRkhtd1hXVnZUSC9SQ0JsMUI0a3BqblFHZXFvZURhekNkbjZSYTh2S0tTazNOMEdvNUNXK3UKYjlRNU4yTEt3MW0vdU05clpQY2c5NjQrNDdRa3BMcDJCUGhBUThpTWVvYXl6NGg4ZWR0WjlaTWpncVNVcHUydQowRU1ka2JtVDBxVm1RVFA5Q2poN1k2WGZWY2EzdHFJUGtkUUl4MFZQS2s5endlNnZMekp3UVlHbUF4cFA3S3VxClJXaldQYll3ODR4RldVTzJBdTBndS9YWit2OENTcUJEMG9NNGt3TnA3aFRYb3dHL2cxTTc2cnBsVUVhSGdRK0IKakk4bjFCNmlLb2g4a2s3SmJ3VytyLy9lcWpnPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+      service:
+        name: keda-admission-webhooks
+        namespace: monitoring
+        path: /validate-keda-sh-v1alpha1-clustertriggerauthentication
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: vsclustertriggerauthentication.kb.io
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - keda.sh
+      apiVersions:
+      - v1alpha1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - clustertriggerauthentications
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: ValidatingWebhookConfiguration
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: kube-prometheus-stack-admission
+      app.kubernetes.io/component: prometheus-operator-webhook
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+    name: prometheus-kube-prometheus-admission
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    - v1beta1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkakNDQVJ5Z0F3SUJBZ0lSQU1DbFV3bCtsT254aFRFMjloUUNEcE13Q2dZSUtvWkl6ajBFQXdJd0R6RU4KTUFzR0ExVUVDaE1FYm1sc01UQWdGdzB5TkRBNE1EZ3hNekEyTURkYUdBOHlNVEkwTURjeE5URXpNRFl3TjFvdwpEekVOTUFzR0ExVUVDaE1FYm1sc01UQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNcEFzdVowCm5tSzZqVXBlQXNUTlpFNHVyNFhPajZVc2dLdUUzKy81T1N6dE81d3hBRE0rNUVrMXFrOFNhcGRyZWZWbTlRZ1kKUVorS3hWQ3pBbDZabzdXalZ6QlZNQTRHQTFVZER3RUIvd1FFQXdJQ0JEQVRCZ05WSFNVRUREQUtCZ2dyQmdFRgpCUWNEQVRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSdVRnVjJLbUhYbWQ0N1RXZkFYbFh2CnVSeEpRVEFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBNUtWWjU2eUc5aWVpZDJFaGZmdHZJYkhUSUFaTGtlb0YKMjJJOE1qRkRYdkFDSUZNc24rc1IvSnRyZlFidk9JU29wZCtTVDVMMmYzK1BUQVd4NFZXZW9pK3UKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+      service:
+        name: prometheus-kube-prometheus-operator
+        namespace: monitoring
+        path: /admission-prometheusrules/validate
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: prometheusrulemutate.monitoring.coreos.com
+    namespaceSelector: {}
+    objectSelector: {}
+    rules:
+    - apiGroups:
+      - monitoring.coreos.com
+      apiVersions:
+      - '*'
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - prometheusrules
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+kind: ValidatingWebhookConfigurationList

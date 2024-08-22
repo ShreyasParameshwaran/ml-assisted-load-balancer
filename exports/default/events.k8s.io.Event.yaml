@@ -1,0 +1,1970 @@
+apiVersion: events.k8s.io/v1
+items:
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 67
+  deprecatedFirstTimestamp: "2024-08-22T18:27:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:21Z"
+  deprecatedSource:
+    component: horizontal-pod-autoscaler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-hpa-nodeapp-deployment-scaler.17ee2054e21e14b9
+    namespace: default
+  note: 'unable to get external metric default/s1-metric-api-predicted_replicass/&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name:
+    nodeapp-deployment-scaler,},MatchExpressions:[]LabelSelectorRequirement{},}: unable
+    to fetch metrics from external metrics API: rpc error: code = Unknown desc = error
+    when getting metric values metric:s1-metric-api-predicted_replicass encountered
+    error'
+  reason: FailedGetExternalMetric
+  regarding:
+    apiVersion: autoscaling/v2
+    kind: HorizontalPodAutoscaler
+    name: keda-hpa-nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14179"
+    uid: 48c5b064-ef9d-425f-8c8a-06457e00ca84
+  reportingController: horizontal-pod-autoscaler
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 12
+  deprecatedFirstTimestamp: "2024-08-22T18:27:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:30:33Z"
+  deprecatedSource:
+    component: horizontal-pod-autoscaler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-hpa-nodeapp-deployment-scaler.17ee2054e27c29c8
+    namespace: default
+  note: 'invalid metrics (1 invalid out of 2), first error is: failed to get s1-metric-api-predicted_replicass
+    external metric value: failed to get s1-metric-api-predicted_replicass external
+    metric: unable to get external metric default/s1-metric-api-predicted_replicass/&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name:
+    nodeapp-deployment-scaler,},MatchExpressions:[]LabelSelectorRequirement{},}: unable
+    to fetch metrics from external metrics API: rpc error: code = Unknown desc = error
+    when getting metric values metric:s1-metric-api-predicted_replicass encountered
+    error'
+  reason: FailedComputeMetricsReplicas
+  regarding:
+    apiVersion: autoscaling/v2
+    kind: HorizontalPodAutoscaler
+    name: keda-hpa-nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14179"
+    uid: 48c5b064-ef9d-425f-8c8a-06457e00ca84
+  reportingController: horizontal-pod-autoscaler
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: horizontal-pod-autoscaler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-hpa-nodeapp-deployment-scaler.17ee21a5eb000cee
+    namespace: default
+  note: 'New size: 7; reason: All metrics below target'
+  reason: SuccessfulRescale
+  regarding:
+    apiVersion: autoscaling/v2
+    kind: HorizontalPodAutoscaler
+    name: keda-hpa-nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "16374"
+    uid: 48c5b064-ef9d-425f-8c8a-06457e00ca84
+  reportingController: horizontal-pod-autoscaler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee214749a527ac
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-6zhzk to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15926"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee21476f4c7bc9
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15930"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee2149880cde2d
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 2.93s (9.005s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15930"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee21498aa485b4
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15930"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee214990bdb576
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15930"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-6zhzk.17ee21a5ec5249f8
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-6zhzk
+    namespace: default
+    resourceVersion: "15930"
+    uid: c7882e4f-2eb1-407b-b4bc-056d6a51ccc7
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee215c57876a6e
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-8499s to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16137"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee215c83724275
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16140"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee216045b87fbc
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 2.857s (16.144s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16140"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee216048a5b279
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16140"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:44Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee216050163dfd
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16140"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-8499s.17ee21a5ec41f7bb
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-8499s
+    namespace: default
+    resourceVersion: "16140"
+    uid: 1b29238a-c423-4762-89ad-a566006e8032
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee215c5841ec21
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-9xp65 to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16143"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee215c85208721
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16148"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee2161a96d99de
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 3.183s (22.083s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16148"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee2161abb91858
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16148"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:50Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee2161b2d9e87e
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16148"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-9xp65.17ee21a5ec820632
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-9xp65
+    namespace: default
+    resourceVersion: "16148"
+    uid: 5c3dafcc-b07e-4377-a3b6-73d81b481ca2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee2147493f6975
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-bdlwb to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15922"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee21476ecf77d1
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15925"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee21482b90d4c1
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 3.166s (3.166s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15925"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee21482e8596e9
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15925"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee214833d97f20
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15925"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-bdlwb.17ee21a5ec8e57bf
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-bdlwb
+    namespace: default
+    resourceVersion: "15925"
+    uid: c0977c92-7d8f-4cc0-b556-9a9e82a2719d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee215c5840e07a
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-cjsqt to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16144"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee215c84a47ba2
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16147"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee2160ebb59956
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 2.784s (18.909s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16147"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee2160ee225803
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16147"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee2160f3bccba2
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16147"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-cjsqt.17ee21a5ec77848c
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-cjsqt
+    namespace: default
+    resourceVersion: "16147"
+    uid: 8fe3b601-5288-4636-a992-73611165a680
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee215c56d13825
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-pvz9r to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16133"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee215c818cbc99
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16136"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee215ef349620a
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 10.497s (10.498s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16136"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee215ef5ef134d
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16136"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:39Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee215efa48db5d
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16136"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-pvz9r.17ee21a5ec6703c3
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-pvz9r
+    namespace: default
+    resourceVersion: "16136"
+    uid: b3c28af1-4ecb-445a-94d8-be5ebeb9eed9
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee214749a4d64a
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-t8nnj to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15927"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:58Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee21476f478fd0
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15931"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee2148d95c6507
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 2.915s (6.074s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15931"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee2148dbf5dd2f
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15931"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee2148e10a0023
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15931"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-t8nnj.17ee21a5ec970c59
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-t8nnj
+    namespace: default
+    resourceVersion: "15931"
+    uid: fd0e144a-ac61-47f0-8e98-813c6b5fc072
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee215c578a63c7
+    namespace: default
+  note: Successfully assigned default/nodeapp-deployment-5768865f95-v7kgg to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16138"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee215c82469b14
+    namespace: default
+  note: Pulling image "shreyas2204/my-node-app"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16141"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee215f9b64e3fd
+    namespace: default
+  note: 'Successfully pulled image "shreyas2204/my-node-app" in 2.82s (13.306s including
+    waiting). Image size: 126900052 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16141"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee215f9e53225f
+    namespace: default
+  note: Created container nodeserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16141"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:41Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee215fa4443bf5
+    namespace: default
+  note: Started container nodeserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16141"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95-v7kgg.17ee21a5ec9cc10f
+    namespace: default
+  note: Stopping container nodeserver
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{nodeserver}
+    kind: Pod
+    name: nodeapp-deployment-5768865f95-v7kgg
+    namespace: default
+    resourceVersion: "16141"
+    uid: c1a07a9f-41cf-4614-a67d-c5a42323ca68
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee214748d6ebed
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-bdlwb'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "15919"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee2147493b2e16
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-t8nnj'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "15919"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee2147493fffec
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-6zhzk'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "15919"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee215c5662edcd
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-pvz9r'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16130"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee215c56d4210f
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-v7kgg'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16130"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee215c56d75f24
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-8499s'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16130"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee215c578de378
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-9xp65'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16130"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee215c579091ad
+    namespace: default
+  note: 'Created pod: nodeapp-deployment-5768865f95-cjsqt'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16130"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec0c0845
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-8499s'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec1424fe
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-6zhzk'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec14a03c
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-bdlwb'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec14dbd9
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-pvz9r'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec15d276
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-9xp65'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec169885
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-t8nnj'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec16e24e
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-v7kgg'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-5768865f95.17ee21a5ec172614
+    namespace: default
+  note: 'Deleted pod: nodeapp-deployment-5768865f95-cjsqt'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: nodeapp-deployment-5768865f95
+    namespace: default
+    resourceVersion: "16686"
+    uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 17
+  deprecatedFirstTimestamp: "2024-08-22T16:39:04Z"
+  deprecatedLastTimestamp: "2024-08-22T18:27:51Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee1a68bf527b62
+    namespace: default
+  note: Scaler metrics-api is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "2641"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 17
+  deprecatedFirstTimestamp: "2024-08-22T16:39:04Z"
+  deprecatedLastTimestamp: "2024-08-22T18:27:51Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee1a68bf53b89f
+    namespace: default
+  note: Scaler prometheus is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "2641"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:27:23Z"
+  deprecatedLastTimestamp: "2024-08-22T18:27:23Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2051e7125c57
+    namespace: default
+  note: 'error requesting metrics endpoint: valueLocation must point to value of type
+    number or a string representing a Quantity got: ''Null'''
+  reason: KEDAScalerFailed
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14177"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 62
+  deprecatedFirstTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:39:36Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2070cbc634c0
+    namespace: default
+  note: Scaler prometheus is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14374"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 9
+  deprecatedFirstTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:30:48Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2070cbc6cd8a
+    namespace: default
+  note: Scaler metrics-api is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14374"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2070cc45a9b6
+    namespace: default
+  note: Started scalers watch
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14374"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2070cc47a3ed
+    namespace: default
+  note: ScaledObject is ready for scaling
+  reason: ScaledObjectReady
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14374"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T18:29:36Z"
+  deprecatedLastTimestamp: "2024-08-22T18:30:36Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee2070ce661ead
+    namespace: default
+  note: 'error requesting metrics endpoint: valueLocation must point to value of type
+    number or a string representing a Quantity got: ''Null'''
+  reason: KEDAScalerFailed
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "14374"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 10
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:09Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee21431ad345ef
+    namespace: default
+  note: Scaler prometheus is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "15838"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 10
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:09Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee21431ad3c968
+    namespace: default
+  note: Scaler metrics-api is built.
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "15838"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee21431b347b6a
+    namespace: default
+  note: Started scalers watch
+  reason: KEDAScalersStarted
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "15838"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee21431b357c32
+    namespace: default
+  note: ScaledObject is ready for scaling
+  reason: ScaledObjectReady
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "15838"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:45:39Z"
+  deprecatedSource:
+    component: keda-operator
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment-scaler.17ee21431e252863
+    namespace: default
+  note: 'error requesting metrics endpoint: valueLocation must point to value of type
+    number or a string representing a Quantity got: ''Null'''
+  reason: KEDAScalerFailed
+  regarding:
+    apiVersion: keda.sh/v1alpha1
+    kind: ScaledObject
+    name: nodeapp-deployment-scaler
+    namespace: default
+    resourceVersion: "15838"
+    uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  reportingController: keda-operator
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:57Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment.17ee21474824dd94
+    namespace: default
+  note: Scaled up replica set nodeapp-deployment-5768865f95 to 10 from 7
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nodeapp-deployment
+    namespace: default
+    resourceVersion: "15917"
+    uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedLastTimestamp: "2024-08-22T18:46:27Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment.17ee215c55661d0d
+    namespace: default
+  note: Scaled up replica set nodeapp-deployment-5768865f95 to 15 from 10
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nodeapp-deployment
+    namespace: default
+    resourceVersion: "16127"
+    uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedLastTimestamp: "2024-08-22T18:51:43Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: nodeapp-deployment.17ee21a5eb862337
+    namespace: default
+  note: Scaled down replica set nodeapp-deployment-5768865f95 to 7 from 15
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nodeapp-deployment
+    namespace: default
+    resourceVersion: "16684"
+    uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
+  reportingController: deployment-controller
+  type: Normal
+kind: EventList

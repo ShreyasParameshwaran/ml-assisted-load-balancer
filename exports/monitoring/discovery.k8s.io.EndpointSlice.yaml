@@ -1,0 +1,580 @@
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+      namespace: monitoring
+      uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+    generateName: alertmanager-operated-
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: alertmanager-operated
+      managed-by: prometheus-operator
+      operated-alertmanager: "true"
+      service.kubernetes.io/headless: ""
+    name: alertmanager-operated-9bqwz
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: alertmanager-operated
+      uid: 9bf21696-658b-4db7-b491-d50620ad2e90
+  ports:
+  - name: http-web
+    port: 9093
+    protocol: TCP
+  - name: udp-mesh
+    port: 9094
+    protocol: UDP
+  - name: tcp-mesh
+    port: 9094
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints: null
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:52Z"
+    generateName: ingress-monitor-nginx-ingress-nginx-controller-admission-
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: ingress-nginx-4.11.1
+      kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller-admission
+    name: ingress-monitor-nginx-ingress-nginx-controller-admission-7njpg
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ingress-monitor-nginx-ingress-nginx-controller-admission
+      uid: bad95891-bc36-416e-83d2-a0e6f83f8675
+  ports: null
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints: null
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:57Z"
+    generateName: ingress-monitor-nginx-ingress-nginx-controller-
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: ingress-nginx-4.11.1
+      kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller
+    name: ingress-monitor-nginx-ingress-nginx-controller-kssn4
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ingress-monitor-nginx-ingress-nginx-controller
+      uid: 824a440f-8178-4689-b46c-006814fcc960
+  ports: null
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints: null
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:19:00Z"
+    generateName: ingress-monitor-nginx-ingress-nginx-controller-metrics-
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: ingress-nginx-4.11.1
+      kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller-metrics
+    name: ingress-monitor-nginx-ingress-nginx-controller-metrics-hcqvw
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ingress-monitor-nginx-ingress-nginx-controller-metrics
+      uid: b487ed77-4a62-490c-b01c-d831c5012a2a
+  ports: null
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: keda-admission-webhooks-79b9989f88-4bcb2
+      namespace: monitoring
+      uid: d0c7277a-cdda-4cce-b02a-35c60eebd2b1
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:41:51Z"
+    generateName: keda-admission-webhooks-
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-admission-webhooks
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: keda-2.15.0
+      kubernetes.io/service-name: keda-admission-webhooks
+    name: keda-admission-webhooks-twfn9
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: keda-admission-webhooks
+      uid: 61f347a6-3ceb-466d-b0ee-6b3c0588b241
+  ports:
+  - name: https
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.78
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: keda-operator-9b5f476c6-fld55
+      namespace: monitoring
+      uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T18:44:22Z"
+    generateName: keda-operator-
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: keda-2.15.0
+      kubernetes.io/service-name: keda-operator
+    name: keda-operator-7pxwx
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: keda-operator
+      uid: 9f760f5a-e2fc-48f2-8285-00410682309c
+  ports:
+  - name: metricsservice
+    port: 9666
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.12
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: keda-operator-metrics-apiserver-57d97c9b9c-d9xq8
+      namespace: monitoring
+      uid: eea6cfbd-5655-4c80-877a-1d26724d8358
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:40:12Z"
+    generateName: keda-operator-metrics-apiserver-
+    labels:
+      app: keda-operator-metrics-apiserver
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator-metrics-apiserver
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: keda-2.15.0
+      kubernetes.io/service-name: keda-operator-metrics-apiserver
+    name: keda-operator-metrics-apiserver-c5b95
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: keda-operator-metrics-apiserver
+      uid: b1abe514-51b4-436e-b655-c857141c0ac1
+  ports:
+  - name: https
+    port: 6443
+    protocol: TCP
+  - name: metrics
+    port: 8080
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.10
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-grafana-648c7ff88d-cf44m
+      namespace: monitoring
+      uid: f60a331f-26c7-497b-88ea-29ab381330bf
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:38:41Z"
+    generateName: prometheus-grafana-
+    labels:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: grafana
+      app.kubernetes.io/version: 11.1.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: grafana-8.3.8
+      kubernetes.io/service-name: prometheus-grafana
+    name: prometheus-grafana-xfqbb
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-grafana
+      uid: a3718601-f310-4d4f-b82d-8ca265e27334
+  ports:
+  - name: http-web
+    port: 3000
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+      namespace: monitoring
+      uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+    generateName: prometheus-kube-prometheus-alertmanager-
+    labels:
+      app: kube-prometheus-stack-alertmanager
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      kubernetes.io/service-name: prometheus-kube-prometheus-alertmanager
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-alertmanager-cpzpz
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-alertmanager
+      uid: 4fe32648-6047-4a45-9058-162694a7480b
+  ports:
+  - appProtocol: http
+    name: reloader-web
+    port: 8080
+    protocol: TCP
+  - name: http-web
+    port: 9093
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-kube-prometheus-operator-597f45494f-9d9mw
+      namespace: monitoring
+      uid: 729b17b9-c4f2-46d3-a47c-24e350b361f2
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:18Z"
+    generateName: prometheus-kube-prometheus-operator-
+    labels:
+      app: kube-prometheus-stack-operator
+      app.kubernetes.io/component: prometheus-operator
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      kubernetes.io/service-name: prometheus-kube-prometheus-operator
+      release: prometheus
+    name: prometheus-kube-prometheus-operator-cnrd8
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-operator
+      uid: 5594b8ee-fd61-440a-b868-f2575c2e8214
+  ports:
+  - name: https
+    port: 10250
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-prometheus-kube-prometheus-prometheus-0
+      namespace: monitoring
+      uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+    generateName: prometheus-kube-prometheus-prometheus-
+    labels:
+      app: kube-prometheus-stack-prometheus
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      heritage: Helm
+      kubernetes.io/service-name: prometheus-kube-prometheus-prometheus
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-prometheus-nkf2z
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-prometheus-prometheus
+      uid: b4ba4f82-c27c-4130-976f-bd540e42fa75
+  ports:
+  - appProtocol: http
+    name: reloader-web
+    port: 8080
+    protocol: TCP
+  - name: http-web
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.7
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-kube-state-metrics-688d66b5b8-q28rn
+      namespace: monitoring
+      uid: def02a97-b89c-49ff-b749-9dedbb793421
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:37Z"
+    generateName: prometheus-kube-state-metrics-
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: kube-state-metrics
+      app.kubernetes.io/version: 2.13.0
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: kube-state-metrics-5.25.1
+      kubernetes.io/service-name: prometheus-kube-state-metrics
+      release: prometheus
+    name: prometheus-kube-state-metrics-gmkg5
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-kube-state-metrics
+      uid: 99394e3b-3094-4e9f-8ced-a5c9a05054a1
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.8
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    hostname: prometheus-prometheus-kube-prometheus-prometheus-0
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-prometheus-kube-prometheus-prometheus-0
+      namespace: monitoring
+      uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+    generateName: prometheus-operated-
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: prometheus-operated
+      managed-by: prometheus-operator
+      operated-prometheus: "true"
+      service.kubernetes.io/headless: ""
+    name: prometheus-operated-klfm2
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-operated
+      uid: 448bceae-e2a0-4c41-81ec-fe147dc83087
+  ports:
+  - name: http-web
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.49.2
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: prometheus-prometheus-node-exporter-q2597
+      namespace: monitoring
+      uid: 72c965a1-9729-4e42-8af0-ef5685a2a45e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:31:03Z"
+    generateName: prometheus-prometheus-node-exporter-
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: prometheus-node-exporter
+      app.kubernetes.io/part-of: prometheus-node-exporter
+      app.kubernetes.io/version: 1.8.2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: prometheus-node-exporter-4.37.3
+      jobLabel: node-exporter
+      kubernetes.io/service-name: prometheus-prometheus-node-exporter
+      release: prometheus
+    name: prometheus-prometheus-node-exporter-jf59s
+    namespace: monitoring
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: prometheus-prometheus-node-exporter
+      uid: 73c360cc-2374-4746-b0d3-d2761410186d
+  ports:
+  - name: http-metrics
+    port: 9100
+    protocol: TCP
+kind: EndpointSliceList

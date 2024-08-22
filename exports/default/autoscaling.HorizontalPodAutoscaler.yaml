@@ -1,0 +1,50 @@
+apiVersion: autoscaling/v2
+items:
+- apiVersion: autoscaling/v2
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations: {}
+    labels:
+      app.kubernetes.io/managed-by: keda-operator
+      app.kubernetes.io/name: keda-hpa-nodeapp-deployment-scaler
+      app.kubernetes.io/part-of: nodeapp-deployment-scaler
+      app.kubernetes.io/version: 2.15.0
+      scaledobject.keda.sh/name: nodeapp-deployment-scaler
+    name: keda-hpa-nodeapp-deployment-scaler
+    namespace: default
+    ownerReferences:
+    - apiVersion: keda.sh/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ScaledObject
+      name: nodeapp-deployment-scaler
+      uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+  spec:
+    maxReplicas: 15
+    metrics:
+    - external:
+        metric:
+          name: s0-prometheus
+          selector:
+            matchLabels:
+              scaledobject.keda.sh/name: nodeapp-deployment-scaler
+        target:
+          averageValue: "500"
+          type: AverageValue
+      type: External
+    - external:
+        metric:
+          name: s1-metric-api-predicted_replicas
+          selector:
+            matchLabels:
+              scaledobject.keda.sh/name: nodeapp-deployment-scaler
+        target:
+          averageValue: "1"
+          type: AverageValue
+      type: External
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: nodeapp-deployment
+kind: HorizontalPodAutoscalerList

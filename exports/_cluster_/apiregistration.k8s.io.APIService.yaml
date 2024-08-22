@@ -1,0 +1,324 @@
+apiVersion: apiregistration.k8s.io/v1
+items:
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.
+  spec:
+    groupPriorityMinimum: 18000
+    version: v1
+    versionPriority: 1
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.admissionregistration.k8s.io
+  spec:
+    group: admissionregistration.k8s.io
+    groupPriorityMinimum: 16700
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.apiextensions.k8s.io
+  spec:
+    group: apiextensions.k8s.io
+    groupPriorityMinimum: 16700
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.apps
+  spec:
+    group: apps
+    groupPriorityMinimum: 17800
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.authentication.k8s.io
+  spec:
+    group: authentication.k8s.io
+    groupPriorityMinimum: 17700
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.authorization.k8s.io
+  spec:
+    group: authorization.k8s.io
+    groupPriorityMinimum: 17600
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.autoscaling
+  spec:
+    group: autoscaling
+    groupPriorityMinimum: 17500
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.batch
+  spec:
+    group: batch
+    groupPriorityMinimum: 17400
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.certificates.k8s.io
+  spec:
+    group: certificates.k8s.io
+    groupPriorityMinimum: 17300
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.coordination.k8s.io
+  spec:
+    group: coordination.k8s.io
+    groupPriorityMinimum: 16500
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.discovery.k8s.io
+  spec:
+    group: discovery.k8s.io
+    groupPriorityMinimum: 16200
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.events.k8s.io
+  spec:
+    group: events.k8s.io
+    groupPriorityMinimum: 17750
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.flowcontrol.apiserver.k8s.io
+  spec:
+    group: flowcontrol.apiserver.k8s.io
+    groupPriorityMinimum: 16100
+    version: v1
+    versionPriority: 21
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: "true"
+    name: v1.monitoring.coreos.com
+  spec:
+    group: monitoring.coreos.com
+    groupPriorityMinimum: 1000
+    version: v1
+    versionPriority: 100
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.networking.k8s.io
+  spec:
+    group: networking.k8s.io
+    groupPriorityMinimum: 17200
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.node.k8s.io
+  spec:
+    group: node.k8s.io
+    groupPriorityMinimum: 16300
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.policy
+  spec:
+    group: policy
+    groupPriorityMinimum: 17100
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.rbac.authorization.k8s.io
+  spec:
+    group: rbac.authorization.k8s.io
+    groupPriorityMinimum: 17000
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.scheduling.k8s.io
+  spec:
+    group: scheduling.k8s.io
+    groupPriorityMinimum: 16600
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1.storage.k8s.io
+  spec:
+    group: storage.k8s.io
+    groupPriorityMinimum: 16800
+    version: v1
+    versionPriority: 15
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: "true"
+    name: v1alpha1.eventing.keda.sh
+  spec:
+    group: eventing.keda.sh
+    groupPriorityMinimum: 1000
+    version: v1alpha1
+    versionPriority: 100
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: "true"
+    name: v1alpha1.keda.sh
+  spec:
+    group: keda.sh
+    groupPriorityMinimum: 1000
+    version: v1alpha1
+    versionPriority: 100
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: "true"
+    name: v1alpha1.monitoring.coreos.com
+  spec:
+    group: monitoring.coreos.com
+    groupPriorityMinimum: 1000
+    version: v1alpha1
+    versionPriority: 100
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: keda
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: v1beta1.external.metrics.k8s.io
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: v1beta1.external.metrics.k8s.io
+  spec:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFoTVJBd0RnWURWUVFLRXdkTFJVUkIKVDFKSE1RMHdDd1lEVlFRREV3UkxSVVJCTUI0WERUSTBNRGd5TWpFMU16RTBObG9YRFRNME1EZ3lNREUyTXpFMApObG93SVRFUU1BNEdBMVVFQ2hNSFMwVkVRVTlTUnpFTk1Bc0dBMVVFQXhNRVMwVkVRVENDQVNJd0RRWUpLb1pJCmh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBT05laXF2L3dhV05UaEQ3a2ZkSkpXWmo2d3pCeWZuOFdBSUkKSTVBb2I1QXNsUllJSi93VUJkazRNanlBRzlTUU1Cc0RLMk9WUlRCdlVzRnV5OHRtdmZXSEFnUWxoL1ZzUzB4YgpMWEZtRmJqK2hkUVNWK3BiK3dGRk9sQzlpWWhDZGxxMWkzVkxod282cGpSaWV2VkZNcEdHdGhxdzlXUFlIeEJzCnR2UzhKaVdSVVBPZTVsYkRRdHh0RndCdDdJbHQwaXUvL3U3bVZBejZPaXBFY2V0Nmd3MENpZDJ3dGxELzhJb2EKNnZLL04rY0pxZHoxajNwZWtlMWEwOEhXQjllalRpaFFrMzNiR216RkFwRnlTZWdqZkh0N2N2enJ4SGZxMlpiNQowbXEyMG9DeTdpTytqTWpkUldzT1Qrck5QWEJJVDdockVhWU5VMmVJSUF1RFQ0YTYrNXNDQXdFQUFhTlRNRkV3CkRnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME9CQllFRkxqVWlwK0sKaE40VkhQRTVReE9DYk8rckJSaElNQThHQTFVZEVRUUlNQWFDQkV0RlJFRXdEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQU40d2xoa2lwemhvMzNHOEt2bDczaHhDRngxOXUxdTFPdnNzWUUzUEU0S0VYZCthMkNvMUtOdHRjTCtCCkVLb3NVb2VmZHVPRkhtd1hXVnZUSC9SQ0JsMUI0a3BqblFHZXFvZURhekNkbjZSYTh2S0tTazNOMEdvNUNXK3UKYjlRNU4yTEt3MW0vdU05clpQY2c5NjQrNDdRa3BMcDJCUGhBUThpTWVvYXl6NGg4ZWR0WjlaTWpncVNVcHUydQowRU1ka2JtVDBxVm1RVFA5Q2poN1k2WGZWY2EzdHFJUGtkUUl4MFZQS2s5endlNnZMekp3UVlHbUF4cFA3S3VxClJXaldQYll3ODR4RldVTzJBdTBndS9YWit2OENTcUJEMG9NNGt3TnA3aFRYb3dHL2cxTTc2cnBsVUVhSGdRK0IKakk4bjFCNmlLb2g4a2s3SmJ3VytyLy9lcWpnPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    group: external.metrics.k8s.io
+    groupPriorityMinimum: 100
+    service:
+      name: keda-operator-metrics-apiserver
+      namespace: monitoring
+      port: 443
+    version: v1beta1
+    versionPriority: 100
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v1beta3.flowcontrol.apiserver.k8s.io
+  spec:
+    group: flowcontrol.apiserver.k8s.io
+    groupPriorityMinimum: 16100
+    version: v1beta3
+    versionPriority: 18
+- apiVersion: apiregistration.k8s.io/v1
+  kind: APIService
+  metadata:
+    annotations: {}
+    labels:
+      kube-aggregator.kubernetes.io/automanaged: onstart
+    name: v2.autoscaling
+  spec:
+    group: autoscaling
+    groupPriorityMinimum: 17500
+    version: v2
+    versionPriority: 30
+kind: APIServiceList

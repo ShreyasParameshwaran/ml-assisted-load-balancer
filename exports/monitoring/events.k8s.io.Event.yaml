@@ -1,0 +1,521 @@
+apiVersion: events.k8s.io/v1
+items:
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee206678f1b375
+    namespace: monitoring
+  note: Successfully assigned monitoring/keda-operator-67948646f7-vztfb to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14338"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:52Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:52Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee20669ae57511
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14341"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee2067cbe687fd
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda:2.15.0" in 5.117s (5.117s
+    including waiting). Image size: 164656672 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14341"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee2067d0b1abba
+    namespace: monitoring
+  note: Created container keda-operator
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14341"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee2067d870ac92
+    namespace: monitoring
+  note: Started container keda-operator
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14341"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7-vztfb.17ee213f1c5227fe
+    namespace: monitoring
+  note: Stopping container keda-operator
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-67948646f7-vztfb
+    namespace: monitoring
+    resourceVersion: "14341"
+    uid: 14af5568-fd1f-45ab-80c0-66db59269473
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7.17ee206678a981e7
+    namespace: monitoring
+  note: 'Created pod: keda-operator-67948646f7-vztfb'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-67948646f7
+    namespace: monitoring
+    resourceVersion: "14335"
+    uid: 1395ae43-a2ca-4a1e-bbbf-7db3a6eca63c
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-67948646f7.17ee213f1c45af40
+    namespace: monitoring
+  note: 'Deleted pod: keda-operator-67948646f7-vztfb'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-67948646f7
+    namespace: monitoring
+    resourceVersion: "15843"
+    uid: 1395ae43-a2ca-4a1e-bbbf-7db3a6eca63c
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6-fld55.17ee213970c7e483
+    namespace: monitoring
+  note: Successfully assigned monitoring/keda-operator-9b5f476c6-fld55 to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-9b5f476c6-fld55
+    namespace: monitoring
+    resourceVersion: "15785"
+    uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:43:58Z"
+  deprecatedLastTimestamp: "2024-08-22T18:43:58Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6-fld55.17ee213991c4db81
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-9b5f476c6-fld55
+    namespace: monitoring
+    resourceVersion: "15787"
+    uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6-fld55.17ee213a77e94c26
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda:2.15.0" in 3.861s (3.861s
+    including waiting). Image size: 164656672 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-9b5f476c6-fld55
+    namespace: monitoring
+    resourceVersion: "15787"
+    uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6-fld55.17ee213a7c778025
+    namespace: monitoring
+  note: Created container keda-operator
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-9b5f476c6-fld55
+    namespace: monitoring
+    resourceVersion: "15787"
+    uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6-fld55.17ee213a829b11f1
+    namespace: monitoring
+  note: Started container keda-operator
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-9b5f476c6-fld55
+    namespace: monitoring
+    resourceVersion: "15787"
+    uid: 368ee0cc-c066-451a-b17f-953f893214d5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-9b5f476c6.17ee2139705be20a
+    namespace: monitoring
+  note: 'Created pod: keda-operator-9b5f476c6-fld55'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-9b5f476c6
+    namespace: monitoring
+    resourceVersion: "15782"
+    uid: 97c4da47-12ff-4956-9f1c-6c749c8419d2
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-f5nqt.17ee206cd724dd59
+    namespace: monitoring
+  note: Stopping container keda-operator
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-f5nqt
+    namespace: monitoring
+    resourceVersion: "1390"
+    uid: 5b988749-b99b-435e-826b-baf01cb50a86
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f.17ee206cd7081092
+    namespace: monitoring
+  note: 'Deleted pod: keda-operator-fbc8b6c8f-f5nqt'
+  reason: SuccessfulDelete
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-fbc8b6c8f
+    namespace: monitoring
+    resourceVersion: "14399"
+    uid: 91e3470a-4ee4-4c8c-bf94-61dea08d750d
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedLastTimestamp: "2024-08-22T18:28:51Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator.17ee206677e25020
+    namespace: monitoring
+  note: Scaled up replica set keda-operator-67948646f7 to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator
+    namespace: monitoring
+    resourceVersion: "14334"
+    uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:19Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator.17ee206cd693398e
+    namespace: monitoring
+  note: Scaled down replica set keda-operator-fbc8b6c8f to 0 from 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator
+    namespace: monitoring
+    resourceVersion: "14346"
+    uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedLastTimestamp: "2024-08-22T18:43:57Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator.17ee21396f813399
+    namespace: monitoring
+  note: Scaled up replica set keda-operator-9b5f476c6 to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator
+    namespace: monitoring
+    resourceVersion: "15781"
+    uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:22Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator.17ee213f1bec04af
+    namespace: monitoring
+  note: Scaled down replica set keda-operator-67948646f7 to 0 from 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator
+    namespace: monitoring
+    resourceVersion: "15793"
+    uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:29:35Z"
+  deprecatedLastTimestamp: "2024-08-22T18:29:35Z"
+  deprecatedSource:
+    component: keda-operator-67948646f7-vztfb_bcc480e0-ddaf-494e-958a-47e95b1fd284
+  eventTime: null
+  kind: Event
+  metadata:
+    name: operator.keda.sh.17ee2070be00d92f
+    namespace: monitoring
+  note: keda-operator-67948646f7-vztfb_bcc480e0-ddaf-494e-958a-47e95b1fd284 became
+    leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: operator.keda.sh
+    namespace: monitoring
+    resourceVersion: "14432"
+    uid: 9abeb481-a324-455c-8173-8cd7926551bd
+  reportingController: keda-operator-67948646f7-vztfb_bcc480e0-ddaf-494e-958a-47e95b1fd284
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedLastTimestamp: "2024-08-22T18:44:39Z"
+  deprecatedSource:
+    component: keda-operator-9b5f476c6-fld55_5fa71df2-1bb4-4067-bb52-10806708ba09
+  eventTime: null
+  kind: Event
+  metadata:
+    name: operator.keda.sh.17ee21430e0d9122
+    namespace: monitoring
+  note: keda-operator-9b5f476c6-fld55_5fa71df2-1bb4-4067-bb52-10806708ba09 became
+    leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: operator.keda.sh
+    namespace: monitoring
+    resourceVersion: "15876"
+    uid: 9abeb481-a324-455c-8173-8cd7926551bd
+  reportingController: keda-operator-9b5f476c6-fld55_5fa71df2-1bb4-4067-bb52-10806708ba09
+  type: Normal
+kind: EventList

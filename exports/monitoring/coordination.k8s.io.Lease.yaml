@@ -1,0 +1,26 @@
+apiVersion: coordination.k8s.io/v1
+items:
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    annotations: {}
+    name: ingress-monitor-nginx-ingress-nginx-leader
+    namespace: monitoring
+  spec:
+    acquireTime: "2024-08-08T15:30:32.625956Z"
+    holderIdentity: ingress-monitor-nginx-ingress-nginx-controller-585944744f-7fd5k
+    leaseDurationSeconds: 30
+    leaseTransitions: 0
+    renewTime: "2024-08-08T16:11:49.142301Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    name: operator.keda.sh
+    namespace: monitoring
+  spec:
+    acquireTime: "2024-08-22T18:44:39.204933Z"
+    holderIdentity: keda-operator-9b5f476c6-fld55_5fa71df2-1bb4-4067-bb52-10806708ba09
+    leaseDurationSeconds: 15
+    leaseTransitions: 3
+    renewTime: "2024-08-22T18:56:37.246571Z"
+kind: LeaseList
