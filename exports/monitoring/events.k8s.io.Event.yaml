@@ -1,0 +1,3953 @@
+apiVersion: events.k8s.io/v1
+items:
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23b29b003ec5
+    namespace: monitoring
+  note: Successfully assigned monitoring/alertmanager-prometheus-kube-prometheus-alertmanager-0
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1187"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23b2bb96729f
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23c667981fac
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    in 4.042s (1m24.49s including waiting). Image size: 42227201 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23c66a171333
+    namespace: monitoring
+  note: Created container init-config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23c6716e3ec5
+    namespace: monitoring
+  note: Started container init-config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:42Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23c681787d89
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus/alertmanager:v0.27.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d7e7edba4e
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus/alertmanager:v0.27.0" in 10.36s
+    (1m14.733s including waiting). Image size: 70251154 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d7eee557a7
+    namespace: monitoring
+  note: Created container alertmanager
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d7f6adc9f7
+    namespace: monitoring
+  note: Started container alertmanager
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d7f6b8c0c0
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d7fa41300a
+    namespace: monitoring
+  note: Created container config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:57Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee23d802ffe595
+    namespace: monitoring
+  note: Started container config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1189"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a076e17b7
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a2ecef1d7
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a384f02d3
+    namespace: monitoring
+  note: Created container init-config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a4c7f1e53
+    namespace: monitoring
+  note: Started container init-config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a5218573c
+    namespace: monitoring
+  note: Container image "quay.io/prometheus/alertmanager:v0.27.0" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a55c79023
+    namespace: monitoring
+  note: Created container alertmanager
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a5a54053c
+    namespace: monitoring
+  note: Started container alertmanager
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{alertmanager}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a5a64ae40
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a5dda895c
+    namespace: monitoring
+  note: Created container config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0.17ee240a63f5750f
+    namespace: monitoring
+  note: Started container config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1632"
+    uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: statefulset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: alertmanager-prometheus-kube-prometheus-alertmanager.17ee23b29a9824d4
+    namespace: monitoring
+  note: create Pod alertmanager-prometheus-kube-prometheus-alertmanager-0 in StatefulSet
+    alertmanager-prometheus-kube-prometheus-alertmanager successful
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: alertmanager-prometheus-kube-prometheus-alertmanager
+    namespace: monitoring
+    resourceVersion: "1185"
+    uid: a2e4a38e-37ec-4384-8c91-20f560be145b
+  reportingController: statefulset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23c1e61074b1
+    namespace: monitoring
+  note: Successfully assigned monitoring/keda-admission-webhooks-79b9989f88-gkr99
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1396"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 8
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:26Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23c1ee5ef207
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "certificates" : secret "kedaorg-certs"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1403"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:39Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:39Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23e1b18b9e38
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda-admission-webhooks:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1403"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:44Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:44Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23e2f29a28de
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda-admission-webhooks:2.15.0"
+    in 5.386s (5.386s including waiting). Image size: 58163179 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1403"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:45Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:45Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23e2f75e36f8
+    namespace: monitoring
+  note: Created container keda-admission-webhooks
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1403"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:45Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:45Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee23e2fee74344
+    namespace: monitoring
+  note: Started container keda-admission-webhooks
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1403"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee240a0b7eb8c1
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1809"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee240a3bec9143
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda-admission-webhooks:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1809"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee240f20ccc021
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda-admission-webhooks:2.15.0"
+    in 6.527s (21.019s including waiting). Image size: 58163179 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1809"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee240f23c7915d
+    namespace: monitoring
+  note: Created container keda-admission-webhooks
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1809"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:54Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88-gkr99.17ee240f2c29203f
+    namespace: monitoring
+  note: Started container keda-admission-webhooks
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-admission-webhooks}
+    kind: Pod
+    name: keda-admission-webhooks-79b9989f88-gkr99
+    namespace: monitoring
+    resourceVersion: "1809"
+    uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks-79b9989f88.17ee23c1e5ccd65b
+    namespace: monitoring
+  note: 'Created pod: keda-admission-webhooks-79b9989f88-gkr99'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-admission-webhooks-79b9989f88
+    namespace: monitoring
+    resourceVersion: "1388"
+    uid: ed0ec546-58b1-42b5-b47c-a4a1074c6cbb
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-admission-webhooks.17ee23c1e529ac8f
+    namespace: monitoring
+  note: Scaled up replica set keda-admission-webhooks-79b9989f88 to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-admission-webhooks
+    namespace: monitoring
+    resourceVersion: "1382"
+    uid: f4083d5d-5814-48b8-8e22-3c6da38a33a3
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23c1e60f55f2
+    namespace: monitoring
+  note: Successfully assigned monitoring/keda-operator-fbc8b6c8f-7kl5n to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1397"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23c20712c1cc
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1404"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23d10a390785
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda:2.15.0" in 17.546s (1m4.477s
+    including waiting). Image size: 164656672 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1404"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:31Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23d1169baca8
+    namespace: monitoring
+  note: Created container keda-operator
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1404"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:31Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23d11f512d4c
+    namespace: monitoring
+  note: Started container keda-operator
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1404"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:31Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:31Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee23dfccc1c94d
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda:2.15.0" in 6.4s (1m2.011s
+    including waiting). Image size: 164656672 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1404"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee240a0f6cc5d6
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1746"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee240a4dbcacea
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1746"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee24121a6c3deb
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda:2.15.0" in 1.838s (33.498s
+    including waiting). Image size: 164656672 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1746"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee24121cc17f87
+    namespace: monitoring
+  note: Created container keda-operator
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1746"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:07Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f-7kl5n.17ee24122376f93b
+    namespace: monitoring
+  note: Started container keda-operator
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator}
+    kind: Pod
+    name: keda-operator-fbc8b6c8f-7kl5n
+    namespace: monitoring
+    resourceVersion: "1746"
+    uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-fbc8b6c8f.17ee23c1e5ccb540
+    namespace: monitoring
+  note: 'Created pod: keda-operator-fbc8b6c8f-7kl5n'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-fbc8b6c8f
+    namespace: monitoring
+    resourceVersion: "1386"
+    uid: e980202b-72d9-46b6-9e01-f5daf60c9cc1
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23c1e5ecbe7a
+    namespace: monitoring
+  note: Successfully assigned monitoring/keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1395"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 8
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:26Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23c1ee5d8b75
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "certificates" : secret "kedaorg-certs"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1400"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:41Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:41Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23e229fcb5e7
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda-metrics-apiserver:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1400"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23e4816eb767
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda-metrics-apiserver:2.15.0"
+    in 6.691s (10.057s including waiting). Image size: 109011140 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1400"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23e4880441f2
+    namespace: monitoring
+  note: Created container keda-operator-metrics-apiserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1400"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:51Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee23e48f30220f
+    namespace: monitoring
+  note: Started container keda-operator-metrics-apiserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1400"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee240a0f0b27cd
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1756"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee240a4da3d6af
+    namespace: monitoring
+  note: Pulling image "ghcr.io/kedacore/keda-metrics-apiserver:2.15.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1756"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee2411acddc739
+    namespace: monitoring
+  note: 'Successfully pulled image "ghcr.io/kedacore/keda-metrics-apiserver:2.15.0"
+    in 1.949s (31.662s including waiting). Image size: 109011140 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1756"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee2411b16c0b9a
+    namespace: monitoring
+  note: Created container keda-operator-metrics-apiserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1756"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:05Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k.17ee2411b8269989
+    namespace: monitoring
+  note: Started container keda-operator-metrics-apiserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{keda-operator-metrics-apiserver}
+    kind: Pod
+    name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+    namespace: monitoring
+    resourceVersion: "1756"
+    uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver-57d97c9b9c.17ee23c1e5ab3e63
+    namespace: monitoring
+  note: 'Created pod: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: keda-operator-metrics-apiserver-57d97c9b9c
+    namespace: monitoring
+    resourceVersion: "1387"
+    uid: da7ee8ca-5b35-47fa-8929-47eb793dc8f0
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator-metrics-apiserver.17ee23c1e5294d8f
+    namespace: monitoring
+  note: Scaled up replica set keda-operator-metrics-apiserver-57d97c9b9c to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator-metrics-apiserver
+    namespace: monitoring
+    resourceVersion: "1383"
+    uid: d7063946-e772-4ae0-8f04-fc761619c8b4
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:23Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: keda-operator.17ee23c1e52a2afb
+    namespace: monitoring
+  note: Scaled up replica set keda-operator-fbc8b6c8f to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keda-operator
+    namespace: monitoring
+    resourceVersion: "1384"
+    uid: fff035f9-d220-4215-a9ec-001f508ff45b
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:28Z"
+  deprecatedSource:
+    component: keda-operator-fbc8b6c8f-7kl5n_ad0c7727-66af-4c0b-b7e4-010168fdbaf4
+  eventTime: null
+  kind: Event
+  metadata:
+    name: operator.keda.sh.17ee23d127ae3083
+    namespace: monitoring
+  note: keda-operator-fbc8b6c8f-7kl5n_ad0c7727-66af-4c0b-b7e4-010168fdbaf4 became
+    leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: operator.keda.sh
+    namespace: monitoring
+    resourceVersion: "1576"
+    uid: 26ae34a5-bcc4-424e-8250-c583cc2869a8
+  reportingController: keda-operator-fbc8b6c8f-7kl5n_ad0c7727-66af-4c0b-b7e4-010168fdbaf4
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:48Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:48Z"
+  deprecatedSource:
+    component: keda-operator-fbc8b6c8f-7kl5n_8a69b07d-e65e-4663-953e-e4c3d0df6f75
+  eventTime: null
+  kind: Event
+  metadata:
+    name: operator.keda.sh.17ee23e3e2a31bfb
+    namespace: monitoring
+  note: keda-operator-fbc8b6c8f-7kl5n_8a69b07d-e65e-4663-953e-e4c3d0df6f75 became
+    leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: operator.keda.sh
+    namespace: monitoring
+    resourceVersion: "1719"
+    uid: 26ae34a5-bcc4-424e-8250-c583cc2869a8
+  reportingController: keda-operator-fbc8b6c8f-7kl5n_8a69b07d-e65e-4663-953e-e4c3d0df6f75
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:24Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:24Z"
+  deprecatedSource:
+    component: keda-operator-fbc8b6c8f-7kl5n_bb2f5992-272b-4ed7-96cb-d9c14ca82d8b
+  eventTime: null
+  kind: Event
+  metadata:
+    name: operator.keda.sh.17ee24162a8227aa
+    namespace: monitoring
+  note: keda-operator-fbc8b6c8f-7kl5n_bb2f5992-272b-4ed7-96cb-d9c14ca82d8b became
+    leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: operator.keda.sh
+    namespace: monitoring
+    resourceVersion: "2431"
+    uid: 26ae34a5-bcc4-424e-8250-c583cc2869a8
+  reportingController: keda-operator-fbc8b6c8f-7kl5n_bb2f5992-272b-4ed7-96cb-d9c14ca82d8b
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23b2b4070668
+    namespace: monitoring
+  note: Successfully assigned monitoring/prometheus-grafana-648c7ff88d-dk744 to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1210"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23b2d3271d48
+    namespace: monitoring
+  note: Pulling image "quay.io/kiwigrid/k8s-sidecar:1.27.4"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cacfd772f8
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/kiwigrid/k8s-sidecar:1.27.4" in 18.928s
+    (1m43.023s including waiting). Image size: 83038110 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cad6e70b16
+    namespace: monitoring
+  note: Created container grafana-sc-dashboard
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23caded2da29
+    namespace: monitoring
+  note: Started container grafana-sc-dashboard
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cadeded8f7
+    namespace: monitoring
+  note: Container image "quay.io/kiwigrid/k8s-sidecar:1.27.4" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cae0e42b7c
+    namespace: monitoring
+  note: Created container grafana-sc-datasources
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cae62fedb1
+    namespace: monitoring
+  note: Started container grafana-sc-datasources
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23cae63a19a8
+    namespace: monitoring
+  note: Pulling image "docker.io/grafana/grafana:11.1.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23de4f42a19e
+    namespace: monitoring
+  note: 'Successfully pulled image "docker.io/grafana/grafana:11.1.0" in 27.503s (1m23.366s
+    including waiting). Image size: 452648644 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23de5a4545cf
+    namespace: monitoring
+  note: Created container grafana
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23de611d3495
+    namespace: monitoring
+  note: Started container grafana
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T19:32:25Z"
+  deprecatedLastTimestamp: "2024-08-22T19:32:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee23de6360188e
+    namespace: monitoring
+  note: 'Readiness probe failed: Get "http://10.244.0.10:3000/api/health": dial tcp
+    10.244.0.10:3000: connect: connection refused'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1213"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a0795d149
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a2eb6b888
+    namespace: monitoring
+  note: Container image "quay.io/kiwigrid/k8s-sidecar:1.27.4" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a38c8f00b
+    namespace: monitoring
+  note: Created container grafana-sc-dashboard
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a4c2c473a
+    namespace: monitoring
+  note: Started container grafana-sc-dashboard
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-dashboard}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a4c41bb5e
+    namespace: monitoring
+  note: Container image "quay.io/kiwigrid/k8s-sidecar:1.27.4" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a55fe3edf
+    namespace: monitoring
+  note: Created container grafana-sc-datasources
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a5acf3790
+    namespace: monitoring
+  note: Started container grafana-sc-datasources
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-sc-datasources}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a5adfe2cc
+    namespace: monitoring
+  note: Container image "docker.io/grafana/grafana:11.1.0" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a5f23992f
+    namespace: monitoring
+  note: Created container grafana
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d-dk744.17ee240a6507b371
+    namespace: monitoring
+  note: Started container grafana
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: prometheus-grafana-648c7ff88d-dk744
+    namespace: monitoring
+    resourceVersion: "1695"
+    uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d.17ee23b103118910
+    namespace: monitoring
+  note: 'Error creating: pods "prometheus-grafana-648c7ff88d-" is forbidden: error
+    looking up service account monitoring/prometheus-grafana: serviceaccount "prometheus-grafana"
+    not found'
+  reason: FailedCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: prometheus-grafana-648c7ff88d
+    namespace: monitoring
+    resourceVersion: "993"
+    uid: b1a4c8c1-6567-4d54-a05d-984c3f48cfe7
+  reportingController: replicaset-controller
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana-648c7ff88d.17ee23b2b3aaf797
+    namespace: monitoring
+  note: 'Created pod: prometheus-grafana-648c7ff88d-dk744'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: prometheus-grafana-648c7ff88d
+    namespace: monitoring
+    resourceVersion: "1208"
+    uid: 966aa218-b105-4f81-9cc6-cede44316797
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-grafana.17ee23b2b31180bd
+    namespace: monitoring
+  note: Scaled up replica set prometheus-grafana-648c7ff88d to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: prometheus-grafana
+    namespace: monitoring
+    resourceVersion: "1207"
+    uid: 6e3e7ea0-3c14-4296-9cfe-7499453db012
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23b19c70fa88
+    namespace: monitoring
+  note: Successfully assigned monitoring/prometheus-kube-prometheus-operator-597f45494f-qslgh
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1045"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23b1a68ee53d
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "tls-secret" : secret "prometheus-kube-prometheus-admission"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1048"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23b1de6ca5fc
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus-operator/prometheus-operator:v0.75.2"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1048"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23c1c855af3a
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus-operator/prometheus-operator:v0.75.2"
+    in 11.606s (1m8.348s including waiting). Image size: 60880385 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1048"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23c1ccf6408d
+    namespace: monitoring
+  note: Created container kube-prometheus-stack
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1048"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee23c1d471efae
+    namespace: monitoring
+  note: Started container kube-prometheus-stack
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1048"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240a05d8efe9
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240a253d54bd
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-operator:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240a30994853
+    namespace: monitoring
+  note: Created container kube-prometheus-stack
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240a41125342
+    namespace: monitoring
+  note: Started container kube-prometheus-stack
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 6
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240a526d8857
+    namespace: monitoring
+  note: 'Readiness probe failed: Get "https://10.244.0.23:10250/healthz": dial tcp
+    10.244.0.23:10250: connect: connection refused'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T19:35:39Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee240b7e606581
+    namespace: monitoring
+  note: 'Liveness probe failed: Get "https://10.244.0.23:10250/healthz": dial tcp
+    10.244.0.23:10250: connect: connection refused'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:59Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh.17ee2410269a5b80
+    namespace: monitoring
+  note: Container kube-prometheus-stack failed liveness probe, will be restarted
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-prometheus-stack}
+    kind: Pod
+    name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+    namespace: monitoring
+    resourceVersion: "1431"
+    uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator-597f45494f.17ee23b19c345c1c
+    namespace: monitoring
+  note: 'Created pod: prometheus-kube-prometheus-operator-597f45494f-qslgh'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: prometheus-kube-prometheus-operator-597f45494f
+    namespace: monitoring
+    resourceVersion: "1043"
+    uid: 10e77d2f-cf43-4b0b-8e95-059ab926faa2
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-prometheus-operator.17ee23b19be1bc3a
+    namespace: monitoring
+  note: Scaled up replica set prometheus-kube-prometheus-operator-597f45494f to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: prometheus-kube-prometheus-operator
+    namespace: monitoring
+    resourceVersion: "1042"
+    uid: 9c79e524-22e9-4deb-a1d8-8f0269b89a48
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee23b203026e05
+    namespace: monitoring
+  note: Successfully assigned monitoring/prometheus-kube-state-metrics-688d66b5b8-45sgn
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1116"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:15Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:15Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee23b22153dc82
+    namespace: monitoring
+  note: Pulling image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.13.0"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1118"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee23c36200281b
+    namespace: monitoring
+  note: 'Successfully pulled image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.13.0"
+    in 6.873s (1m14.099s including waiting). Image size: 45474319 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1118"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee23c36690d6e2
+    namespace: monitoring
+  note: Created container kube-state-metrics
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1118"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee23c36f579ab5
+    namespace: monitoring
+  note: Started container kube-state-metrics
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1118"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240a0444b4cc
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240a253ee663
+    namespace: monitoring
+  note: Container image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.13.0"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240a3194a2ae
+    namespace: monitoring
+  note: Created container kube-state-metrics
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:02Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240a4144103a
+    namespace: monitoring
+  note: Started container kube-state-metrics
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T19:35:41Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240c2923d5ff
+    namespace: monitoring
+  note: 'Liveness probe failed: Get "http://10.244.0.20:8080/livez": dial tcp 10.244.0.20:8080:
+    connect: connection refused'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 3
+  deprecatedFirstTimestamp: "2024-08-22T19:35:45Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee240d1501e4a7
+    namespace: monitoring
+  note: 'Readiness probe failed: Get "http://10.244.0.20:8080/readyz": dial tcp 10.244.0.20:8080:
+    connect: connection refused'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:01Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:01Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn.17ee2410d14bdfb1
+    namespace: monitoring
+  note: Container kube-state-metrics failed liveness probe, will be restarted
+  reason: Killing
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-state-metrics}
+    kind: Pod
+    name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+    namespace: monitoring
+    resourceVersion: "1469"
+    uid: b607aee4-82d4-4c9b-bb00-67500963c600
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics-688d66b5b8.17ee23b202b0c4c5
+    namespace: monitoring
+  note: 'Created pod: prometheus-kube-state-metrics-688d66b5b8-45sgn'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: prometheus-kube-state-metrics-688d66b5b8
+    namespace: monitoring
+    resourceVersion: "1114"
+    uid: e3d84d35-d583-4f0c-bf30-555656a3ca26
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:14Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-kube-state-metrics.17ee23b2025e683e
+    namespace: monitoring
+  note: Scaled up replica set prometheus-kube-state-metrics-688d66b5b8 to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: prometheus-kube-state-metrics
+    namespace: monitoring
+    resourceVersion: "1113"
+    uid: 827148a5-2a1a-44e9-92f1-d36be961f26e
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b0c55af78d
+    namespace: monitoring
+  note: Successfully assigned monitoring/prometheus-prometheus-kube-prometheus-prometheus-0
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "962"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 4
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b0cebdc43a
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "config" : secret "prometheus-prometheus-kube-prometheus-prometheus"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b0cebe1cee
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "web-config" : secret "prometheus-prometheus-kube-prometheus-prometheus-web-config"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b0cebe641b
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "tls-assets" : secret "prometheus-prometheus-kube-prometheus-prometheus-tls-assets-0"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 4
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b0cebf1812
+    namespace: monitoring
+  note: 'MountVolume.SetUp failed for volume "prometheus-prometheus-kube-prometheus-prometheus-rulefiles-0"
+    : configmap "prometheus-prometheus-kube-prometheus-prometheus-rulefiles-0" not
+    found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:17Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23b2a872205a
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23c576a81372
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    in 8.936s (1m20.769s including waiting). Image size: 42227201 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23c57adfded7
+    namespace: monitoring
+  note: Created container init-config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23c581ae1d5b
+    namespace: monitoring
+  note: Started container init-config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedLastTimestamp: "2024-08-22T19:30:38Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23c58fd37d13
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus/prometheus:v2.53.1"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d57e6888cc
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus/prometheus:v2.53.1" in 19.129s
+    (1m8.427s including waiting). Image size: 270502825 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d58ce02033
+    namespace: monitoring
+  note: Created container prometheus
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d59485583f
+    namespace: monitoring
+  note: Started container prometheus
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d5948fe8c1
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d59849eabb
+    namespace: monitoring
+  note: Created container config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:47Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee23d5a0134410
+    namespace: monitoring
+  note: Started container config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "964"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a041cf39c
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a2539ea82
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a3194a27b
+    namespace: monitoring
+  note: Created container init-config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a46edd21f
+    namespace: monitoring
+  note: Started container init-config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.initContainers{init-config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a556bdefb
+    namespace: monitoring
+  note: Container image "quay.io/prometheus/prometheus:v2.53.1" already present on
+    machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a59102332
+    namespace: monitoring
+  note: Created container prometheus
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a5cd6f6ae
+    namespace: monitoring
+  note: Started container prometheus
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a5ce3c044
+    namespace: monitoring
+  note: Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.75.2"
+    already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a628f13b2
+    namespace: monitoring
+  note: Created container config-reloader
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus-0.17ee240a65f69139
+    namespace: monitoring
+  note: Started container config-reloader
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{config-reloader}
+    kind: Pod
+    name: prometheus-prometheus-kube-prometheus-prometheus-0
+    namespace: monitoring
+    resourceVersion: "1643"
+    uid: b73ddfca-a730-4cd7-a337-c288c9567318
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 4
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedSource:
+    component: statefulset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus.17ee23b0bf9ee6e9
+    namespace: monitoring
+  note: 'create Pod prometheus-prometheus-kube-prometheus-prometheus-0 in StatefulSet
+    prometheus-prometheus-kube-prometheus-prometheus failed error: pods "prometheus-prometheus-kube-prometheus-prometheus-0"
+    is forbidden: error looking up service account monitoring/prometheus-kube-prometheus-prometheus:
+    serviceaccount "prometheus-kube-prometheus-prometheus" not found'
+  reason: FailedCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: prometheus-prometheus-kube-prometheus-prometheus
+    namespace: monitoring
+    resourceVersion: "954"
+    uid: 91af8eeb-9308-43f5-8770-ded9844882d5
+  reportingController: statefulset-controller
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:09Z"
+  deprecatedSource:
+    component: statefulset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-kube-prometheus-prometheus.17ee23b0c5018c91
+    namespace: monitoring
+  note: create Pod prometheus-prometheus-kube-prometheus-prometheus-0 in StatefulSet
+    prometheus-prometheus-kube-prometheus-prometheus successful
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: prometheus-prometheus-kube-prometheus-prometheus
+    namespace: monitoring
+    resourceVersion: "956"
+    uid: 91af8eeb-9308-43f5-8770-ded9844882d5
+  reportingController: statefulset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee23b2d9ac8bfa
+    namespace: monitoring
+  note: Successfully assigned monitoring/prometheus-prometheus-node-exporter-xd9cz
+    to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1240"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee23b2f4daa2b7
+    namespace: monitoring
+  note: Pulling image "quay.io/prometheus/node-exporter:v1.8.2"
+  reason: Pulling
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1242"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee23ccf459bcf6
+    namespace: monitoring
+  note: 'Successfully pulled image "quay.io/prometheus/node-exporter:v1.8.2" in 9.202s
+    (1m51.66s including waiting). Image size: 23274918 bytes.'
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1242"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee23ccf7c9f2a2
+    namespace: monitoring
+  note: Created container node-exporter
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1242"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:31:10Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee23ccfe873394
+    namespace: monitoring
+  note: Started container node-exporter
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1242"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee240a09912839
+    namespace: monitoring
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1549"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee240a2a4b955c
+    namespace: monitoring
+  note: Container image "quay.io/prometheus/node-exporter:v1.8.2" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1549"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee240a35a625ba
+    namespace: monitoring
+  note: Created container node-exporter
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1549"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter-xd9cz.17ee240a4b45060a
+    namespace: monitoring
+  note: Started container node-exporter
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{node-exporter}
+    kind: Pod
+    name: prometheus-prometheus-node-exporter-xd9cz
+    namespace: monitoring
+    resourceVersion: "1549"
+    uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 10
+  deprecatedFirstTimestamp: "2024-08-22T19:29:13Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:15Z"
+  deprecatedSource:
+    component: daemonset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter.17ee23b1a61cd375
+    namespace: monitoring
+  note: 'Error creating: pods "prometheus-prometheus-node-exporter-" is forbidden:
+    error looking up service account monitoring/prometheus-prometheus-node-exporter:
+    serviceaccount "prometheus-prometheus-node-exporter" not found'
+  reason: FailedCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: prometheus-prometheus-node-exporter
+    namespace: monitoring
+    resourceVersion: "1063"
+    uid: c585caab-48f3-4e8c-8cd9-32c7e91115ad
+  reportingController: daemonset-controller
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:18Z"
+  deprecatedSource:
+    component: daemonset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: prometheus-prometheus-node-exporter.17ee23b2d91d8839
+    namespace: monitoring
+  note: 'Created pod: prometheus-prometheus-node-exporter-xd9cz'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: prometheus-prometheus-node-exporter
+    namespace: monitoring
+    resourceVersion: "1066"
+    uid: c585caab-48f3-4e8c-8cd9-32c7e91115ad
+  reportingController: daemonset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedSource:
+    component: persistentvolume-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-prometheus-alertmanager-0.17ee23b113e5dc60
+    namespace: monitoring
+  note: Two claims are bound to the same volume, this one is bound incorrectly
+  reason: ClaimMisbound
+  regarding:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: storage-prometheus-alertmanager-0
+    namespace: monitoring
+    resourceVersion: "1001"
+    uid: d801da30-f024-40e5-ad4c-63ce5e8cc1bf
+  reportingController: persistentvolume-controller
+  type: Warning
+kind: EventList

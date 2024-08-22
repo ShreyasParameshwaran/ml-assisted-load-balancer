@@ -1,0 +1,222 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48","leaseDurationSeconds":15,"acquireTime":"2024-08-22T19:36:14Z","renewTime":"2024-08-22T19:37:19Z","leaderTransitions":0}'
+    name: k8s.io-minikube-hostpath
+    namespace: kube-system
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:08Z"
+    labels:
+      k8s-app: kube-dns
+      kubernetes.io/cluster-service: "true"
+      kubernetes.io/name: CoreDNS
+    name: kube-dns
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 10.244.0.36
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: coredns-7db6d8ff4d-cw9rj
+        namespace: kube-system
+        uid: b2bca304-452d-4382-9540-2d3872a43d6d
+    ports:
+    - name: dns-tcp
+      port: 53
+      protocol: TCP
+    - name: dns
+      port: 53
+      protocol: UDP
+    - name: metrics
+      port: 9153
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:46Z"
+    labels:
+      app: kube-prometheus-stack-coredns
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      jobLabel: coredns
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-coredns
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 10.244.0.36
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: coredns-7db6d8ff4d-cw9rj
+        namespace: kube-system
+        uid: b2bca304-452d-4382-9540-2d3872a43d6d
+    ports:
+    - name: http-metrics
+      port: 9153
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:43Z"
+    labels:
+      app: kube-prometheus-stack-kube-controller-manager
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      jobLabel: kube-controller-manager
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-controller-manager
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: kube-controller-manager-minikube
+        namespace: kube-system
+        uid: d97336a9-f704-43d9-aa4f-3167e29cec82
+    ports:
+    - name: http-metrics
+      port: 10257
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:45Z"
+    labels:
+      app: kube-prometheus-stack-kube-etcd
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      jobLabel: kube-etcd
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-etcd
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: etcd-minikube
+        namespace: kube-system
+        uid: 8ee4198d-a29a-432f-820e-d6c487967230
+    ports:
+    - name: http-metrics
+      port: 2381
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:46Z"
+    labels:
+      app: kube-prometheus-stack-kube-proxy
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      jobLabel: kube-proxy
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-proxy
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: kube-proxy-wllfb
+        namespace: kube-system
+        uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+    ports:
+    - name: http-metrics
+      port: 10249
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:47Z"
+    labels:
+      app: kube-prometheus-stack-kube-scheduler
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      jobLabel: kube-scheduler
+      release: prometheus
+      service.kubernetes.io/headless: ""
+    name: prometheus-kube-prometheus-kube-scheduler
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: kube-scheduler-minikube
+        namespace: kube-system
+        uid: ab020414-72ec-409f-aafa-a951c55ed4a6
+    ports:
+    - name: http-metrics
+      port: 10259
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations: {}
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      k8s-app: kubelet
+    name: prometheus-kube-prometheus-kubelet
+    namespace: kube-system
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      targetRef:
+        kind: Node
+        name: minikube
+        uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
+    ports:
+    - name: https-metrics
+      port: 10250
+      protocol: TCP
+    - name: http-metrics
+      port: 10255
+      protocol: TCP
+    - name: cadvisor
+      port: 4194
+      protocol: TCP
+kind: EndpointsList

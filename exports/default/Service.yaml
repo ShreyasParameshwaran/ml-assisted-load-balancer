@@ -1,0 +1,192 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-app
+      meta.helm.sh/release-namespace: default
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller
+    namespace: default
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.96.53.53
+    clusterIPs:
+    - 10.96.53.53
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: http
+      name: http
+      nodePort: 32262
+      port: 80
+      protocol: TCP
+      targetPort: http
+    - appProtocol: https
+      name: https
+      nodePort: 30741
+      port: 443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: LoadBalancer
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-app
+      meta.helm.sh/release-namespace: default
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller-admission
+    namespace: default
+  spec:
+    clusterIP: 10.99.246.26
+    clusterIPs:
+    - 10.99.246.26
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - appProtocol: https
+      name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: webhook
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: ingress-app
+      meta.helm.sh/release-namespace: default
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller-metrics
+    namespace: default
+  spec:
+    clusterIP: 10.111.123.26
+    clusterIPs:
+    - 10.111.123.26
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 10254
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/name: ingress-nginx
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations: {}
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+  spec:
+    clusterIP: 10.96.0.1
+    clusterIPs:
+    - 10.96.0.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations: {}
+    name: ml-api-service
+    namespace: default
+  spec:
+    clusterIP: 10.101.53.44
+    clusterIPs:
+    - 10.101.53.44
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: ml-api
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations: {}
+    name: nodeapp-service
+    namespace: default
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.100.135.236
+    clusterIPs:
+    - 10.100.135.236
+    externalIPs:
+    - 10.0.0.100
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 32000
+      port: 5000
+      protocol: TCP
+      targetPort: 4000
+    selector:
+      app: nodeapp
+    sessionAffinity: None
+    type: LoadBalancer
+kind: ServiceList

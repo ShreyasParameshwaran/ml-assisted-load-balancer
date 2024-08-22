@@ -1,0 +1,376 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:15Z"
+    labels:
+      managed-by: prometheus-operator
+      operated-alertmanager: "true"
+      service.kubernetes.io/headless: ""
+    name: alertmanager-operated
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - hostname: alertmanager-prometheus-kube-prometheus-alertmanager-0
+      ip: 10.244.0.25
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+        namespace: monitoring
+        uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+    ports:
+    - name: udp-mesh
+      port: 9094
+      protocol: UDP
+    - name: tcp-mesh
+      port: 9094
+      protocol: TCP
+    - name: http-web
+      port: 9093
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-08T16:12:34Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller
+    namespace: monitoring
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-08T16:12:34Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller-admission
+    namespace: monitoring
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-08T16:12:34Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-monitor-nginx
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-monitor-nginx-ingress-nginx-controller-metrics
+    namespace: monitoring
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:14Z"
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-admission-webhooks
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-admission-webhooks
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.27
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: keda-admission-webhooks-79b9989f88-gkr99
+        namespace: monitoring
+        uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
+    ports:
+    - name: https
+      port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:29Z"
+    labels:
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-operator
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.32
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: keda-operator-fbc8b6c8f-7kl5n
+        namespace: monitoring
+        uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
+    ports:
+    - name: metricsservice
+      port: 9666
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:11Z"
+    labels:
+      app: keda-operator-metrics-apiserver
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/instance: keda
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: keda-operator-metrics-apiserver
+      app.kubernetes.io/part-of: keda-operator
+      app.kubernetes.io/version: 2.15.0
+      helm.sh/chart: keda-2.15.0
+    name: keda-operator-metrics-apiserver
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.33
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
+        namespace: monitoring
+        uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
+    ports:
+    - name: metrics
+      port: 8080
+      protocol: TCP
+    - name: https
+      port: 6443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:11Z"
+    labels:
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: grafana
+      app.kubernetes.io/version: 11.1.0
+      helm.sh/chart: grafana-8.3.8
+    name: prometheus-grafana
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.24
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-grafana-648c7ff88d-dk744
+        namespace: monitoring
+        uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
+    ports:
+    - name: http-web
+      port: 3000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:14Z"
+    labels:
+      app: kube-prometheus-stack-alertmanager
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-alertmanager
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.25
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: alertmanager-prometheus-kube-prometheus-alertmanager-0
+        namespace: monitoring
+        uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
+    ports:
+    - appProtocol: http
+      name: reloader-web
+      port: 8080
+      protocol: TCP
+    - name: http-web
+      port: 9093
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:00Z"
+    labels:
+      app: kube-prometheus-stack-operator
+      app.kubernetes.io/component: prometheus-operator
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+    name: prometheus-kube-prometheus-operator
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.23
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-kube-prometheus-operator-597f45494f-qslgh
+        namespace: monitoring
+        uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
+    ports:
+    - name: https
+      port: 10250
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:13Z"
+    labels:
+      app: kube-prometheus-stack-prometheus
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+      self-monitor: "true"
+    name: prometheus-kube-prometheus-prometheus
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.22
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-prometheus-kube-prometheus-prometheus-0
+        namespace: monitoring
+        uid: b73ddfca-a730-4cd7-a337-c288c9567318
+    ports:
+    - name: http-web
+      port: 9090
+      protocol: TCP
+    - appProtocol: http
+      name: reloader-web
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:15Z"
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: kube-state-metrics
+      app.kubernetes.io/version: 2.13.0
+      helm.sh/chart: kube-state-metrics-5.25.1
+      release: prometheus
+    name: prometheus-kube-state-metrics
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 10.244.0.20
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-kube-state-metrics-688d66b5b8-45sgn
+        namespace: monitoring
+        uid: b607aee4-82d4-4c9b-bb00-67500963c600
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:17Z"
+    labels:
+      managed-by: prometheus-operator
+      operated-prometheus: "true"
+      service.kubernetes.io/headless: ""
+    name: prometheus-operated
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - hostname: prometheus-prometheus-kube-prometheus-prometheus-0
+      ip: 10.244.0.22
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-prometheus-kube-prometheus-prometheus-0
+        namespace: monitoring
+        uid: b73ddfca-a730-4cd7-a337-c288c9567318
+    ports:
+    - name: http-web
+      port: 9090
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:31:11Z"
+    labels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: prometheus-node-exporter
+      app.kubernetes.io/part-of: prometheus-node-exporter
+      app.kubernetes.io/version: 1.8.2
+      helm.sh/chart: prometheus-node-exporter-4.37.3
+      jobLabel: node-exporter
+      release: prometheus
+    name: prometheus-prometheus-node-exporter
+    namespace: monitoring
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: prometheus-prometheus-node-exporter-xd9cz
+        namespace: monitoring
+        uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
+    ports:
+    - name: http-metrics
+      port: 9100
+      protocol: TCP
+kind: EndpointsList

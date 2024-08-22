@@ -1,0 +1,436 @@
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+items:
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: catch-all
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 10000
+    priorityLevelConfiguration:
+      name: catch-all
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:unauthenticated
+        kind: Group
+      - group:
+          name: system:authenticated
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: endpoint-controller
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 150
+    priorityLevelConfiguration:
+      name: workload-high
+    rules:
+    - resourceRules:
+      - apiGroups:
+        - ""
+        namespaces:
+        - '*'
+        resources:
+        - endpoints
+        verbs:
+        - get
+        - create
+        - update
+      subjects:
+      - kind: User
+        user:
+          name: system:kube-controller-manager
+      - kind: ServiceAccount
+        serviceAccount:
+          name: endpoint-controller
+          namespace: kube-system
+      - kind: ServiceAccount
+        serviceAccount:
+          name: endpointslicemirroring-controller
+          namespace: kube-system
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: exempt
+  spec:
+    matchingPrecedence: 1
+    priorityLevelConfiguration:
+      name: exempt
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:masters
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: global-default
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 9900
+    priorityLevelConfiguration:
+      name: global-default
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:unauthenticated
+        kind: Group
+      - group:
+          name: system:authenticated
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: kube-controller-manager
+  spec:
+    distinguisherMethod:
+      type: ByNamespace
+    matchingPrecedence: 800
+    priorityLevelConfiguration:
+      name: workload-high
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - kind: User
+        user:
+          name: system:kube-controller-manager
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: kube-scheduler
+  spec:
+    distinguisherMethod:
+      type: ByNamespace
+    matchingPrecedence: 800
+    priorityLevelConfiguration:
+      name: workload-high
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - kind: User
+        user:
+          name: system:kube-scheduler
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: kube-system-service-accounts
+  spec:
+    distinguisherMethod:
+      type: ByNamespace
+    matchingPrecedence: 900
+    priorityLevelConfiguration:
+      name: workload-high
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - kind: ServiceAccount
+        serviceAccount:
+          name: '*'
+          namespace: kube-system
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: probes
+  spec:
+    matchingPrecedence: 2
+    priorityLevelConfiguration:
+      name: exempt
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - /healthz
+        - /readyz
+        - /livez
+        verbs:
+        - get
+      subjects:
+      - group:
+          name: system:unauthenticated
+        kind: Group
+      - group:
+          name: system:authenticated
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: service-accounts
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 9000
+    priorityLevelConfiguration:
+      name: workload-low
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:serviceaccounts
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: system-leader-election
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 100
+    priorityLevelConfiguration:
+      name: leader-election
+    rules:
+    - resourceRules:
+      - apiGroups:
+        - coordination.k8s.io
+        namespaces:
+        - '*'
+        resources:
+        - leases
+        verbs:
+        - get
+        - create
+        - update
+      subjects:
+      - kind: User
+        user:
+          name: system:kube-controller-manager
+      - kind: User
+        user:
+          name: system:kube-scheduler
+      - kind: ServiceAccount
+        serviceAccount:
+          name: '*'
+          namespace: kube-system
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: system-node-high
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 400
+    priorityLevelConfiguration:
+      name: node-high
+    rules:
+    - resourceRules:
+      - apiGroups:
+        - ""
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - nodes
+        - nodes/status
+        verbs:
+        - '*'
+      - apiGroups:
+        - coordination.k8s.io
+        namespaces:
+        - '*'
+        resources:
+        - leases
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:nodes
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: system-nodes
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 500
+    priorityLevelConfiguration:
+      name: system
+    rules:
+    - nonResourceRules:
+      - nonResourceURLs:
+        - '*'
+        verbs:
+        - '*'
+      resourceRules:
+      - apiGroups:
+        - '*'
+        clusterScope: true
+        namespaces:
+        - '*'
+        resources:
+        - '*'
+        verbs:
+        - '*'
+      subjects:
+      - group:
+          name: system:nodes
+        kind: Group
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: FlowSchema
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: workload-leader-election
+  spec:
+    distinguisherMethod:
+      type: ByUser
+    matchingPrecedence: 200
+    priorityLevelConfiguration:
+      name: leader-election
+    rules:
+    - resourceRules:
+      - apiGroups:
+        - ""
+        namespaces:
+        - '*'
+        resources:
+        - endpoints
+        - configmaps
+        verbs:
+        - get
+        - create
+        - update
+      - apiGroups:
+        - coordination.k8s.io
+        namespaces:
+        - '*'
+        resources:
+        - leases
+        verbs:
+        - get
+        - create
+        - update
+      subjects:
+      - kind: ServiceAccount
+        serviceAccount:
+          name: '*'
+          namespace: kube-system
+kind: FlowSchemaList

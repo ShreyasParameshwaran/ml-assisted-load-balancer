@@ -1,0 +1,6 @@
+kube_deployment_status_replicas
+nginx_ingress_controller_requests
+nginx_ingress_controller_request_size
+nginx_ingress_controller_nginx_process_connections
+nginx_ingress_controller_request_size
+container_memory_usage_bytes{pod=~"nodeapp-deployment.*"}

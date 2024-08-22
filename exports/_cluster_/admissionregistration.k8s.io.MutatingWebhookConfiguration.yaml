@@ -1,0 +1,51 @@
+apiVersion: admissionregistration.k8s.io/v1
+items:
+- apiVersion: admissionregistration.k8s.io/v1
+  kind: MutatingWebhookConfiguration
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: prometheus
+      meta.helm.sh/release-namespace: monitoring
+    labels:
+      app: kube-prometheus-stack-admission
+      app.kubernetes.io/component: prometheus-operator-webhook
+      app.kubernetes.io/instance: prometheus
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
+      app.kubernetes.io/part-of: kube-prometheus-stack
+      app.kubernetes.io/version: 61.7.2
+      chart: kube-prometheus-stack-61.7.2
+      heritage: Helm
+      release: prometheus
+    name: prometheus-kube-prometheus-admission
+  webhooks:
+  - admissionReviewVersions:
+    - v1
+    - v1beta1
+    clientConfig:
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkakNDQVJ5Z0F3SUJBZ0lSQU1DbFV3bCtsT254aFRFMjloUUNEcE13Q2dZSUtvWkl6ajBFQXdJd0R6RU4KTUFzR0ExVUVDaE1FYm1sc01UQWdGdzB5TkRBNE1EZ3hNekEyTURkYUdBOHlNVEkwTURjeE5URXpNRFl3TjFvdwpEekVOTUFzR0ExVUVDaE1FYm1sc01UQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJNcEFzdVowCm5tSzZqVXBlQXNUTlpFNHVyNFhPajZVc2dLdUUzKy81T1N6dE81d3hBRE0rNUVrMXFrOFNhcGRyZWZWbTlRZ1kKUVorS3hWQ3pBbDZabzdXalZ6QlZNQTRHQTFVZER3RUIvd1FFQXdJQ0JEQVRCZ05WSFNVRUREQUtCZ2dyQmdFRgpCUWNEQVRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSdVRnVjJLbUhYbWQ0N1RXZkFYbFh2CnVSeEpRVEFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBNUtWWjU2eUc5aWVpZDJFaGZmdHZJYkhUSUFaTGtlb0YKMjJJOE1qRkRYdkFDSUZNc24rc1IvSnRyZlFidk9JU29wZCtTVDVMMmYzK1BUQVd4NFZXZW9pK3UKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+      service:
+        name: prometheus-kube-prometheus-operator
+        namespace: monitoring
+        path: /admission-prometheusrules/mutate
+        port: 443
+    failurePolicy: Ignore
+    matchPolicy: Equivalent
+    name: prometheusrulemutate.monitoring.coreos.com
+    namespaceSelector: {}
+    objectSelector: {}
+    reinvocationPolicy: Never
+    rules:
+    - apiGroups:
+      - monitoring.coreos.com
+      apiVersions:
+      - '*'
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - prometheusrules
+      scope: '*'
+    sideEffects: None
+    timeoutSeconds: 10
+kind: MutatingWebhookConfigurationList

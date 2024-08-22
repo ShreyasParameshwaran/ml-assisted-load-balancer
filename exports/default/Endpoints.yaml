@@ -1,0 +1,188 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 10.244.0.29
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
+        namespace: default
+        uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
+    ports:
+    - appProtocol: https
+      name: https
+      port: 443
+      protocol: TCP
+    - appProtocol: http
+      name: http
+      port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller-admission
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 10.244.0.29
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
+        namespace: default
+        uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
+    ports:
+    - appProtocol: https
+      name: https-webhook
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      helm.sh/chart: ingress-nginx-4.11.1
+    name: ingress-app-ingress-nginx-controller-metrics
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 10.244.0.29
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
+        namespace: default
+        uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
+    ports:
+    - name: metrics
+      port: 10254
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations: {}
+    labels:
+      endpointslice.kubernetes.io/skip-mirror: "true"
+    name: kubernetes
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 192.168.49.2
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:04Z"
+    name: ml-api-service
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 10.244.0.31
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: ml-api-deployment-548d698969-hf64z
+        namespace: default
+        uid: 9a7b6402-dc4f-478f-8f11-a521069b6083
+    ports:
+    - port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:16Z"
+    name: nodeapp-service
+    namespace: default
+  subsets:
+  - addresses:
+    - ip: 10.244.0.21
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-qnq5b
+        namespace: default
+        uid: f170bec5-9e6f-445e-a6ac-6d6a33493564
+    - ip: 10.244.0.26
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-68hjv
+        namespace: default
+        uid: 2dfba524-1c06-4e11-bee0-3da4caffbab1
+    - ip: 10.244.0.28
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-lgpn6
+        namespace: default
+        uid: 8d7f3fe1-43b1-45a1-8da4-55b56b11efc1
+    - ip: 10.244.0.30
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-zx9xg
+        namespace: default
+        uid: 4414f10f-825e-4d43-bb71-f1ae2a9cf12e
+    - ip: 10.244.0.34
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-26jzn
+        namespace: default
+        uid: 0e5004dd-1230-4506-a7a1-a7b61118d01c
+    - ip: 10.244.0.35
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-mlmkv
+        namespace: default
+        uid: 9ca13671-b5f5-4783-983e-5f6c4724b505
+    - ip: 10.244.0.37
+      nodeName: minikube
+      targetRef:
+        kind: Pod
+        name: nodeapp-deployment-6cc654cb66-9lmdf
+        namespace: default
+        uid: e805f2d6-4bfc-486b-bf6a-84a0ecf560c3
+    ports:
+    - port: 4000
+      protocol: TCP
+kind: EndpointsList

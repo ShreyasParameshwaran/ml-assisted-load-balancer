@@ -1,0 +1,18 @@
+apiVersion: certificates.k8s.io/v1
+items:
+- apiVersion: certificates.k8s.io/v1
+  kind: CertificateSigningRequest
+  metadata:
+    generateName: csr-
+    name: csr-x95rl
+  spec:
+    groups:
+    - system:nodes
+    - system:authenticated
+    request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlIeE1JR1lBZ0VBTURZeEZUQVRCZ05WQkFvVERITjVjM1JsYlRwdWIyUmxjekVkTUJzR0ExVUVBeE1VYzNsegpkR1Z0T201dlpHVTZiV2x1YVd0MVltVXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBU1FPWHZ2CmlQT1dZYnRFNmlhNTZrQ2JGNFdYYjZjUDI2N3lxMitJSkNqc3Q2OHpwaCtCdEFqYnJTQkFiekJmbDd5WU5LTTYKZ3N4RFNEWkFkSm5vVnRaeG9BQXdDZ1lJS29aSXpqMEVBd0lEU0FBd1JRSWhBTGdaN3hkN0N3R0FORVZBTDBOYQpKZ1dqdmhZRnZrZ0p3Y1BwRCtVOHVMOGtBaUJVaVpiTHJrOGpOMjBwS1RjWnhoSFRxUlViY2F4NURHUVorVXQrCnc0aEN0dz09Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+    signerName: kubernetes.io/kube-apiserver-client-kubelet
+    usages:
+    - digital signature
+    - client auth
+    username: system:node:minikube
+kind: CertificateSigningRequestList

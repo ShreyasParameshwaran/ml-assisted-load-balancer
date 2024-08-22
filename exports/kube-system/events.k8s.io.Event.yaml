@@ -1,0 +1,1475 @@
+apiVersion: events.k8s.io/v1
+items:
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5c092c200
+    namespace: kube-system
+  note: Successfully assigned kube-system/coredns-7db6d8ff4d-cw9rj to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "384"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5e2eb7140
+    namespace: kube-system
+  note: Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5e574311a
+    namespace: kube-system
+  note: Created container coredns
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5ea7018be
+    namespace: kube-system
+  note: Started container coredns
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 5
+  deprecatedFirstTimestamp: "2024-08-22T19:28:23Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:52Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a612485f56
+    namespace: kube-system
+  note: 'Readiness probe failed: HTTP probe failed with statuscode: 503'
+  reason: Unhealthy
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a0eff984a
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a50f6c5f8
+    namespace: kube-system
+  note: Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a5410c1b6
+    namespace: kube-system
+  note: Created container coredns
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:34Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a596c79e6
+    namespace: kube-system
+  note: Started container coredns
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: replicaset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns-7db6d8ff4d.17ee23a5c041f655
+    namespace: kube-system
+  note: 'Created pod: coredns-7db6d8ff4d-cw9rj'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: coredns-7db6d8ff4d
+    namespace: kube-system
+    resourceVersion: "364"
+    uid: 7457546b-bc4a-4711-8331-9087e256993f
+  reportingController: replicaset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedSource:
+    component: deployment-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: coredns.17ee23a5a5805b9e
+    namespace: kube-system
+  note: Scaled up replica set coredns-7db6d8ff4d to 1
+  reason: ScalingReplicaSet
+  regarding:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: coredns
+    namespace: kube-system
+    resourceVersion: "297"
+    uid: fadad79a-9f01-407e-b859-21f0f18be68f
+  reportingController: deployment-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee23a1a98aded5
+    namespace: kube-system
+  note: Container image "registry.k8s.io/etcd:3.5.12-0" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee23a1ad1aab94
+    namespace: kube-system
+  note: Created container etcd
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee23a1b505470f
+    namespace: kube-system
+  note: Started container etcd
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee240920ec5f07
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee2409327b68f4
+    namespace: kube-system
+  note: Container image "registry.k8s.io/etcd:3.5.12-0" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee24093564c96d
+    namespace: kube-system
+  note: Created container etcd
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: etcd-minikube.17ee24093bd3782d
+    namespace: kube-system
+  note: Started container etcd
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedLastTimestamp: "2024-08-22T19:29:10Z"
+  deprecatedSource:
+    component: k8s.io/minikube-hostpath_minikube_cde5c9ce-558b-423f-9baf-d9d906fd8818
+  eventTime: null
+  kind: Event
+  metadata:
+    name: k8s.io-minikube-hostpath.17ee23b0f1d756c1
+    namespace: kube-system
+  note: minikube_cde5c9ce-558b-423f-9baf-d9d906fd8818 became leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: v1
+    kind: Endpoints
+    name: k8s.io-minikube-hostpath
+    namespace: kube-system
+    resourceVersion: "989"
+    uid: 8f93e0e5-6a3d-42dc-a25c-6f926533022b
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:14Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:14Z"
+  deprecatedSource:
+    component: k8s.io/minikube-hostpath_minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48
+  eventTime: null
+  kind: Event
+  metadata:
+    name: k8s.io-minikube-hostpath.17ee2413c5895cb7
+    namespace: kube-system
+  note: minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48 became leader
+  reason: LeaderElection
+  regarding:
+    apiVersion: v1
+    kind: Endpoints
+    name: k8s.io-minikube-hostpath
+    namespace: kube-system
+    resourceVersion: "2399"
+    uid: 45c526ed-fa6e-4657-ba16-f9e67288ab29
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1a9879b86
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-apiserver:v1.30.0" already present on
+    machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1ad1c6bf0
+    namespace: kube-system
+  note: Created container kube-apiserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1b3f7b61c
+    namespace: kube-system
+  note: Started container kube-apiserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee240922ff3f58
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee240932b3be32
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-apiserver:v1.30.0" already present on
+    machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee240935dd4aad
+    namespace: kube-system
+  note: Created container kube-apiserver
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-apiserver-minikube.17ee24093c977c2d
+    namespace: kube-system
+  note: Started container kube-apiserver
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1a90cf642
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-controller-manager:v1.30.0" already
+    present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1ac266f9d
+    namespace: kube-system
+  note: Created container kube-controller-manager
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1b3b2fef3
+    namespace: kube-system
+  note: Started container kube-controller-manager
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee2409234819de
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee240932a87ac1
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-controller-manager:v1.30.0" already
+    present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee240935dde3dc
+    namespace: kube-system
+  note: Created container kube-controller-manager
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-controller-manager-minikube.17ee24093c73535e
+    namespace: kube-system
+  note: Started container kube-controller-manager
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5b5c67108
+    namespace: kube-system
+  note: Successfully assigned kube-system/kube-proxy-wllfb to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "374"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5d54a7094
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-proxy:v1.30.0" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5d9b15758
+    namespace: kube-system
+  note: Created container kube-proxy
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5df8a4e72
+    namespace: kube-system
+  note: Started container kube-proxy
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee240a0d76c81a
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee240a362636e5
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-proxy:v1.30.0" already present on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee240a3d8023ce
+    namespace: kube-system
+  note: Created container kube-proxy
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy-wllfb.17ee240a4d096c83
+    namespace: kube-system
+  note: Started container kube-proxy
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedSource:
+    component: daemonset-controller
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-proxy.17ee23a5b5420836
+    namespace: kube-system
+  note: 'Created pod: kube-proxy-wllfb'
+  reason: SuccessfulCreate
+  regarding:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: kube-proxy
+    namespace: kube-system
+    resourceVersion: "286"
+    uid: a0c744ae-1f2f-49e2-98af-b6ccbc3b5326
+  reportingController: daemonset-controller
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1a96a328b
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-scheduler:v1.30.0" already present on
+    machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1ac862ee3
+    namespace: kube-system
+  note: Created container kube-scheduler
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1b3f95099
+    namespace: kube-system
+  note: Started container kube-scheduler
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:28Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee240920e192f9
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee240932a69a05
+    namespace: kube-system
+  note: Container image "registry.k8s.io/kube-scheduler:v1.30.0" already present on
+    machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee24093611893e
+    namespace: kube-system
+  note: Created container kube-scheduler
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:29Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: kube-scheduler-minikube.17ee24093c98a622
+    namespace: kube-system
+  note: Started container kube-scheduler
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:09Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:09Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a2e88b7ce9
+    namespace: kube-system
+  note: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.'
+  reason: FailedScheduling
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "310"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: default-scheduler
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:20Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:20Z"
+  deprecatedSource:
+    component: default-scheduler
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a57b911a16
+    namespace: kube-system
+  note: Successfully assigned kube-system/storage-provisioner to minikube
+  reason: Scheduled
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "312"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: default-scheduler
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:21Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a5881f6169
+    namespace: kube-system
+  note: 'MountVolume.SetUp failed for volume "kube-api-access-tpj6w" : configmap "kube-root-ca.crt"
+    not found'
+  reason: FailedMount
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:52Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a5bea081fd
+    namespace: kube-system
+  note: Container image "gcr.io/k8s-minikube/storage-provisioner:v5" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:52Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a5c113ee53
+    namespace: kube-system
+  note: Created container storage-provisioner
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:28:22Z"
+  deprecatedLastTimestamp: "2024-08-22T19:28:52Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee23a5c754598a
+    namespace: kube-system
+  note: Started container storage-provisioner
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedLastTimestamp: "2024-08-22T19:35:32Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee240a0abb9e99
+    namespace: kube-system
+  note: Pod sandbox changed, it will be killed and re-created.
+  reason: SandboxChanged
+  regarding:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:14Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee240a36350dbc
+    namespace: kube-system
+  note: Container image "gcr.io/k8s-minikube/storage-provisioner:v5" already present
+    on machine
+  reason: Pulled
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:14Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee240a3d7fcc22
+    namespace: kube-system
+  note: Created container storage-provisioner
+  reason: Created
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 2
+  deprecatedFirstTimestamp: "2024-08-22T19:35:33Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:14Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee240a4b2592e5
+    namespace: kube-system
+  note: Started container storage-provisioner
+  reason: Started
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Normal
+- apiVersion: events.k8s.io/v1
+  deprecatedCount: 1
+  deprecatedFirstTimestamp: "2024-08-22T19:36:04Z"
+  deprecatedLastTimestamp: "2024-08-22T19:36:04Z"
+  deprecatedSource:
+    component: kubelet
+    host: minikube
+  eventTime: null
+  kind: Event
+  metadata:
+    name: storage-provisioner.17ee241149c4d867
+    namespace: kube-system
+  note: Back-off restarting failed container storage-provisioner in pod storage-provisioner_kube-system(454c6de5-fabd-402d-b63e-180a1c2dacda)
+  reason: BackOff
+  regarding:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  reportingController: kubelet
+  reportingInstance: minikube
+  type: Warning
+kind: EventList

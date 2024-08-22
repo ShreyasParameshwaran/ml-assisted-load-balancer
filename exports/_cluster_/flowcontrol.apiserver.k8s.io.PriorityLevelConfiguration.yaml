@@ -1,0 +1,129 @@
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+items:
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: catch-all
+  spec:
+    limited:
+      lendablePercent: 0
+      limitResponse:
+        type: Reject
+      nominalConcurrencyShares: 5
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: exempt
+  spec:
+    exempt:
+      lendablePercent: 0
+      nominalConcurrencyShares: 0
+    type: Exempt
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: global-default
+  spec:
+    limited:
+      lendablePercent: 50
+      limitResponse:
+        queuing:
+          handSize: 6
+          queueLengthLimit: 50
+          queues: 128
+        type: Queue
+      nominalConcurrencyShares: 20
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: leader-election
+  spec:
+    limited:
+      lendablePercent: 0
+      limitResponse:
+        queuing:
+          handSize: 4
+          queueLengthLimit: 50
+          queues: 16
+        type: Queue
+      nominalConcurrencyShares: 10
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: node-high
+  spec:
+    limited:
+      lendablePercent: 25
+      limitResponse:
+        queuing:
+          handSize: 6
+          queueLengthLimit: 50
+          queues: 64
+        type: Queue
+      nominalConcurrencyShares: 40
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: system
+  spec:
+    limited:
+      lendablePercent: 33
+      limitResponse:
+        queuing:
+          handSize: 6
+          queueLengthLimit: 50
+          queues: 64
+        type: Queue
+      nominalConcurrencyShares: 30
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: workload-high
+  spec:
+    limited:
+      lendablePercent: 50
+      limitResponse:
+        queuing:
+          handSize: 6
+          queueLengthLimit: 50
+          queues: 128
+        type: Queue
+      nominalConcurrencyShares: 40
+    type: Limited
+- apiVersion: flowcontrol.apiserver.k8s.io/v1
+  kind: PriorityLevelConfiguration
+  metadata:
+    annotations:
+      apf.kubernetes.io/autoupdate-spec: "true"
+    name: workload-low
+  spec:
+    limited:
+      lendablePercent: 90
+      limitResponse:
+        queuing:
+          handSize: 6
+          queueLengthLimit: 50
+          queues: 128
+        type: Queue
+      nominalConcurrencyShares: 100
+    type: Limited
+kind: PriorityLevelConfigurationList

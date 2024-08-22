@@ -1,0 +1,54 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    jws-kubeconfig-ihlhpd: eyJhbGciOiJIUzI1NiIsImtpZCI6ImlobGhwZCJ9..Nak27qjlyNxI4KF-dwjAoNqfRPW5XXCNquaXKDkhLjk
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+      - cluster:
+          certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJME1EZ3dNekV5TVRjd05Wb1hEVE0wTURnd01qRXlNVGN3TlZvd0ZURVRNQkVHQTFVRQpBeE1LYldsdWFXdDFZbVZEUVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTXdZCmxHaEFBaDVzMVVzeVl2Z2tFbjRMeDk1VjFxejd2OTE5QjBkSlUxUnNPSG5qMXYwd3JiOUNTNGdYVUxJbUpOd0sKSUdtMktrSUVyZ3JJc0ZnTzRJQVVrQlhyS2kwYWVJeXduc20zTi9vbWY3UUoweTFmUmxvdG15aHdDUWhVV1R6agpzanV2a3pjbzVYajBjeCtscisrNXBQdURYN0RjOGRtRWYxUzV1RWRXNXJXVjNKdUF5WlI5aTlhQmlERUdFaDdWClg1UTNHbERhMmllY1ZQWnRNU0lyNm4xWTJBUFBGK0RqdjZqRkFDMkg0R0w2SVkwNUpIMGhDalRTVkZpNnJZUGYKbkNPbE1FY2ROYWM2aTBacFhKbzFrN2NEZmN3bEJwcnBJQzBJTHpoY1VRQUNIRWtCajJSTFBsMGZHV25Ic1U1Mwp6UnNWMW9Ib1ZnUVRTeCswWHQ4Q0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRkJRY0RBVEFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJSVW5KWGhBRSsrSlJrMWl4WFlaNFhtQWNvSEZEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUF3ZHA1Ym4zZQpBV2dlK2tkSDFZZ2F3eXlSbi9FY3kzT0VsbUlpRk13MjhvdVo5bG4xbUV3Z21MTHlZdS9WY3pmT21ETjVhZ0hCCmtVVFE3UFloV2Nnb0U1TmE5cGtFQ2o0bkZXd0QxTXBBTkRrNkczWmIwak5INGJpbDNFSHZxeTVNY29DNjFQK2sKZTVPRDZ2S2ExMDdwL05mV1lOUzN2QjJIaHIveXU4M0pYaDdFQTI0U3BBc3RDdStqVFpLOEFyTzdkNkVBM0lLdAptMjllbkpPU1N1YlM4b2M3Q2VCY05QaS9KT2hBbVNaYXBoWnQ3UHMwOFZzNzZlRkFVZEU4bTNYL2xzb1BldTNzCmtHM1JnRnh4ZlVxTGVEcmRKMkUrYmhMZXNhUS9ZWnZQZnlrME45Q2JjM2R4TzRvcW9GSHNhUndYa1BQNzJlbzkKdmhKZUVwazhIb0dKcXc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+          server: https://control-plane.minikube.internal:8443
+        name: ""
+      contexts: null
+      current-context: ""
+      kind: Config
+      preferences: {}
+      users: null
+  kind: ConfigMap
+  metadata:
+    annotations: {}
+    name: cluster-info
+    namespace: kube-public
+- apiVersion: v1
+  data:
+    ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+      a3ViZUNBMB4XDTI0MDgxMDE1NDEzM1oXDTM0MDgwOTE1NDEzM1owFTETMBEGA1UE
+      AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALrD
+      2HIS/oKfL5Hg9smwLsZ6BC7Y4gGSgzWSFVC2BDF2LKmz/LPOKeFkmMppMbD0u1Kx
+      u8WC6CvaJDeAKpiIRo3FPHjiR9McgmutKrMco1exVe5w4l5q7NfpQlw1riNAOJXD
+      ic/S4M9G/1GPgwtm8mZxKkgEy/m3zSVya94yC1n5MOI9eW+oXZ1q8V1EPu95Qt+u
+      eTfHtB5rMZxi4GPN2d9bxP3ovqnoyLsYppq47TTkEkB1BpjumZnER2m8huIT7JMv
+      2iSPy0PpGSa6he5zF20HoPsKSBRHFno+naljDbkhnNcXBEybwh8orDKwUBa6DnJb
+      MXQNnMhkLRKbK71I85kCAwEAAaNhMF8wDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQW
+      MBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW
+      BBRLPdTtwTHTYIVi/2SMop7OTB9l1jANBgkqhkiG9w0BAQsFAAOCAQEAiUnk+0Ry
+      Ei7YrQOnHyOScetUdjUUT9TA4z76hLs5hCzKRZkDaYXpjU7wxMcV7IdQShP1UMVW
+      o9m+niKWFfWN3CGveTxObaxWEcOdHmITWR+QoGET+iQMJn/KGme9SnkixLCywgDV
+      ltAkb8fyxe7eqAjH/haIx/7BluojDYrU7673FYTywM/dEUmtkgZEk2Ci614oclF6
+      qvbU3EZw4PphLeeKRIQYjQImps7vWI4kaNLvAk8jgZAjZV5NpCVh7A7RctDW+pVj
+      IFw3QShYTUpd3jQUhR3oYGKb84Lx+EOSkKe7HdrjbQcPr6J/fTRmFsJJnUW0Yaj5
+      orZdad7YR3i9YQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    annotations:
+      kubernetes.io/description: Contains a CA bundle that can be used to verify the
+        kube-apiserver when using internal endpoints such as the internal service
+        IP or kubernetes.default.svc. No other usage is guaranteed across distributions
+        of Kubernetes clusters.
+    name: kube-root-ca.crt
+    namespace: kube-public
+kind: ConfigMapList

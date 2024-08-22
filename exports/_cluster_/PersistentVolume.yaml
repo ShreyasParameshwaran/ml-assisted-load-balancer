@@ -1,0 +1,30 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      hostPathProvisionerIdentity: 61cfebe3-230e-4883-b9b2-9aa0804ede03
+      pv.kubernetes.io/provisioned-by: k8s.io/minikube-hostpath
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-f0cd58e1-1f06-4870-b985-39cc292eb0e5
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: storage-prometheus-alertmanager-0
+      namespace: monitoring
+      resourceVersion: "1578"
+      uid: f0cd58e1-1f06-4870-b985-39cc292eb0e5
+    hostPath:
+      path: /tmp/hostpath-provisioner/monitoring/storage-prometheus-alertmanager-0
+      type: ""
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard
+    volumeMode: Filesystem
+kind: PersistentVolumeList

@@ -1,0 +1,26 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: nodeapp-deployment-scaler
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: nodeapp-deployment
+  minReplicaCount: 1
+  maxReplicaCount: 15
+  triggers:
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus-kube-prometheus-prometheus:9090
+      threshold: '500'
+      pollingInterval: '10'
+      query: sum(increase(nginx_ingress_controller_requests[1m]))/2
+  - type: metrics-api
+    metadata:
+      targetValue: '1'
+      url: "http://10.101.53.44:5000/predict"
+      format: "json"
+      valueLocation: 'predicted_replicas'
+      pollingInterval: '60'
+
+
