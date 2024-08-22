@@ -7,7 +7,7 @@ items:
     labels:
       k8s-app: kube-dns
       pod-template-hash: 7db6d8ff4d
-    name: coredns-7db6d8ff4d-6l8t9
+    name: coredns-7db6d8ff4d-cw9rj
     namespace: kube-system
     ownerReferences:
     - apiVersion: apps/v1
@@ -15,7 +15,7 @@ items:
       controller: true
       kind: ReplicaSet
       name: coredns-7db6d8ff4d
-      uid: 55cf65a8-550e-4713-b09b-d754d93f28d7
+      uid: 7457546b-bc4a-4711-8331-9087e256993f
   spec:
     affinity:
       podAntiAffinity:
@@ -86,7 +86,7 @@ items:
         name: config-volume
         readOnly: true
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-brzjn
+        name: kube-api-access-86njn
         readOnly: true
     dnsPolicy: Default
     enableServiceLinks: true
@@ -123,7 +123,7 @@ items:
           path: Corefile
         name: coredns
       name: config-volume
-    - name: kube-api-access-brzjn
+    - name: kube-api-access-86njn
       projected:
         defaultMode: 420
         sources:
@@ -148,7 +148,7 @@ items:
       kubeadm.kubernetes.io/etcd.advertise-client-urls: https://192.168.49.2:2379
       kubernetes.io/config.hash: 063d6b9688927e601f52fd818d1305c5
       kubernetes.io/config.mirror: 063d6b9688927e601f52fd818d1305c5
-      kubernetes.io/config.seen: "2024-08-22T16:16:50.115777341Z"
+      kubernetes.io/config.seen: "2024-08-22T19:28:08.294855335Z"
       kubernetes.io/config.source: file
     labels:
       component: etcd
@@ -160,7 +160,7 @@ items:
       controller: true
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   spec:
     containers:
     - command:
@@ -253,7 +253,7 @@ items:
       kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint: 192.168.49.2:8443
       kubernetes.io/config.hash: 3c555f828409b009ebee39fdbedfcac0
       kubernetes.io/config.mirror: 3c555f828409b009ebee39fdbedfcac0
-      kubernetes.io/config.seen: "2024-08-22T16:16:50.115783070Z"
+      kubernetes.io/config.seen: "2024-08-22T19:28:03.828268550Z"
       kubernetes.io/config.source: file
     labels:
       component: kube-apiserver
@@ -265,7 +265,7 @@ items:
       controller: true
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   spec:
     containers:
     - command:
@@ -396,7 +396,7 @@ items:
     annotations:
       kubernetes.io/config.hash: 7fd44e8d11c3e0ffe6b1825e2a1f2270
       kubernetes.io/config.mirror: 7fd44e8d11c3e0ffe6b1825e2a1f2270
-      kubernetes.io/config.seen: "2024-08-22T16:16:44.758712206Z"
+      kubernetes.io/config.seen: "2024-08-22T19:28:08.294862846Z"
       kubernetes.io/config.source: file
     labels:
       component: kube-controller-manager
@@ -408,7 +408,7 @@ items:
       controller: true
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   spec:
     containers:
     - command:
@@ -534,7 +534,7 @@ items:
       controller-revision-hash: 79cf874c65
       k8s-app: kube-proxy
       pod-template-generation: "1"
-    name: kube-proxy-gqjqv
+    name: kube-proxy-wllfb
     namespace: kube-system
     ownerReferences:
     - apiVersion: apps/v1
@@ -542,7 +542,7 @@ items:
       controller: true
       kind: DaemonSet
       name: kube-proxy
-      uid: b94b603b-3c43-430c-8ff4-f1dae57102f4
+      uid: a0c744ae-1f2f-49e2-98af-b6ccbc3b5326
   spec:
     affinity:
       nodeAffinity:
@@ -581,7 +581,7 @@ items:
         name: lib-modules
         readOnly: true
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-pntpc
+        name: kube-api-access-85pds
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -634,7 +634,7 @@ items:
         path: /lib/modules
         type: ""
       name: lib-modules
-    - name: kube-api-access-pntpc
+    - name: kube-api-access-85pds
       projected:
         defaultMode: 420
         sources:
@@ -658,7 +658,7 @@ items:
     annotations:
       kubernetes.io/config.hash: f9c8e1d0d74b1727abdb4b4a31d3a7c1
       kubernetes.io/config.mirror: f9c8e1d0d74b1727abdb4b4a31d3a7c1
-      kubernetes.io/config.seen: "2024-08-22T16:16:50.115791231Z"
+      kubernetes.io/config.seen: "2024-08-22T19:28:08.294864140Z"
       kubernetes.io/config.source: file
     labels:
       component: kube-scheduler
@@ -670,7 +670,7 @@ items:
       controller: true
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   spec:
     containers:
     - command:
@@ -758,7 +758,7 @@ items:
       - mountPath: /tmp
         name: tmp
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-2m75h
+        name: kube-api-access-tpj6w
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -786,7 +786,7 @@ items:
         path: /tmp
         type: Directory
       name: tmp
-    - name: kube-api-access-2m75h
+    - name: kube-api-access-tpj6w
       projected:
         defaultMode: 420
         sources:

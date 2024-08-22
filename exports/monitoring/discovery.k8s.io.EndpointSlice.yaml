@@ -4,7 +4,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.9
+    - 10.244.0.25
     conditions:
       ready: true
       serving: true
@@ -15,11 +15,11 @@ items:
       kind: Pod
       name: alertmanager-prometheus-kube-prometheus-alertmanager-0
       namespace: monitoring
-      uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+      uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:15Z"
     generateName: alertmanager-operated-
     labels:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
@@ -27,7 +27,7 @@ items:
       managed-by: prometheus-operator
       operated-alertmanager: "true"
       service.kubernetes.io/headless: ""
-    name: alertmanager-operated-9bqwz
+    name: alertmanager-operated-lst5h
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -35,7 +35,7 @@ items:
       controller: true
       kind: Service
       name: alertmanager-operated
-      uid: 9bf21696-658b-4db7-b491-d50620ad2e90
+      uid: 7d4a1452-8cab-4c77-8e56-0ef1711edcf5
   ports:
   - name: http-web
     port: 9093
@@ -52,7 +52,7 @@ items:
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:52Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:09Z"
     generateName: ingress-monitor-nginx-ingress-nginx-controller-admission-
     labels:
       app.kubernetes.io/component: controller
@@ -64,7 +64,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: ingress-nginx-4.11.1
       kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller-admission
-    name: ingress-monitor-nginx-ingress-nginx-controller-admission-7njpg
+    name: ingress-monitor-nginx-ingress-nginx-controller-admission-vbj24
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -72,7 +72,7 @@ items:
       controller: true
       kind: Service
       name: ingress-monitor-nginx-ingress-nginx-controller-admission
-      uid: bad95891-bc36-416e-83d2-a0e6f83f8675
+      uid: 85a80216-bb7f-4709-adc7-25b6a53055fa
   ports: null
 - addressType: IPv4
   apiVersion: discovery.k8s.io/v1
@@ -80,7 +80,7 @@ items:
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:57Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:14Z"
     generateName: ingress-monitor-nginx-ingress-nginx-controller-
     labels:
       app.kubernetes.io/component: controller
@@ -92,7 +92,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: ingress-nginx-4.11.1
       kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller
-    name: ingress-monitor-nginx-ingress-nginx-controller-kssn4
+    name: ingress-monitor-nginx-ingress-nginx-controller-dxg9z
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -100,7 +100,7 @@ items:
       controller: true
       kind: Service
       name: ingress-monitor-nginx-ingress-nginx-controller
-      uid: 824a440f-8178-4689-b46c-006814fcc960
+      uid: 15084941-993f-48e9-a13c-90fce9d92655
   ports: null
 - addressType: IPv4
   apiVersion: discovery.k8s.io/v1
@@ -108,7 +108,7 @@ items:
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:19:00Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:17Z"
     generateName: ingress-monitor-nginx-ingress-nginx-controller-metrics-
     labels:
       app.kubernetes.io/component: controller
@@ -120,7 +120,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: ingress-nginx-4.11.1
       kubernetes.io/service-name: ingress-monitor-nginx-ingress-nginx-controller-metrics
-    name: ingress-monitor-nginx-ingress-nginx-controller-metrics-hcqvw
+    name: ingress-monitor-nginx-ingress-nginx-controller-metrics-n8dwf
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -128,13 +128,13 @@ items:
       controller: true
       kind: Service
       name: ingress-monitor-nginx-ingress-nginx-controller-metrics
-      uid: b487ed77-4a62-490c-b01c-d831c5012a2a
+      uid: 0f7bde7b-27c2-48d3-8c40-779b844a68d4
   ports: null
 - addressType: IPv4
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.13
+    - 10.244.0.27
     conditions:
       ready: true
       serving: true
@@ -142,13 +142,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: keda-admission-webhooks-79b9989f88-4bcb2
+      name: keda-admission-webhooks-79b9989f88-gkr99
       namespace: monitoring
-      uid: d0c7277a-cdda-4cce-b02a-35c60eebd2b1
+      uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:41:51Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:14Z"
     generateName: keda-admission-webhooks-
     labels:
       app.kubernetes.io/component: operator
@@ -160,7 +160,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: keda-2.15.0
       kubernetes.io/service-name: keda-admission-webhooks
-    name: keda-admission-webhooks-twfn9
+    name: keda-admission-webhooks-24rvp
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -168,7 +168,7 @@ items:
       controller: true
       kind: Service
       name: keda-admission-webhooks
-      uid: 61f347a6-3ceb-466d-b0ee-6b3c0588b241
+      uid: 7647d019-a855-4671-a2f9-dd717206abd0
   ports:
   - name: https
     port: 9443
@@ -177,7 +177,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.78
+    - 10.244.0.32
     conditions:
       ready: true
       serving: true
@@ -185,13 +185,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: keda-operator-9b5f476c6-fld55
+      name: keda-operator-fbc8b6c8f-7kl5n
       namespace: monitoring
-      uid: 368ee0cc-c066-451a-b17f-953f893214d5
+      uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T18:44:22Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:29Z"
     generateName: keda-operator-
     labels:
       app.kubernetes.io/component: operator
@@ -203,7 +203,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: keda-2.15.0
       kubernetes.io/service-name: keda-operator
-    name: keda-operator-7pxwx
+    name: keda-operator-jw7r9
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -211,7 +211,7 @@ items:
       controller: true
       kind: Service
       name: keda-operator
-      uid: 9f760f5a-e2fc-48f2-8285-00410682309c
+      uid: db8b6c27-b634-4f79-a636-e636fc0fb8d7
   ports:
   - name: metricsservice
     port: 9666
@@ -220,7 +220,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.12
+    - 10.244.0.33
     conditions:
       ready: true
       serving: true
@@ -228,13 +228,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: keda-operator-metrics-apiserver-57d97c9b9c-d9xq8
+      name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
       namespace: monitoring
-      uid: eea6cfbd-5655-4c80-877a-1d26724d8358
+      uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:40:12Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:11Z"
     generateName: keda-operator-metrics-apiserver-
     labels:
       app: keda-operator-metrics-apiserver
@@ -247,7 +247,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: keda-2.15.0
       kubernetes.io/service-name: keda-operator-metrics-apiserver
-    name: keda-operator-metrics-apiserver-c5b95
+    name: keda-operator-metrics-apiserver-r8jqk
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -255,7 +255,7 @@ items:
       controller: true
       kind: Service
       name: keda-operator-metrics-apiserver
-      uid: b1abe514-51b4-436e-b655-c857141c0ac1
+      uid: 1cb3aab4-cdf0-49f7-99e7-d6a515c9e31d
   ports:
   - name: https
     port: 6443
@@ -267,7 +267,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.10
+    - 10.244.0.24
     conditions:
       ready: true
       serving: true
@@ -275,13 +275,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: prometheus-grafana-648c7ff88d-cf44m
+      name: prometheus-grafana-648c7ff88d-dk744
       namespace: monitoring
-      uid: f60a331f-26c7-497b-88ea-29ab381330bf
+      uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:38:41Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:11Z"
     generateName: prometheus-grafana-
     labels:
       app.kubernetes.io/instance: prometheus
@@ -291,7 +291,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: grafana-8.3.8
       kubernetes.io/service-name: prometheus-grafana
-    name: prometheus-grafana-xfqbb
+    name: prometheus-grafana-6qrwt
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -299,7 +299,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-grafana
-      uid: a3718601-f310-4d4f-b82d-8ca265e27334
+      uid: 6d335e30-5d16-44e8-8005-faa8e8d87cac
   ports:
   - name: http-web
     port: 3000
@@ -308,7 +308,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.9
+    - 10.244.0.25
     conditions:
       ready: true
       serving: true
@@ -318,11 +318,11 @@ items:
       kind: Pod
       name: alertmanager-prometheus-kube-prometheus-alertmanager-0
       namespace: monitoring
-      uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+      uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:14Z"
     generateName: prometheus-kube-prometheus-alertmanager-
     labels:
       app: kube-prometheus-stack-alertmanager
@@ -336,7 +336,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-alertmanager
       release: prometheus
       self-monitor: "true"
-    name: prometheus-kube-prometheus-alertmanager-cpzpz
+    name: prometheus-kube-prometheus-alertmanager-8b859
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -344,7 +344,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-alertmanager
-      uid: 4fe32648-6047-4a45-9058-162694a7480b
+      uid: da385d9b-c96b-4d55-aa33-1ba9e0b21fee
   ports:
   - appProtocol: http
     name: reloader-web
@@ -357,7 +357,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.6
+    - 10.244.0.23
     conditions:
       ready: true
       serving: true
@@ -365,13 +365,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: prometheus-kube-prometheus-operator-597f45494f-9d9mw
+      name: prometheus-kube-prometheus-operator-597f45494f-qslgh
       namespace: monitoring
-      uid: 729b17b9-c4f2-46d3-a47c-24e350b361f2
+      uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:18Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:00Z"
     generateName: prometheus-kube-prometheus-operator-
     labels:
       app: kube-prometheus-stack-operator
@@ -386,7 +386,7 @@ items:
       heritage: Helm
       kubernetes.io/service-name: prometheus-kube-prometheus-operator
       release: prometheus
-    name: prometheus-kube-prometheus-operator-cnrd8
+    name: prometheus-kube-prometheus-operator-mh9g2
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -394,7 +394,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-operator
-      uid: 5594b8ee-fd61-440a-b868-f2575c2e8214
+      uid: 1919946c-7c4a-4ca8-922b-ada022676f61
   ports:
   - name: https
     port: 10250
@@ -403,7 +403,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.8
+    - 10.244.0.22
     conditions:
       ready: true
       serving: true
@@ -413,11 +413,11 @@ items:
       kind: Pod
       name: prometheus-prometheus-kube-prometheus-prometheus-0
       namespace: monitoring
-      uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+      uid: b73ddfca-a730-4cd7-a337-c288c9567318
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:13Z"
     generateName: prometheus-kube-prometheus-prometheus-
     labels:
       app: kube-prometheus-stack-prometheus
@@ -431,7 +431,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-prometheus
       release: prometheus
       self-monitor: "true"
-    name: prometheus-kube-prometheus-prometheus-nkf2z
+    name: prometheus-kube-prometheus-prometheus-7gnx7
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -439,7 +439,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-prometheus
-      uid: b4ba4f82-c27c-4130-976f-bd540e42fa75
+      uid: 4b0ea686-cf27-4abb-b252-15ab18f72f88
   ports:
   - appProtocol: http
     name: reloader-web
@@ -452,7 +452,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.7
+    - 10.244.0.20
     conditions:
       ready: true
       serving: true
@@ -460,13 +460,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: prometheus-kube-state-metrics-688d66b5b8-q28rn
+      name: prometheus-kube-state-metrics-688d66b5b8-45sgn
       namespace: monitoring
-      uid: def02a97-b89c-49ff-b749-9dedbb793421
+      uid: b607aee4-82d4-4c9b-bb00-67500963c600
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:37Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:15Z"
     generateName: prometheus-kube-state-metrics-
     labels:
       app.kubernetes.io/component: metrics
@@ -479,7 +479,7 @@ items:
       helm.sh/chart: kube-state-metrics-5.25.1
       kubernetes.io/service-name: prometheus-kube-state-metrics
       release: prometheus
-    name: prometheus-kube-state-metrics-gmkg5
+    name: prometheus-kube-state-metrics-g2hcf
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -487,7 +487,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-state-metrics
-      uid: 99394e3b-3094-4e9f-8ced-a5c9a05054a1
+      uid: 3a4bfb7d-be1d-493a-84bc-9d290f724e79
   ports:
   - name: http
     port: 8080
@@ -496,7 +496,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.8
+    - 10.244.0.22
     conditions:
       ready: true
       serving: true
@@ -507,11 +507,11 @@ items:
       kind: Pod
       name: prometheus-prometheus-kube-prometheus-prometheus-0
       namespace: monitoring
-      uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+      uid: b73ddfca-a730-4cd7-a337-c288c9567318
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:17Z"
     generateName: prometheus-operated-
     labels:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
@@ -519,7 +519,7 @@ items:
       managed-by: prometheus-operator
       operated-prometheus: "true"
       service.kubernetes.io/headless: ""
-    name: prometheus-operated-klfm2
+    name: prometheus-operated-sfxzc
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -527,7 +527,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-operated
-      uid: 448bceae-e2a0-4c41-81ec-fe147dc83087
+      uid: ea514c69-0a4d-438c-9e48-6f336feba610
   ports:
   - name: http-web
     port: 9090
@@ -544,13 +544,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: prometheus-prometheus-node-exporter-q2597
+      name: prometheus-prometheus-node-exporter-xd9cz
       namespace: monitoring
-      uid: 72c965a1-9729-4e42-8af0-ef5685a2a45e
+      uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:31:03Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:31:11Z"
     generateName: prometheus-prometheus-node-exporter-
     labels:
       app.kubernetes.io/component: metrics
@@ -564,7 +564,7 @@ items:
       jobLabel: node-exporter
       kubernetes.io/service-name: prometheus-prometheus-node-exporter
       release: prometheus
-    name: prometheus-prometheus-node-exporter-jf59s
+    name: prometheus-prometheus-node-exporter-fj4k7
     namespace: monitoring
     ownerReferences:
     - apiVersion: v1
@@ -572,7 +572,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-prometheus-node-exporter
-      uid: 73c360cc-2374-4746-b0d3-d2761410186d
+      uid: 90edeeb5-4911-4367-b247-49544e3c40ea
   ports:
   - name: http-metrics
     port: 9100

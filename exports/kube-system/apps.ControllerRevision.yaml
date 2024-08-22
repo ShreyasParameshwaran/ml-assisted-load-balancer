@@ -78,6 +78,6 @@ items:
       controller: true
       kind: DaemonSet
       name: kube-proxy
-      uid: b94b603b-3c43-430c-8ff4-f1dae57102f4
+      uid: a0c744ae-1f2f-49e2-98af-b6ccbc3b5326
   revision: 1
 kind: ControllerRevisionList

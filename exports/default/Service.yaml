@@ -18,6 +18,7 @@ items:
     namespace: default
   spec:
     allocateLoadBalancerNodePorts: true
+    clusterIP: 10.96.53.53
     clusterIPs:
     - 10.96.53.53
     externalTrafficPolicy: Cluster
@@ -61,6 +62,7 @@ items:
     name: ingress-app-ingress-nginx-controller-admission
     namespace: default
   spec:
+    clusterIP: 10.99.246.26
     clusterIPs:
     - 10.99.246.26
     internalTrafficPolicy: Cluster
@@ -96,6 +98,7 @@ items:
     name: ingress-app-ingress-nginx-controller-metrics
     namespace: default
   spec:
+    clusterIP: 10.111.123.26
     clusterIPs:
     - 10.111.123.26
     internalTrafficPolicy: Cluster
@@ -123,6 +126,7 @@ items:
     name: kubernetes
     namespace: default
   spec:
+    clusterIP: 10.96.0.1
     clusterIPs:
     - 10.96.0.1
     internalTrafficPolicy: Cluster
@@ -143,6 +147,7 @@ items:
     name: ml-api-service
     namespace: default
   spec:
+    clusterIP: 10.101.53.44
     clusterIPs:
     - 10.101.53.44
     internalTrafficPolicy: Cluster
@@ -165,6 +170,7 @@ items:
     namespace: default
   spec:
     allocateLoadBalancerNodePorts: true
+    clusterIP: 10.100.135.236
     clusterIPs:
     - 10.100.135.236
     externalIPs:

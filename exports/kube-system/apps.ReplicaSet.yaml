@@ -18,7 +18,7 @@ items:
       controller: true
       kind: Deployment
       name: coredns
-      uid: 40581310-6430-4dba-9ae5-7acc6ed66fbe
+      uid: fadad79a-9f01-407e-b859-21f0f18be68f
   spec:
     replicas: 1
     selector:

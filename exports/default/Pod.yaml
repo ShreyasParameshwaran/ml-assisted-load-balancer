@@ -13,7 +13,7 @@ items:
       app.kubernetes.io/version: 1.11.1
       helm.sh/chart: ingress-nginx-4.11.1
       pod-template-hash: 544f5dfc8f
-    name: ingress-app-ingress-nginx-controller-544f5dfc8f-x2srn
+    name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
@@ -21,7 +21,7 @@ items:
       controller: true
       kind: ReplicaSet
       name: ingress-app-ingress-nginx-controller-544f5dfc8f
-      uid: d4910bf7-88de-4c21-87dc-896148323356
+      uid: e2457ff3-faaa-4bb5-b23e-1ff5a35ba06a
   spec:
     containers:
     - args:
@@ -111,7 +111,7 @@ items:
         name: webhook-cert
         readOnly: true
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-hpdpp
+        name: kube-api-access-z22dj
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -140,7 +140,7 @@ items:
       secret:
         defaultMode: 420
         secretName: ingress-app-ingress-nginx-admission
-    - name: kube-api-access-hpdpp
+    - name: kube-api-access-z22dj
       projected:
         defaultMode: 420
         sources:
@@ -165,7 +165,7 @@ items:
     labels:
       app: ml-api
       pod-template-hash: 548d698969
-    name: ml-api-deployment-548d698969-htjtl
+    name: ml-api-deployment-548d698969-hf64z
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
@@ -173,7 +173,7 @@ items:
       controller: true
       kind: ReplicaSet
       name: ml-api-deployment-548d698969
-      uid: e957da4c-875e-4fa3-a332-40f769f562d0
+      uid: 18d40b99-d4a8-4f5f-8a16-18b6fcc5f6b3
   spec:
     containers:
     - env:
@@ -190,7 +190,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-x5ksx
+        name: kube-api-access-dlwk5
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -213,7 +213,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-x5ksx
+    - name: kube-api-access-dlwk5
       projected:
         defaultMode: 420
         sources:
@@ -234,21 +234,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-c2ghg
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-26jzn
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -262,7 +260,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-msdjf
+        name: kube-api-access-vxc29
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -285,7 +283,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-msdjf
+    - name: kube-api-access-vxc29
       projected:
         defaultMode: 420
         sources:
@@ -306,21 +304,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-dfmdp
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-68hjv
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -334,7 +330,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-zzkdq
+        name: kube-api-access-7p7rn
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -357,7 +353,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-zzkdq
+    - name: kube-api-access-7p7rn
       projected:
         defaultMode: 420
         sources:
@@ -378,21 +374,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-jr6p2
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-9lmdf
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -406,7 +400,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-rpbwt
+        name: kube-api-access-9zkqt
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -429,7 +423,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-rpbwt
+    - name: kube-api-access-9zkqt
       projected:
         defaultMode: 420
         sources:
@@ -450,21 +444,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-t6jbt
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-lgpn6
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -478,7 +470,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-fbxcf
+        name: kube-api-access-6j2q8
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -501,7 +493,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-fbxcf
+    - name: kube-api-access-6j2q8
       projected:
         defaultMode: 420
         sources:
@@ -522,21 +514,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-vlq8z
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-mlmkv
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -550,7 +540,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-s8255
+        name: kube-api-access-hdc9l
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -573,7 +563,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-s8255
+    - name: kube-api-access-hdc9l
       projected:
         defaultMode: 420
         sources:
@@ -594,21 +584,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-wck9l
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-qnq5b
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -622,7 +610,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-m6l7s
+        name: kube-api-access-2m4qr
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -645,7 +633,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-m6l7s
+    - name: kube-api-access-2m4qr
       projected:
         defaultMode: 420
         sources:
@@ -666,21 +654,19 @@ items:
 - apiVersion: v1
   kind: Pod
   metadata:
-    annotations:
-      kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-    generateName: nodeapp-deployment-5768865f95-
+    generateName: nodeapp-deployment-6cc654cb66-
     labels:
       app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95-zw5tq
+      pod-template-hash: 6cc654cb66
+    name: nodeapp-deployment-6cc654cb66-zx9xg
     namespace: default
     ownerReferences:
     - apiVersion: apps/v1
       blockOwnerDeletion: true
       controller: true
       kind: ReplicaSet
-      name: nodeapp-deployment-5768865f95
-      uid: 0027846b-7f0a-4d65-b984-caf768fb28aa
+      name: nodeapp-deployment-6cc654cb66
+      uid: ccdffda1-2d1e-4200-8b40-92198ac84713
   spec:
     containers:
     - image: shreyas2204/my-node-app
@@ -694,7 +680,7 @@ items:
       terminationMessagePolicy: File
       volumeMounts:
       - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-        name: kube-api-access-wkz8v
+        name: kube-api-access-kl79l
         readOnly: true
     dnsPolicy: ClusterFirst
     enableServiceLinks: true
@@ -717,7 +703,7 @@ items:
       operator: Exists
       tolerationSeconds: 300
     volumes:
-    - name: kube-api-access-wkz8v
+    - name: kube-api-access-kl79l
       projected:
         defaultMode: 420
         sources:

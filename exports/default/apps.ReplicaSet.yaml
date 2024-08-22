@@ -26,7 +26,7 @@ items:
       controller: true
       kind: Deployment
       name: ingress-app-ingress-nginx-controller
-      uid: abf85df5-21d8-46ac-9fb2-6d72e8f9f573
+      uid: cf59e1f3-86b5-41e1-9a04-896ac65866ec
   spec:
     replicas: 1
     selector:
@@ -167,7 +167,7 @@ items:
       controller: true
       kind: Deployment
       name: ml-api-deployment
-      uid: 0ef818ea-ee96-4f9e-927c-8e832de292e5
+      uid: a8dabbd0-79a1-45db-9d77-5d2c172b33f6
   spec:
     replicas: 1
     selector:
@@ -205,153 +205,6 @@ items:
     annotations:
       deployment.kubernetes.io/desired-replicas: "7"
       deployment.kubernetes.io/max-replicas: "9"
-      deployment.kubernetes.io/revision: "8"
-    labels:
-      app: nodeapp
-      pod-template-hash: 5768865f95
-    name: nodeapp-deployment-5768865f95
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 7
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 5768865f95
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:27:02+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 5768865f95
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "7"
-      deployment.kubernetes.io/max-replicas: "9"
-      deployment.kubernetes.io/revision: "7"
-    labels:
-      app: nodeapp
-      pod-template-hash: 5dbb54bfd
-    name: nodeapp-deployment-5dbb54bfd
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 5dbb54bfd
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:20:31+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 5dbb54bfd
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "7"
-      deployment.kubernetes.io/max-replicas: "9"
-      deployment.kubernetes.io/revision: "4"
-    labels:
-      app: nodeapp
-      pod-template-hash: 5ffb6f79b
-    name: nodeapp-deployment-5ffb6f79b
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 5ffb6f79b
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:13:18+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 5ffb6f79b
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app:latest
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "7"
-      deployment.kubernetes.io/max-replicas: "9"
       deployment.kubernetes.io/revision: "1"
     labels:
       app: nodeapp
@@ -364,9 +217,9 @@ items:
       controller: true
       kind: Deployment
       name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
+      uid: 1d4f70f9-3b8b-4779-bc08-bc30fcc16e15
   spec:
-    replicas: 0
+    replicas: 7
     selector:
       matchLabels:
         app: nodeapp
@@ -377,202 +230,6 @@ items:
         labels:
           app: nodeapp
           pod-template-hash: 6cc654cb66
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "1"
-      deployment.kubernetes.io/max-replicas: "2"
-      deployment.kubernetes.io/revision: "2"
-    labels:
-      app: nodeapp
-      pod-template-hash: 6f75998bfc
-    name: nodeapp-deployment-6f75998bfc
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 6f75998bfc
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:09:48+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 6f75998bfc
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "7"
-      deployment.kubernetes.io/max-replicas: "9"
-      deployment.kubernetes.io/revision: "6"
-    labels:
-      app: nodeapp
-      pod-template-hash: 7564645cd5
-    name: nodeapp-deployment-7564645cd5
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 7564645cd5
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:20:31+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 7564645cd5
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app:latest
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "7"
-      deployment.kubernetes.io/max-replicas: "9"
-      deployment.kubernetes.io/revision: "5"
-    labels:
-      app: nodeapp
-      pod-template-hash: 86d4c675d
-    name: nodeapp-deployment-86d4c675d
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: 86d4c675d
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:17:56+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: 86d4c675d
-      spec:
-        containers:
-        - image: shreyas2204/my-node-app:latest
-          imagePullPolicy: Always
-          name: nodeserver
-          ports:
-          - containerPort: 4000
-            protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-        dnsPolicy: ClusterFirst
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext: {}
-        terminationGracePeriodSeconds: 30
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "4"
-      deployment.kubernetes.io/max-replicas: "5"
-      deployment.kubernetes.io/revision: "3"
-    labels:
-      app: nodeapp
-      pod-template-hash: c55db597
-    name: nodeapp-deployment-c55db597
-    namespace: default
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: nodeapp-deployment
-      uid: 2d381825-af5a-4a38-9afd-2449c9efff4d
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: nodeapp
-        pod-template-hash: c55db597
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T22:13:18+05:30"
-        creationTimestamp: null
-        labels:
-          app: nodeapp
-          pod-template-hash: c55db597
       spec:
         containers:
         - image: shreyas2204/my-node-app

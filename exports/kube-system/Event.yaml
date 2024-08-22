@@ -1,0 +1,1488 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "384"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Successfully assigned kube-system/coredns-7db6d8ff4d-cw9rj to minikube
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5c092c200
+    namespace: kube-system
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present
+    on machine
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5e2eb7140
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Created container coredns
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5e574311a
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Started container coredns
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a5ea7018be
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 5
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "385"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:52Z"
+  message: 'Readiness probe failed: HTTP probe failed with statuscode: 503'
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee23a612485f56
+    namespace: kube-system
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:32Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a0eff984a
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:34Z"
+  message: Container image "registry.k8s.io/coredns/coredns:v1.11.1" already present
+    on machine
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a50f6c5f8
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:34Z"
+  message: Created container coredns
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a5410c1b6
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{coredns}
+    kind: Pod
+    name: coredns-7db6d8ff4d-cw9rj
+    namespace: kube-system
+    resourceVersion: "817"
+    uid: b2bca304-452d-4382-9540-2d3872a43d6d
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:34Z"
+  message: Started container coredns
+  metadata:
+    name: coredns-7db6d8ff4d-cw9rj.17ee240a596c79e6
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: coredns-7db6d8ff4d
+    namespace: kube-system
+    resourceVersion: "364"
+    uid: 7457546b-bc4a-4711-8331-9087e256993f
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: 'Created pod: coredns-7db6d8ff4d-cw9rj'
+  metadata:
+    name: coredns-7db6d8ff4d.17ee23a5c041f655
+    namespace: kube-system
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: coredns
+    namespace: kube-system
+    resourceVersion: "297"
+    uid: fadad79a-9f01-407e-b859-21f0f18be68f
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:21Z"
+  message: Scaled up replica set coredns-7db6d8ff4d to 1
+  metadata:
+    name: coredns.17ee23a5a5805b9e
+    namespace: kube-system
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Container image "registry.k8s.io/etcd:3.5.12-0" already present on machine
+  metadata:
+    name: etcd-minikube.17ee23a1a98aded5
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Created container etcd
+  metadata:
+    name: etcd-minikube.17ee23a1ad1aab94
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Started container etcd
+  metadata:
+    name: etcd-minikube.17ee23a1b505470f
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:28Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: etcd-minikube.17ee240920ec5f07
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Container image "registry.k8s.io/etcd:3.5.12-0" already present on machine
+  metadata:
+    name: etcd-minikube.17ee2409327b68f4
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Created container etcd
+  metadata:
+    name: etcd-minikube.17ee24093564c96d
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-minikube
+    namespace: kube-system
+    uid: 063d6b9688927e601f52fd818d1305c5
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Started container etcd
+  metadata:
+    name: etcd-minikube.17ee24093bd3782d
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:29:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: k8s.io-minikube-hostpath
+    namespace: kube-system
+    resourceVersion: "989"
+    uid: 8f93e0e5-6a3d-42dc-a25c-6f926533022b
+  kind: Event
+  lastTimestamp: "2024-08-22T19:29:10Z"
+  message: minikube_cde5c9ce-558b-423f-9baf-d9d906fd8818 became leader
+  metadata:
+    name: k8s.io-minikube-hostpath.17ee23b0f1d756c1
+    namespace: kube-system
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: k8s.io/minikube-hostpath_minikube_cde5c9ce-558b-423f-9baf-d9d906fd8818
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:36:14Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: k8s.io-minikube-hostpath
+    namespace: kube-system
+    resourceVersion: "2399"
+    uid: 45c526ed-fa6e-4657-ba16-f9e67288ab29
+  kind: Event
+  lastTimestamp: "2024-08-22T19:36:14Z"
+  message: minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48 became leader
+  metadata:
+    name: k8s.io-minikube-hostpath.17ee2413c5895cb7
+    namespace: kube-system
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: k8s.io/minikube-hostpath_minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Container image "registry.k8s.io/kube-apiserver:v1.30.0" already present
+    on machine
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1a9879b86
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Created container kube-apiserver
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1ad1c6bf0
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Started container kube-apiserver
+  metadata:
+    name: kube-apiserver-minikube.17ee23a1b3f7b61c
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:28Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: kube-apiserver-minikube.17ee240922ff3f58
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Container image "registry.k8s.io/kube-apiserver:v1.30.0" already present
+    on machine
+  metadata:
+    name: kube-apiserver-minikube.17ee240932b3be32
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Created container kube-apiserver
+  metadata:
+    name: kube-apiserver-minikube.17ee240935dd4aad
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-apiserver}
+    kind: Pod
+    name: kube-apiserver-minikube
+    namespace: kube-system
+    uid: 3c555f828409b009ebee39fdbedfcac0
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Started container kube-apiserver
+  metadata:
+    name: kube-apiserver-minikube.17ee24093c977c2d
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Container image "registry.k8s.io/kube-controller-manager:v1.30.0" already
+    present on machine
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1a90cf642
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Created container kube-controller-manager
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1ac266f9d
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Started container kube-controller-manager
+  metadata:
+    name: kube-controller-manager-minikube.17ee23a1b3b2fef3
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:28Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: kube-controller-manager-minikube.17ee2409234819de
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Container image "registry.k8s.io/kube-controller-manager:v1.30.0" already
+    present on machine
+  metadata:
+    name: kube-controller-manager-minikube.17ee240932a87ac1
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Created container kube-controller-manager
+  metadata:
+    name: kube-controller-manager-minikube.17ee240935dde3dc
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-controller-manager}
+    kind: Pod
+    name: kube-controller-manager-minikube
+    namespace: kube-system
+    uid: 7fd44e8d11c3e0ffe6b1825e2a1f2270
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Started container kube-controller-manager
+  metadata:
+    name: kube-controller-manager-minikube.17ee24093c73535e
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "374"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:21Z"
+  message: Successfully assigned kube-system/kube-proxy-wllfb to minikube
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5b5c67108
+    namespace: kube-system
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Container image "registry.k8s.io/kube-proxy:v1.30.0" already present on
+    machine
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5d54a7094
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Created container kube-proxy
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5d9b15758
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "376"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:22Z"
+  message: Started container kube-proxy
+  metadata:
+    name: kube-proxy-wllfb.17ee23a5df8a4e72
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:32Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: kube-proxy-wllfb.17ee240a0d76c81a
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:33Z"
+  message: Container image "registry.k8s.io/kube-proxy:v1.30.0" already present on
+    machine
+  metadata:
+    name: kube-proxy-wllfb.17ee240a362636e5
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:33Z"
+  message: Created container kube-proxy
+  metadata:
+    name: kube-proxy-wllfb.17ee240a3d8023ce
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-proxy}
+    kind: Pod
+    name: kube-proxy-wllfb
+    namespace: kube-system
+    resourceVersion: "406"
+    uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:33Z"
+  message: Started container kube-proxy
+  metadata:
+    name: kube-proxy-wllfb.17ee240a4d096c83
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: kube-proxy
+    namespace: kube-system
+    resourceVersion: "286"
+    uid: a0c744ae-1f2f-49e2-98af-b6ccbc3b5326
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:21Z"
+  message: 'Created pod: kube-proxy-wllfb'
+  metadata:
+    name: kube-proxy.17ee23a5b5420836
+    namespace: kube-system
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Container image "registry.k8s.io/kube-scheduler:v1.30.0" already present
+    on machine
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1a96a328b
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Created container kube-scheduler
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1ac862ee3
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:04Z"
+  message: Started container kube-scheduler
+  metadata:
+    name: kube-scheduler-minikube.17ee23a1b3f95099
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:28Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: kube-scheduler-minikube.17ee240920e192f9
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Container image "registry.k8s.io/kube-scheduler:v1.30.0" already present
+    on machine
+  metadata:
+    name: kube-scheduler-minikube.17ee240932a69a05
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Created container kube-scheduler
+  metadata:
+    name: kube-scheduler-minikube.17ee24093611893e
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler}
+    kind: Pod
+    name: kube-scheduler-minikube
+    namespace: kube-system
+    uid: f9c8e1d0d74b1727abdb4b4a31d3a7c1
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:29Z"
+  message: Started container kube-scheduler
+  metadata:
+    name: kube-scheduler-minikube.17ee24093c98a622
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:09Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "310"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:09Z"
+  message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.'
+  metadata:
+    name: storage-provisioner.17ee23a2e88b7ce9
+    namespace: kube-system
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:20Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "312"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:20Z"
+  message: Successfully assigned kube-system/storage-provisioner to minikube
+  metadata:
+    name: storage-provisioner.17ee23a57b911a16
+    namespace: kube-system
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:21Z"
+  message: 'MountVolume.SetUp failed for volume "kube-api-access-tpj6w" : configmap
+    "kube-root-ca.crt" not found'
+  metadata:
+    name: storage-provisioner.17ee23a5881f6169
+    namespace: kube-system
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:52Z"
+  message: Container image "gcr.io/k8s-minikube/storage-provisioner:v5" already present
+    on machine
+  metadata:
+    name: storage-provisioner.17ee23a5bea081fd
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:52Z"
+  message: Created container storage-provisioner
+  metadata:
+    name: storage-provisioner.17ee23a5c113ee53
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:28:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "343"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:28:52Z"
+  message: Started container storage-provisioner
+  metadata:
+    name: storage-provisioner.17ee23a5c754598a
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:32Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:35:32Z"
+  message: Pod sandbox changed, it will be killed and re-created.
+  metadata:
+    name: storage-provisioner.17ee240a0abb9e99
+    namespace: kube-system
+  reason: SandboxChanged
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:36:14Z"
+  message: Container image "gcr.io/k8s-minikube/storage-provisioner:v5" already present
+    on machine
+  metadata:
+    name: storage-provisioner.17ee240a36350dbc
+    namespace: kube-system
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:36:14Z"
+  message: Created container storage-provisioner
+  metadata:
+    name: storage-provisioner.17ee240a3d7fcc22
+    namespace: kube-system
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:36:14Z"
+  message: Started container storage-provisioner
+  metadata:
+    name: storage-provisioner.17ee240a4b2592e5
+    namespace: kube-system
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-08-22T19:36:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{storage-provisioner}
+    kind: Pod
+    name: storage-provisioner
+    namespace: kube-system
+    resourceVersion: "596"
+    uid: 454c6de5-fabd-402d-b63e-180a1c2dacda
+  kind: Event
+  lastTimestamp: "2024-08-22T19:36:04Z"
+  message: Back-off restarting failed container storage-provisioner in pod storage-provisioner_kube-system(454c6de5-fabd-402d-b63e-180a1c2dacda)
+  metadata:
+    name: storage-provisioner.17ee241149c4d867
+    namespace: kube-system
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: minikube
+  source:
+    component: kubelet
+    host: minikube
+  type: Warning
+kind: EventList

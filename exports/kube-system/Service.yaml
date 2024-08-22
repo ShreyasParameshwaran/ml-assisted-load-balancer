@@ -13,6 +13,7 @@ items:
     name: kube-dns
     namespace: kube-system
   spec:
+    clusterIP: 10.96.0.10
     clusterIPs:
     - 10.96.0.10
     internalTrafficPolicy: Cluster
@@ -55,6 +56,7 @@ items:
     name: prometheus-kube-prometheus-coredns
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -89,6 +91,7 @@ items:
     name: prometheus-kube-prometheus-kube-controller-manager
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -123,6 +126,7 @@ items:
     name: prometheus-kube-prometheus-kube-etcd
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -157,6 +161,7 @@ items:
     name: prometheus-kube-prometheus-kube-proxy
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -191,6 +196,7 @@ items:
     name: prometheus-kube-prometheus-kube-scheduler
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -217,6 +223,7 @@ items:
     name: prometheus-kube-prometheus-kubelet
     namespace: kube-system
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster

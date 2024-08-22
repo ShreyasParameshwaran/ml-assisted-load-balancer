@@ -225,7 +225,7 @@ items:
       controller: true
       kind: StatefulSet
       name: alertmanager-prometheus-kube-prometheus-alertmanager
-      uid: 60a5b0ac-2fcb-4877-a791-4c22c2560d78
+      uid: a2e4a38e-37ec-4384-8c91-20f560be145b
   revision: 1
 - apiVersion: apps/v1
   data:
@@ -456,7 +456,7 @@ items:
       controller: true
       kind: StatefulSet
       name: prometheus-prometheus-kube-prometheus-prometheus
-      uid: 8b2ea582-ec88-4e91-a8cd-4f4e94a1872c
+      uid: 91af8eeb-9308-43f5-8770-ded9844882d5
   revision: 1
 - apiVersion: apps/v1
   data:
@@ -588,6 +588,6 @@ items:
       controller: true
       kind: DaemonSet
       name: prometheus-prometheus-node-exporter
-      uid: 8747a71f-e563-442e-b768-3084463bf73d
+      uid: c585caab-48f3-4e8c-8cd9-32c7e91115ad
   revision: 1
 kind: ControllerRevisionList

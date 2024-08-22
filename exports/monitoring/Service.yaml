@@ -15,6 +15,7 @@ items:
       name: prometheus-kube-prometheus-alertmanager
       uid: 73e8987a-5d71-4ec1-995f-e6dc3bdaf7e1
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -56,6 +57,7 @@ items:
     namespace: monitoring
   spec:
     allocateLoadBalancerNodePorts: true
+    clusterIP: 10.104.1.82
     clusterIPs:
     - 10.104.1.82
     externalTrafficPolicy: Cluster
@@ -99,6 +101,7 @@ items:
     name: ingress-monitor-nginx-ingress-nginx-controller-admission
     namespace: monitoring
   spec:
+    clusterIP: 10.102.201.167
     clusterIPs:
     - 10.102.201.167
     internalTrafficPolicy: Cluster
@@ -134,6 +137,7 @@ items:
     name: ingress-monitor-nginx-ingress-nginx-controller-metrics
     namespace: monitoring
   spec:
+    clusterIP: 10.102.7.157
     clusterIPs:
     - 10.102.7.157
     internalTrafficPolicy: Cluster
@@ -168,8 +172,9 @@ items:
     name: keda-admission-webhooks
     namespace: monitoring
   spec:
+    clusterIP: 10.110.81.32
     clusterIPs:
-    - 10.99.233.159
+    - 10.110.81.32
     internalTrafficPolicy: Cluster
     ipFamilies:
     - IPv4
@@ -200,8 +205,9 @@ items:
     name: keda-operator
     namespace: monitoring
   spec:
+    clusterIP: 10.97.6.54
     clusterIPs:
-    - 10.108.13.255
+    - 10.97.6.54
     internalTrafficPolicy: Cluster
     ipFamilies:
     - IPv4
@@ -233,8 +239,9 @@ items:
     name: keda-operator-metrics-apiserver
     namespace: monitoring
   spec:
+    clusterIP: 10.104.102.123
     clusterIPs:
-    - 10.97.78.0
+    - 10.104.102.123
     internalTrafficPolicy: Cluster
     ipFamilies:
     - IPv4
@@ -267,6 +274,7 @@ items:
     name: prometheus-grafana
     namespace: monitoring
   spec:
+    clusterIP: 10.102.204.57
     clusterIPs:
     - 10.102.204.57
     internalTrafficPolicy: Cluster
@@ -302,6 +310,7 @@ items:
     name: prometheus-kube-prometheus-alertmanager
     namespace: monitoring
   spec:
+    clusterIP: 10.105.101.116
     clusterIPs:
     - 10.105.101.116
     internalTrafficPolicy: Cluster
@@ -343,6 +352,7 @@ items:
     name: prometheus-kube-prometheus-operator
     namespace: monitoring
   spec:
+    clusterIP: 10.101.66.38
     clusterIPs:
     - 10.101.66.38
     internalTrafficPolicy: Cluster
@@ -378,6 +388,7 @@ items:
     name: prometheus-kube-prometheus-prometheus
     namespace: monitoring
   spec:
+    clusterIP: 10.109.45.90
     clusterIPs:
     - 10.109.45.90
     internalTrafficPolicy: Cluster
@@ -418,6 +429,7 @@ items:
     name: prometheus-kube-state-metrics
     namespace: monitoring
   spec:
+    clusterIP: 10.105.228.215
     clusterIPs:
     - 10.105.228.215
     internalTrafficPolicy: Cluster
@@ -449,6 +461,7 @@ items:
       name: prometheus-kube-prometheus-prometheus
       uid: 3454c7cc-839a-4035-9575-11fb656bf1f0
   spec:
+    clusterIP: None
     clusterIPs:
     - None
     internalTrafficPolicy: Cluster
@@ -484,6 +497,7 @@ items:
     name: prometheus-prometheus-node-exporter
     namespace: monitoring
   spec:
+    clusterIP: 10.108.176.152
     clusterIPs:
     - 10.108.176.152
     internalTrafficPolicy: Cluster

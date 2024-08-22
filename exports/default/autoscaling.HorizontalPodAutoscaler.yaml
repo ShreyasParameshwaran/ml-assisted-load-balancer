@@ -18,7 +18,7 @@ items:
       controller: true
       kind: ScaledObject
       name: nodeapp-deployment-scaler
-      uid: cd3cd790-b61b-4ed1-b029-8d81c5b0953d
+      uid: 025b6153-f7a5-4fb2-b3d3-ea0400e9c16d
   spec:
     maxReplicas: 15
     metrics:

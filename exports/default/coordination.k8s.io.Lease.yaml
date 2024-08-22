@@ -7,11 +7,11 @@ items:
     name: ingress-app-ingress-nginx-leader
     namespace: default
   spec:
-    acquireTime: "2024-08-22T16:27:42.169145Z"
-    holderIdentity: ingress-app-ingress-nginx-controller-544f5dfc8f-x2srn
+    acquireTime: "2024-08-22T19:30:53.374248Z"
+    holderIdentity: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
     leaseDurationSeconds: 30
     leaseTransitions: 1
-    renewTime: "2024-08-22T18:56:32.394387Z"
+    renewTime: "2024-08-22T19:37:21.533095Z"
 - apiVersion: coordination.k8s.io/v1
   kind: Lease
   metadata:

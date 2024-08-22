@@ -28,7 +28,7 @@ items:
       controller: true
       kind: Deployment
       name: keda-admission-webhooks
-      uid: 6457fadb-1a4c-41e2-a5e5-b9a113b8dfbe
+      uid: f4083d5d-5814-48b8-8e22-3c6da38a33a3
   spec:
     replicas: 1
     selector:
@@ -142,312 +142,6 @@ items:
     annotations:
       deployment.kubernetes.io/desired-replicas: "1"
       deployment.kubernetes.io/max-replicas: "2"
-      deployment.kubernetes.io/revision: "2"
-      meta.helm.sh/release-name: keda
-      meta.helm.sh/release-namespace: monitoring
-    labels:
-      app: keda-operator
-      app.kubernetes.io/component: operator
-      app.kubernetes.io/instance: keda
-      app.kubernetes.io/managed-by: Helm
-      app.kubernetes.io/name: keda-operator
-      app.kubernetes.io/part-of: keda-operator
-      app.kubernetes.io/version: 2.15.0
-      helm.sh/chart: keda-2.15.0
-      name: keda-operator
-      pod-template-hash: 67948646f7
-    name: keda-operator-67948646f7
-    namespace: monitoring
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: keda-operator
-      uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
-  spec:
-    replicas: 0
-    selector:
-      matchLabels:
-        app: keda-operator
-        pod-template-hash: 67948646f7
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-22T23:58:51+05:30"
-        creationTimestamp: null
-        labels:
-          app: keda-operator
-          app.kubernetes.io/component: operator
-          app.kubernetes.io/instance: keda
-          app.kubernetes.io/managed-by: Helm
-          app.kubernetes.io/name: keda-operator
-          app.kubernetes.io/part-of: keda-operator
-          app.kubernetes.io/version: 2.15.0
-          helm.sh/chart: keda-2.15.0
-          name: keda-operator
-          pod-template-hash: 67948646f7
-      spec:
-        automountServiceAccountToken: true
-        containers:
-        - args:
-          - --leader-elect
-          - --disable-compression=true
-          - --zap-log-level=info
-          - --zap-encoder=console
-          - --zap-time-encoding=rfc3339
-          - --cert-dir=/certs
-          - --enable-cert-rotation=true
-          - --cert-secret-name=kedaorg-certs
-          - --operator-service-name=keda-operator
-          - --metrics-server-service-name=keda-operator-metrics-apiserver
-          - --webhooks-service-name=keda-admission-webhooks
-          - --k8s-cluster-name=kubernetes-default
-          - --k8s-cluster-domain=cluster.local
-          - --enable-prometheus-metrics=false
-          command:
-          - /keda
-          env:
-          - name: WATCH_NAMESPACE
-          - name: POD_NAME
-            valueFrom:
-              fieldRef:
-                apiVersion: v1
-                fieldPath: metadata.name
-          - name: POD_NAMESPACE
-            valueFrom:
-              fieldRef:
-                apiVersion: v1
-                fieldPath: metadata.namespace
-          - name: OPERATOR_NAME
-            value: keda-operator
-          - name: KEDA_HTTP_DEFAULT_TIMEOUT
-            value: "3000"
-          - name: KEDA_HTTP_MIN_TLS_VERSION
-            value: TLS12
-          image: ghcr.io/kedacore/keda:2.15.0
-          imagePullPolicy: Always
-          livenessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /healthz
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 25
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-          name: keda-operator
-          ports:
-          - containerPort: 9666
-            name: metricsservice
-            protocol: TCP
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /readyz
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 20
-            periodSeconds: 3
-            successThreshold: 1
-            timeoutSeconds: 1
-          resources:
-            limits:
-              cpu: "1"
-              memory: 1000Mi
-            requests:
-              cpu: 100m
-              memory: 100Mi
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-              - ALL
-            readOnlyRootFilesystem: true
-            seccompProfile:
-              type: RuntimeDefault
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-          volumeMounts:
-          - mountPath: /certs
-            name: certificates
-            readOnly: true
-        dnsPolicy: ClusterFirst
-        nodeSelector:
-          kubernetes.io/os: linux
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext:
-          runAsNonRoot: true
-        serviceAccount: keda-operator
-        serviceAccountName: keda-operator
-        terminationGracePeriodSeconds: 30
-        volumes:
-        - name: certificates
-          secret:
-            defaultMode: 420
-            optional: true
-            secretName: kedaorg-certs
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "1"
-      deployment.kubernetes.io/max-replicas: "2"
-      deployment.kubernetes.io/revision: "3"
-      meta.helm.sh/release-name: keda
-      meta.helm.sh/release-namespace: monitoring
-    labels:
-      app: keda-operator
-      app.kubernetes.io/component: operator
-      app.kubernetes.io/instance: keda
-      app.kubernetes.io/managed-by: Helm
-      app.kubernetes.io/name: keda-operator
-      app.kubernetes.io/part-of: keda-operator
-      app.kubernetes.io/version: 2.15.0
-      helm.sh/chart: keda-2.15.0
-      name: keda-operator
-      pod-template-hash: 9b5f476c6
-    name: keda-operator-9b5f476c6
-    namespace: monitoring
-    ownerReferences:
-    - apiVersion: apps/v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Deployment
-      name: keda-operator
-      uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
-        app: keda-operator
-        pod-template-hash: 9b5f476c6
-    template:
-      metadata:
-        annotations:
-          kubectl.kubernetes.io/restartedAt: "2024-08-23T00:13:57+05:30"
-        creationTimestamp: null
-        labels:
-          app: keda-operator
-          app.kubernetes.io/component: operator
-          app.kubernetes.io/instance: keda
-          app.kubernetes.io/managed-by: Helm
-          app.kubernetes.io/name: keda-operator
-          app.kubernetes.io/part-of: keda-operator
-          app.kubernetes.io/version: 2.15.0
-          helm.sh/chart: keda-2.15.0
-          name: keda-operator
-          pod-template-hash: 9b5f476c6
-      spec:
-        automountServiceAccountToken: true
-        containers:
-        - args:
-          - --leader-elect
-          - --disable-compression=true
-          - --zap-log-level=info
-          - --zap-encoder=console
-          - --zap-time-encoding=rfc3339
-          - --cert-dir=/certs
-          - --enable-cert-rotation=true
-          - --cert-secret-name=kedaorg-certs
-          - --operator-service-name=keda-operator
-          - --metrics-server-service-name=keda-operator-metrics-apiserver
-          - --webhooks-service-name=keda-admission-webhooks
-          - --k8s-cluster-name=kubernetes-default
-          - --k8s-cluster-domain=cluster.local
-          - --enable-prometheus-metrics=false
-          command:
-          - /keda
-          env:
-          - name: WATCH_NAMESPACE
-          - name: POD_NAME
-            valueFrom:
-              fieldRef:
-                apiVersion: v1
-                fieldPath: metadata.name
-          - name: POD_NAMESPACE
-            valueFrom:
-              fieldRef:
-                apiVersion: v1
-                fieldPath: metadata.namespace
-          - name: OPERATOR_NAME
-            value: keda-operator
-          - name: KEDA_HTTP_DEFAULT_TIMEOUT
-            value: "3000"
-          - name: KEDA_HTTP_MIN_TLS_VERSION
-            value: TLS12
-          image: ghcr.io/kedacore/keda:2.15.0
-          imagePullPolicy: Always
-          livenessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /healthz
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 25
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-          name: keda-operator
-          ports:
-          - containerPort: 9666
-            name: metricsservice
-            protocol: TCP
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /readyz
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 20
-            periodSeconds: 3
-            successThreshold: 1
-            timeoutSeconds: 1
-          resources:
-            limits:
-              cpu: "1"
-              memory: 1000Mi
-            requests:
-              cpu: 100m
-              memory: 100Mi
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-              - ALL
-            readOnlyRootFilesystem: true
-            seccompProfile:
-              type: RuntimeDefault
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-          volumeMounts:
-          - mountPath: /certs
-            name: certificates
-            readOnly: true
-        dnsPolicy: ClusterFirst
-        nodeSelector:
-          kubernetes.io/os: linux
-        restartPolicy: Always
-        schedulerName: default-scheduler
-        securityContext:
-          runAsNonRoot: true
-        serviceAccount: keda-operator
-        serviceAccountName: keda-operator
-        terminationGracePeriodSeconds: 30
-        volumes:
-        - name: certificates
-          secret:
-            defaultMode: 420
-            optional: true
-            secretName: kedaorg-certs
-- apiVersion: apps/v1
-  kind: ReplicaSet
-  metadata:
-    annotations:
-      deployment.kubernetes.io/desired-replicas: "1"
-      deployment.kubernetes.io/max-replicas: "2"
       deployment.kubernetes.io/revision: "1"
       meta.helm.sh/release-name: keda
       meta.helm.sh/release-namespace: monitoring
@@ -470,9 +164,9 @@ items:
       controller: true
       kind: Deployment
       name: keda-operator
-      uid: fdd1650b-d531-4146-a854-cc6b8ee7159c
+      uid: fff035f9-d220-4215-a9ec-001f508ff45b
   spec:
-    replicas: 0
+    replicas: 1
     selector:
       matchLabels:
         app: keda-operator
@@ -620,7 +314,7 @@ items:
       controller: true
       kind: Deployment
       name: keda-operator-metrics-apiserver
-      uid: 740be4b9-6d89-408d-8c81-9724249e285c
+      uid: d7063946-e772-4ae0-8f04-fc761619c8b4
   spec:
     replicas: 1
     selector:
@@ -754,7 +448,7 @@ items:
       controller: true
       kind: Deployment
       name: prometheus-grafana
-      uid: 87238adb-5566-4b17-911c-70472793e292
+      uid: 6e3e7ea0-3c14-4296-9cfe-7499453db012
   spec:
     replicas: 1
     selector:
@@ -996,7 +690,7 @@ items:
       controller: true
       kind: Deployment
       name: prometheus-kube-prometheus-operator
-      uid: fd75c9af-4033-461e-9f5e-e8b6dca60bbe
+      uid: 9c79e524-22e9-4deb-a1d8-8f0269b89a48
   spec:
     replicas: 1
     selector:
@@ -1123,7 +817,7 @@ items:
       controller: true
       kind: Deployment
       name: prometheus-kube-state-metrics
-      uid: 561f3000-03d3-4a64-906b-292a61416630
+      uid: 827148a5-2a1a-44e9-92f1-d36be961f26e
   spec:
     replicas: 1
     selector:

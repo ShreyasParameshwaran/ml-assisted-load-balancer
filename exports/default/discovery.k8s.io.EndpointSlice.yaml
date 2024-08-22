@@ -4,7 +4,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.5
+    - 10.244.0.29
     conditions:
       ready: true
       serving: true
@@ -12,13 +12,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x2srn
+      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
       namespace: default
-      uid: d40d8769-5f4d-4607-a499-07521381a2af
+      uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:27:19Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
     generateName: ingress-app-ingress-nginx-controller-admission-
     labels:
       app.kubernetes.io/component: controller
@@ -30,7 +30,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: ingress-nginx-4.11.1
       kubernetes.io/service-name: ingress-app-ingress-nginx-controller-admission
-    name: ingress-app-ingress-nginx-controller-admission-gqsqp
+    name: ingress-app-ingress-nginx-controller-admission-j8n72
     namespace: default
     ownerReferences:
     - apiVersion: v1
@@ -38,7 +38,7 @@ items:
       controller: true
       kind: Service
       name: ingress-app-ingress-nginx-controller-admission
-      uid: 4fd01b38-8ffb-4ceb-870a-7f558d34755d
+      uid: 2a807524-68f5-4151-94e2-fed45ee00918
   ports:
   - appProtocol: https
     name: https-webhook
@@ -48,7 +48,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.5
+    - 10.244.0.29
     conditions:
       ready: true
       serving: true
@@ -56,56 +56,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x2srn
+      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
       namespace: default
-      uid: d40d8769-5f4d-4607-a499-07521381a2af
+      uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:27:19Z"
-    generateName: ingress-app-ingress-nginx-controller-metrics-
-    labels:
-      app.kubernetes.io/component: controller
-      app.kubernetes.io/instance: ingress-app
-      app.kubernetes.io/managed-by: Helm
-      app.kubernetes.io/name: ingress-nginx
-      app.kubernetes.io/part-of: ingress-nginx
-      app.kubernetes.io/version: 1.11.1
-      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
-      helm.sh/chart: ingress-nginx-4.11.1
-      kubernetes.io/service-name: ingress-app-ingress-nginx-controller-metrics
-    name: ingress-app-ingress-nginx-controller-metrics-cv7tt
-    namespace: default
-    ownerReferences:
-    - apiVersion: v1
-      blockOwnerDeletion: true
-      controller: true
-      kind: Service
-      name: ingress-app-ingress-nginx-controller-metrics
-      uid: cceea22b-a473-4299-bfd1-d87d5b149591
-  ports:
-  - name: metrics
-    port: 10254
-    protocol: TCP
-- addressType: IPv4
-  apiVersion: discovery.k8s.io/v1
-  endpoints:
-  - addresses:
-    - 10.244.0.5
-    conditions:
-      ready: true
-      serving: true
-      terminating: false
-    nodeName: minikube
-    targetRef:
-      kind: Pod
-      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x2srn
-      namespace: default
-      uid: d40d8769-5f4d-4607-a499-07521381a2af
-  kind: EndpointSlice
-  metadata:
-    annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:27:19Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
     generateName: ingress-app-ingress-nginx-controller-
     labels:
       app.kubernetes.io/component: controller
@@ -117,7 +74,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       helm.sh/chart: ingress-nginx-4.11.1
       kubernetes.io/service-name: ingress-app-ingress-nginx-controller
-    name: ingress-app-ingress-nginx-controller-v62nd
+    name: ingress-app-ingress-nginx-controller-cz5sd
     namespace: default
     ownerReferences:
     - apiVersion: v1
@@ -125,7 +82,7 @@ items:
       controller: true
       kind: Service
       name: ingress-app-ingress-nginx-controller
-      uid: 0930fa22-8c75-4c51-b771-dc3c091ce2c9
+      uid: 17e33b80-949e-4561-8e3f-b3f7205624d5
   ports:
   - appProtocol: https
     name: https
@@ -134,6 +91,49 @@ items:
   - appProtocol: http
     name: http
     port: 80
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.244.0.29
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: ingress-app-ingress-nginx-controller-544f5dfc8f-x8tmw
+      namespace: default
+      uid: 3f6e230f-04c4-40d8-8e36-7b8fc108d201
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:09Z"
+    generateName: ingress-app-ingress-nginx-controller-metrics-
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/instance: ingress-app
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ingress-nginx
+      app.kubernetes.io/part-of: ingress-nginx
+      app.kubernetes.io/version: 1.11.1
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      helm.sh/chart: ingress-nginx-4.11.1
+      kubernetes.io/service-name: ingress-app-ingress-nginx-controller-metrics
+    name: ingress-app-ingress-nginx-controller-metrics-dj7rj
+    namespace: default
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ingress-app-ingress-nginx-controller-metrics
+      uid: 8877cbba-4218-489b-a242-2c6d86d4ea84
+  ports:
+  - name: metrics
+    port: 10254
     protocol: TCP
 - addressType: IPv4
   apiVersion: discovery.k8s.io/v1
@@ -157,7 +157,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.4
+    - 10.244.0.31
     conditions:
       ready: true
       serving: true
@@ -165,18 +165,18 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: ml-api-deployment-548d698969-htjtl
+      name: ml-api-deployment-548d698969-hf64z
       namespace: default
-      uid: 9828a9a5-3171-4449-9723-d13b287329cb
+      uid: 9a7b6402-dc4f-478f-8f11-a521069b6083
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:24:47Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:04Z"
     generateName: ml-api-service-
     labels:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       kubernetes.io/service-name: ml-api-service
-    name: ml-api-service-8cf42
+    name: ml-api-service-wjxff
     namespace: default
     ownerReferences:
     - apiVersion: v1
@@ -184,7 +184,7 @@ items:
       controller: true
       kind: Service
       name: ml-api-service
-      uid: 830cef25-cd35-47fd-80aa-8a65e569a41a
+      uid: 658e3e91-4930-46d3-894b-b422b493d14a
   ports:
   - name: ""
     port: 5000
@@ -193,7 +193,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.68
+    - 10.244.0.21
     conditions:
       ready: true
       serving: true
@@ -201,11 +201,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-jr6p2
+      name: nodeapp-deployment-6cc654cb66-qnq5b
       namespace: default
-      uid: cf68007a-8cf4-4347-8d4d-816d3c4649da
+      uid: f170bec5-9e6f-445e-a6ac-6d6a33493564
   - addresses:
-    - 10.244.0.69
+    - 10.244.0.26
     conditions:
       ready: true
       serving: true
@@ -213,11 +213,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-wck9l
+      name: nodeapp-deployment-6cc654cb66-68hjv
       namespace: default
-      uid: 9cb028c7-bd3c-431a-8dad-b40415ff99e9
+      uid: 2dfba524-1c06-4e11-bee0-3da4caffbab1
   - addresses:
-    - 10.244.0.71
+    - 10.244.0.28
     conditions:
       ready: true
       serving: true
@@ -225,11 +225,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-vlq8z
+      name: nodeapp-deployment-6cc654cb66-lgpn6
       namespace: default
-      uid: a4b1499f-d113-44d7-996b-16b0d385200f
+      uid: 8d7f3fe1-43b1-45a1-8da4-55b56b11efc1
   - addresses:
-    - 10.244.0.72
+    - 10.244.0.30
     conditions:
       ready: true
       serving: true
@@ -237,11 +237,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-zw5tq
+      name: nodeapp-deployment-6cc654cb66-zx9xg
       namespace: default
-      uid: 8d83356b-ece9-4e88-9d63-38f9b60806e3
+      uid: 4414f10f-825e-4d43-bb71-f1ae2a9cf12e
   - addresses:
-    - 10.244.0.74
+    - 10.244.0.34
     conditions:
       ready: true
       serving: true
@@ -249,11 +249,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-t6jbt
+      name: nodeapp-deployment-6cc654cb66-26jzn
       namespace: default
-      uid: d99f7804-966a-41f7-a73b-d2cd0e6aee18
+      uid: 0e5004dd-1230-4506-a7a1-a7b61118d01c
   - addresses:
-    - 10.244.0.76
+    - 10.244.0.35
     conditions:
       ready: true
       serving: true
@@ -261,11 +261,11 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-dfmdp
+      name: nodeapp-deployment-6cc654cb66-mlmkv
       namespace: default
-      uid: b92aaab7-aa41-454b-ab99-dbf9d478a4ce
+      uid: 9ca13671-b5f5-4783-983e-5f6c4724b505
   - addresses:
-    - 10.244.0.75
+    - 10.244.0.37
     conditions:
       ready: true
       serving: true
@@ -273,18 +273,18 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: nodeapp-deployment-5768865f95-c2ghg
+      name: nodeapp-deployment-6cc654cb66-9lmdf
       namespace: default
-      uid: 709d7d52-0746-403b-bac2-d47f28401158
+      uid: e805f2d6-4bfc-486b-bf6a-84a0ecf560c3
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T18:52:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:16Z"
     generateName: nodeapp-service-
     labels:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
       kubernetes.io/service-name: nodeapp-service
-    name: nodeapp-service-n452c
+    name: nodeapp-service-d5d5v
     namespace: default
     ownerReferences:
     - apiVersion: v1
@@ -292,7 +292,7 @@ items:
       controller: true
       kind: Service
       name: nodeapp-service
-      uid: e4fb54be-96eb-4be1-9b03-6df92928889a
+      uid: 71dc62a6-48c8-4e86-8379-284c1f6ba79d
   ports:
   - name: ""
     port: 4000

@@ -4,16 +4,14 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_6a2788d1-f950-4c36-a3dd-633779a07af3","leaseDurationSeconds":15,"acquireTime":"2024-08-22T16:19:11Z","renewTime":"2024-08-22T18:56:33Z","leaderTransitions":4}'
-    labels:
-      addonmanager.kubernetes.io/mode: Reconcile
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_532890a2-dd0d-43e4-a27e-a43f83f99b48","leaseDurationSeconds":15,"acquireTime":"2024-08-22T19:36:14Z","renewTime":"2024-08-22T19:37:19Z","leaderTransitions":0}'
     name: k8s.io-minikube-hostpath
     namespace: kube-system
 - apiVersion: v1
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-11T16:06:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:08Z"
     labels:
       k8s-app: kube-dns
       kubernetes.io/cluster-service: "true"
@@ -22,13 +20,13 @@ items:
     namespace: kube-system
   subsets:
   - addresses:
-    - ip: 10.244.0.148
+    - ip: 10.244.0.36
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: coredns-7db6d8ff4d-tjqfq
+        name: coredns-7db6d8ff4d-cw9rj
         namespace: kube-system
-        uid: cd306b39-aa42-4d33-a349-4d314cbf549c
+        uid: b2bca304-452d-4382-9540-2d3872a43d6d
     ports:
     - name: dns-tcp
       port: 53
@@ -43,7 +41,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:46Z"
     labels:
       app: kube-prometheus-stack-coredns
       app.kubernetes.io/instance: prometheus
@@ -59,13 +57,13 @@ items:
     namespace: kube-system
   subsets:
   - addresses:
-    - ip: 10.244.0.2
+    - ip: 10.244.0.36
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: coredns-7db6d8ff4d-6l8t9
+        name: coredns-7db6d8ff4d-cw9rj
         namespace: kube-system
-        uid: 5b7a5693-b79d-43fa-95bc-3f30a130bf3b
+        uid: b2bca304-452d-4382-9540-2d3872a43d6d
     ports:
     - name: http-metrics
       port: 9153
@@ -74,7 +72,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-10T11:31:37Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:43Z"
     labels:
       app: kube-prometheus-stack-kube-controller-manager
       app.kubernetes.io/instance: prometheus
@@ -96,7 +94,7 @@ items:
         kind: Pod
         name: kube-controller-manager-minikube
         namespace: kube-system
-        uid: e1d8ce39-5385-4352-ac49-9daa94de571e
+        uid: d97336a9-f704-43d9-aa4f-3167e29cec82
     ports:
     - name: http-metrics
       port: 10257
@@ -105,7 +103,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-10T11:31:43Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:45Z"
     labels:
       app: kube-prometheus-stack-kube-etcd
       app.kubernetes.io/instance: prometheus
@@ -127,7 +125,7 @@ items:
         kind: Pod
         name: etcd-minikube
         namespace: kube-system
-        uid: 2bc345d7-ba65-4530-9b37-a00bceb1db8f
+        uid: 8ee4198d-a29a-432f-820e-d6c487967230
     ports:
     - name: http-metrics
       port: 2381
@@ -136,7 +134,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:29Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:46Z"
     labels:
       app: kube-prometheus-stack-kube-proxy
       app.kubernetes.io/instance: prometheus
@@ -156,9 +154,9 @@ items:
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: kube-proxy-gqjqv
+        name: kube-proxy-wllfb
         namespace: kube-system
-        uid: 3aa63f0d-24f5-4a0a-a6e2-110f19acdecf
+        uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
     ports:
     - name: http-metrics
       port: 10249
@@ -167,7 +165,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:47Z"
     labels:
       app: kube-prometheus-stack-kube-scheduler
       app.kubernetes.io/instance: prometheus
@@ -189,7 +187,7 @@ items:
         kind: Pod
         name: kube-scheduler-minikube
         namespace: kube-system
-        uid: 2d53323d-5757-4db7-b331-a6dffeedce42
+        uid: ab020414-72ec-409f-aafa-a951c55ed4a6
     ports:
     - name: http-metrics
       port: 10259
@@ -210,7 +208,7 @@ items:
       targetRef:
         kind: Node
         name: minikube
-        uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+        uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
     ports:
     - name: https-metrics
       port: 10250

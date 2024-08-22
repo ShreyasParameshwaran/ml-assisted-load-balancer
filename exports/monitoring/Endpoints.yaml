@@ -4,7 +4,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:15Z"
     labels:
       managed-by: prometheus-operator
       operated-alertmanager: "true"
@@ -14,13 +14,13 @@ items:
   subsets:
   - addresses:
     - hostname: alertmanager-prometheus-kube-prometheus-alertmanager-0
-      ip: 10.244.0.9
+      ip: 10.244.0.25
       nodeName: minikube
       targetRef:
         kind: Pod
         name: alertmanager-prometheus-kube-prometheus-alertmanager-0
         namespace: monitoring
-        uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+        uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
     ports:
     - name: udp-mesh
       port: 9094
@@ -80,7 +80,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:41:51Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:14Z"
     labels:
       app.kubernetes.io/component: operator
       app.kubernetes.io/instance: keda
@@ -93,13 +93,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.13
+    - ip: 10.244.0.27
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: keda-admission-webhooks-79b9989f88-4bcb2
+        name: keda-admission-webhooks-79b9989f88-gkr99
         namespace: monitoring
-        uid: d0c7277a-cdda-4cce-b02a-35c60eebd2b1
+        uid: bef90367-e921-49c7-b2fa-0ebc91cdbe74
     ports:
     - name: https
       port: 9443
@@ -107,6 +107,8 @@ items:
 - apiVersion: v1
   kind: Endpoints
   metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:29Z"
     labels:
       app.kubernetes.io/component: operator
       app.kubernetes.io/instance: keda
@@ -119,13 +121,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.78
+    - ip: 10.244.0.32
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: keda-operator-9b5f476c6-fld55
+        name: keda-operator-fbc8b6c8f-7kl5n
         namespace: monitoring
-        uid: 368ee0cc-c066-451a-b17f-953f893214d5
+        uid: 101de76c-a522-4c3e-88e9-1d6b0b4afa60
     ports:
     - name: metricsservice
       port: 9666
@@ -134,7 +136,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:40:12Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:11Z"
     labels:
       app: keda-operator-metrics-apiserver
       app.kubernetes.io/component: operator
@@ -148,13 +150,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.12
+    - ip: 10.244.0.33
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: keda-operator-metrics-apiserver-57d97c9b9c-d9xq8
+        name: keda-operator-metrics-apiserver-57d97c9b9c-pcg4k
         namespace: monitoring
-        uid: eea6cfbd-5655-4c80-877a-1d26724d8358
+        uid: 639480d8-46e4-4d91-a41c-95f3ed76178f
     ports:
     - name: metrics
       port: 8080
@@ -166,7 +168,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:38:41Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:11Z"
     labels:
       app.kubernetes.io/instance: prometheus
       app.kubernetes.io/managed-by: Helm
@@ -177,13 +179,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.10
+    - ip: 10.244.0.24
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: prometheus-grafana-648c7ff88d-cf44m
+        name: prometheus-grafana-648c7ff88d-dk744
         namespace: monitoring
-        uid: f60a331f-26c7-497b-88ea-29ab381330bf
+        uid: 83b11b89-3f81-4534-8e54-8e3b1938283b
     ports:
     - name: http-web
       port: 3000
@@ -192,7 +194,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:31Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:14Z"
     labels:
       app: kube-prometheus-stack-alertmanager
       app.kubernetes.io/instance: prometheus
@@ -207,13 +209,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.9
+    - ip: 10.244.0.25
       nodeName: minikube
       targetRef:
         kind: Pod
         name: alertmanager-prometheus-kube-prometheus-alertmanager-0
         namespace: monitoring
-        uid: 7f159fca-f070-45f5-872f-9c21acd8c07a
+        uid: a596f76f-4444-41d2-9f7f-fe8e749c1d39
     ports:
     - appProtocol: http
       name: reloader-web
@@ -226,7 +228,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:18Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:00Z"
     labels:
       app: kube-prometheus-stack-operator
       app.kubernetes.io/component: prometheus-operator
@@ -242,13 +244,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.6
+    - ip: 10.244.0.23
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: prometheus-kube-prometheus-operator-597f45494f-9d9mw
+        name: prometheus-kube-prometheus-operator-597f45494f-qslgh
         namespace: monitoring
-        uid: 729b17b9-c4f2-46d3-a47c-24e350b361f2
+        uid: 6768502e-f4f4-47b6-ac0c-58632a00d2ab
     ports:
     - name: https
       port: 10250
@@ -257,7 +259,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:13Z"
     labels:
       app: kube-prometheus-stack-prometheus
       app.kubernetes.io/instance: prometheus
@@ -272,13 +274,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.8
+    - ip: 10.244.0.22
       nodeName: minikube
       targetRef:
         kind: Pod
         name: prometheus-prometheus-kube-prometheus-prometheus-0
         namespace: monitoring
-        uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+        uid: b73ddfca-a730-4cd7-a337-c288c9567318
     ports:
     - name: http-web
       port: 9090
@@ -291,7 +293,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:29:37Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:36:15Z"
     labels:
       app.kubernetes.io/component: metrics
       app.kubernetes.io/instance: prometheus
@@ -305,13 +307,13 @@ items:
     namespace: monitoring
   subsets:
   - addresses:
-    - ip: 10.244.0.7
+    - ip: 10.244.0.20
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: prometheus-kube-state-metrics-688d66b5b8-q28rn
+        name: prometheus-kube-state-metrics-688d66b5b8-45sgn
         namespace: monitoring
-        uid: def02a97-b89c-49ff-b749-9dedbb793421
+        uid: b607aee4-82d4-4c9b-bb00-67500963c600
     ports:
     - name: http
       port: 8080
@@ -320,7 +322,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:37:15Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:29:17Z"
     labels:
       managed-by: prometheus-operator
       operated-prometheus: "true"
@@ -330,13 +332,13 @@ items:
   subsets:
   - addresses:
     - hostname: prometheus-prometheus-kube-prometheus-prometheus-0
-      ip: 10.244.0.8
+      ip: 10.244.0.22
       nodeName: minikube
       targetRef:
         kind: Pod
         name: prometheus-prometheus-kube-prometheus-prometheus-0
         namespace: monitoring
-        uid: 56b4c80f-03a8-41b6-964f-8345e2889750
+        uid: b73ddfca-a730-4cd7-a337-c288c9567318
     ports:
     - name: http-web
       port: 9090
@@ -345,7 +347,7 @@ items:
   kind: Endpoints
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:31:03Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:31:11Z"
     labels:
       app.kubernetes.io/component: metrics
       app.kubernetes.io/instance: prometheus
@@ -364,9 +366,9 @@ items:
       nodeName: minikube
       targetRef:
         kind: Pod
-        name: prometheus-prometheus-node-exporter-q2597
+        name: prometheus-prometheus-node-exporter-xd9cz
         namespace: monitoring
-        uid: 72c965a1-9729-4e42-8af0-ef5685a2a45e
+        uid: b971ef78-0b50-4c9f-acdc-4fd3f52dc817
     ports:
     - name: http-metrics
       port: 9100

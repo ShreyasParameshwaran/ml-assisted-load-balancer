@@ -10,7 +10,7 @@ items:
     - apiVersion: v1
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   spec:
     drivers: null
 kind: CSINodeList

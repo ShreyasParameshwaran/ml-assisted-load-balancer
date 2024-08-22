@@ -4,7 +4,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.2
+    - 10.244.0.36
     conditions:
       ready: true
       serving: true
@@ -12,13 +12,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: coredns-7db6d8ff4d-6l8t9
+      name: coredns-7db6d8ff4d-cw9rj
       namespace: kube-system
-      uid: 5b7a5693-b79d-43fa-95bc-3f30a130bf3b
+      uid: b2bca304-452d-4382-9540-2d3872a43d6d
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:17:05Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:08Z"
     generateName: kube-dns-
     labels:
       endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
@@ -26,7 +26,7 @@ items:
       kubernetes.io/cluster-service: "true"
       kubernetes.io/name: CoreDNS
       kubernetes.io/service-name: kube-dns
-    name: kube-dns-564l7
+    name: kube-dns-hxbwn
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -34,7 +34,7 @@ items:
       controller: true
       kind: Service
       name: kube-dns
-      uid: 36c35636-a258-4449-b493-ba55acc1207b
+      uid: 31c8a951-bb31-4327-b834-7783fc654845
   ports:
   - name: metrics
     port: 9153
@@ -49,7 +49,7 @@ items:
   apiVersion: discovery.k8s.io/v1
   endpoints:
   - addresses:
-    - 10.244.0.2
+    - 10.244.0.36
     conditions:
       ready: true
       serving: true
@@ -57,13 +57,13 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: coredns-7db6d8ff4d-6l8t9
+      name: coredns-7db6d8ff4d-cw9rj
       namespace: kube-system
-      uid: 5b7a5693-b79d-43fa-95bc-3f30a130bf3b
+      uid: b2bca304-452d-4382-9540-2d3872a43d6d
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:46Z"
     generateName: prometheus-kube-prometheus-coredns-
     labels:
       app: kube-prometheus-stack-coredns
@@ -78,7 +78,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-coredns
       release: prometheus
       service.kubernetes.io/headless: ""
-    name: prometheus-kube-prometheus-coredns-p9cpn
+    name: prometheus-kube-prometheus-coredns-np8zt
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -86,7 +86,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-coredns
-      uid: 1a42a122-12bd-45b7-a055-7bef2ecc1450
+      uid: d0f8a2bf-2cfd-4b1b-990a-52e5a7a7caf7
   ports:
   - name: http-metrics
     port: 9153
@@ -105,11 +105,11 @@ items:
       kind: Pod
       name: kube-controller-manager-minikube
       namespace: kube-system
-      uid: 99f35d0e-c637-4e52-94db-719c29a056d6
+      uid: d97336a9-f704-43d9-aa4f-3167e29cec82
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:27Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:43Z"
     generateName: prometheus-kube-prometheus-kube-controller-manager-
     labels:
       app: kube-prometheus-stack-kube-controller-manager
@@ -124,7 +124,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-kube-controller-manager
       release: prometheus
       service.kubernetes.io/headless: ""
-    name: prometheus-kube-prometheus-kube-controller-manager-ztcgb
+    name: prometheus-kube-prometheus-kube-controller-manager-ttztz
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -132,7 +132,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-kube-controller-manager
-      uid: ce3fe7d7-de89-4aa3-821c-4ab2c6338568
+      uid: 3409b923-3765-4927-8d9a-61d6518f238f
   ports:
   - name: http-metrics
     port: 10257
@@ -151,11 +151,11 @@ items:
       kind: Pod
       name: etcd-minikube
       namespace: kube-system
-      uid: f613f2a6-ae8e-4cd3-a7f5-54b209a8a59e
+      uid: 8ee4198d-a29a-432f-820e-d6c487967230
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:28Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:45Z"
     generateName: prometheus-kube-prometheus-kube-etcd-
     labels:
       app: kube-prometheus-stack-kube-etcd
@@ -170,7 +170,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-kube-etcd
       release: prometheus
       service.kubernetes.io/headless: ""
-    name: prometheus-kube-prometheus-kube-etcd-p2cb2
+    name: prometheus-kube-prometheus-kube-etcd-rc8nk
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -178,7 +178,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-kube-etcd
-      uid: f73fbd3d-9f85-4868-bde9-f6dd1e66d218
+      uid: 0aaacf4a-2186-4ba8-a09b-788edaff3889
   ports:
   - name: http-metrics
     port: 2381
@@ -195,9 +195,9 @@ items:
     nodeName: minikube
     targetRef:
       kind: Pod
-      name: kube-proxy-gqjqv
+      name: kube-proxy-wllfb
       namespace: kube-system
-      uid: 3aa63f0d-24f5-4a0a-a6e2-110f19acdecf
+      uid: b2dc887a-6bbd-4b7c-98e9-0f8135cfabe2
   kind: EndpointSlice
   metadata:
     generateName: prometheus-kube-prometheus-kube-proxy-
@@ -214,7 +214,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-kube-proxy
       release: prometheus
       service.kubernetes.io/headless: ""
-    name: prometheus-kube-prometheus-kube-proxy-vml2p
+    name: prometheus-kube-prometheus-kube-proxy-77fdr
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -222,7 +222,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-kube-proxy
-      uid: f1b2638e-5e3c-4112-bd82-18324e4832d8
+      uid: 1f971e42-0315-452c-bb0a-a418c1b65318
   ports:
   - name: http-metrics
     port: 10249
@@ -241,11 +241,11 @@ items:
       kind: Pod
       name: kube-scheduler-minikube
       namespace: kube-system
-      uid: 2d53323d-5757-4db7-b331-a6dffeedce42
+      uid: ab020414-72ec-409f-aafa-a951c55ed4a6
   kind: EndpointSlice
   metadata:
     annotations:
-      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T16:18:30Z"
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-08-22T19:28:47Z"
     generateName: prometheus-kube-prometheus-kube-scheduler-
     labels:
       app: kube-prometheus-stack-kube-scheduler
@@ -260,7 +260,7 @@ items:
       kubernetes.io/service-name: prometheus-kube-prometheus-kube-scheduler
       release: prometheus
       service.kubernetes.io/headless: ""
-    name: prometheus-kube-prometheus-kube-scheduler-dcsq4
+    name: prometheus-kube-prometheus-kube-scheduler-5mlmw
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -268,7 +268,7 @@ items:
       controller: true
       kind: Service
       name: prometheus-kube-prometheus-kube-scheduler
-      uid: 02fd9989-63e5-4958-a236-09c383ee58d9
+      uid: 4be47b6b-98ac-40fe-8ba2-815d35f9384f
   ports:
   - name: http-metrics
     port: 10259
@@ -283,7 +283,7 @@ items:
     targetRef:
       kind: Node
       name: minikube
-      uid: 537e713e-a2ba-414a-b2d2-6f82b3366e92
+      uid: 3ea6f3d9-2324-49ab-9b5a-57b5629cd3b8
   kind: EndpointSlice
   metadata:
     labels:
@@ -292,7 +292,7 @@ items:
       endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
       k8s-app: kubelet
       kubernetes.io/service-name: prometheus-kube-prometheus-kubelet
-    name: prometheus-kube-prometheus-kubelet-w29j4
+    name: prometheus-kube-prometheus-kubelet-w5v8j
     namespace: kube-system
     ownerReferences:
     - apiVersion: v1
@@ -300,7 +300,7 @@ items:
       controller: true
       kind: Endpoints
       name: prometheus-kube-prometheus-kubelet
-      uid: 68f4f587-334a-4a17-af63-09de9e9d8ce8
+      uid: 9551f4ea-4957-428d-84b5-24af83900032
   ports:
   - name: http-metrics
     port: 10255

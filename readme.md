@@ -22,6 +22,31 @@ Before running the cluster creation script, ensure you have the following instal
     ./setup_minikube.sh
     ```
 
+4. Run minikube tunnel in a new terminal
+
+    ```bash
+    minikube tunnel
+    ```
+
+5. Run port-forward for Prometheus in a new terminal
+    ```bash
+    kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090:9090 -n monitoring
+    ```
+
+6. Run port-forward for Ingress-NGINX in a new terminal
+    ```bash
+    kubectl port-forward service/ingress-app-ingress-nginx-controller 3000:80
+    ```
+
+7. Run port-forward for ML API service in a new terminal
+    ```bash
+    kubectl port-forward service/ml-api-service 5000:5000
+    ```
+8. Visit Localhost
+    - http://localhost:3000 - Web App
+    - http://localhost:9000 - Prometheus
+    - http://localhost:5000/predict - ML API
+
 # Content below is deprecated
 ## PRE REQUISITES 
 docker
